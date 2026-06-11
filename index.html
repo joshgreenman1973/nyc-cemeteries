@@ -345,7 +345,7 @@ header .links button.ai:hover { background: var(--maroon); color: #fff; }
       <div class="row" id="statuses">
         <button class="chip schip on" data-s="Active"><span class="dot dot-active"></span>Active</button>
         <button class="chip schip on" data-s="Preserved"><span class="dot dot-preserved"></span>Preserved</button>
-        <button class="chip schip" data-s="Obliterated"><span class="dot dot-oblit"></span>Obliterated</button>
+        <button class="chip schip" data-s="Obliterated"><span class="dot dot-oblit"></span>No longer extant</button>
       </div>
       <div class="sortrow">
         Sort by
@@ -388,6 +388,7 @@ L.tileLayer('https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png', {
 const fmt = n => n >= 1000000 ? (n/1000000).toFixed(n%1000000?1:0).replace(/\.0$/,'') + ' million' : n.toLocaleString('en-US');
 const radiusFor = c => c ? Math.max(5, Math.min(26, Math.sqrt(c)/85)) : 4;
 const STATUS_COLOR = { Active: '#3d5743', Preserved: '#9c7c38', Obliterated: '#6e1423' };
+const STATUS_LABEL = { Active: 'Active', Preserved: 'Preserved', Obliterated: 'No longer extant' };
 
 function markerStyle(p) {
   const col = STATUS_COLOR[p.status] || '#8a8678';
@@ -508,7 +509,7 @@ function select(id, fly) {
   document.getElementById('dname').textContent = p.name;
   document.getElementById('dboro').innerHTML =
     (p.borough || 'New York City') + (p.religion ? ' · ' + p.religion : '') +
-    (p.status ? `<br><span class="badge badge-${p.status}">${p.status}</span>` : '');
+    (p.status ? `<br><span class="badge badge-${p.status}">${STATUS_LABEL[p.status] || p.status}</span>` : '');
   let stats = '';
   stats += `<div class="stat"><div class="num">${p.count ? p.count_display : '—'}</div><div class="lbl">${p.count ? (p.count_type==='graves'?'graves':'people buried') : 'no documented count'}</div></div>`;
   if (p.founded) stats += `<div class="stat"><div class="num">${p.founded}</div><div class="lbl">founded</div></div>`;
@@ -530,7 +531,7 @@ function select(id, fly) {
   const facts = [];
   if (p.cem_type) facts.push(['Type', [p.cem_type, p.subtype].filter(Boolean).join(', ')]);
   if (p.close_yr && p.close_yr !== 'present') facts.push(['Closed', p.close_yr]);
-  if (p.oblit_yr && p.oblit_yr !== 'n/a') facts.push(['Obliterated', p.oblit_yr]);
+  if (p.oblit_yr && p.oblit_yr !== 'n/a') facts.push(['No longer extant', p.oblit_yr]);
   if (facts.length) {
     html += `<h3>Record</h3><div class="facts">` +
       facts.map(([k,v]) => `<div class="fact"><span class="fk">${k}</span><span class="fv">${v}</span></div>`).join('') +
