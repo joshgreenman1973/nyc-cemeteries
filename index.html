@@ -286,6 +286,7 @@ header .links button#sat-btn.on { background: var(--navy); color: #fff; border-c
   cursor: pointer;
 }
 .more-btn:hover, .wiki-link:hover { background: var(--ink); color: var(--bone); }
+.links-row { display: flex; flex-wrap: wrap; gap: 8px; }
 .empty-note { font-size: 13px; color: var(--stone); font-style: italic; padding: 6px 0; }
 .facts { margin-bottom: 6px; }
 .fact { display: flex; gap: 10px; padding: 3px 0; font-size: 13.5px; border-bottom: 1px dotted var(--rule); }
@@ -601,9 +602,10 @@ function select(id, fly) {
   } else {
     html += `<div class="empty-note">No notable burials recorded in Wikidata for this cemetery. That reflects gaps in the database as much as the cemetery itself.</div>`;
   }
-  if (p.wikipedia) {
-    html += `<div><a class="wiki-link" target="_blank" rel="noopener" href="https://en.wikipedia.org/wiki/${encodeURIComponent(p.wikipedia.replace(/ /g,'_'))}">Wikipedia article</a></div>`;
-  }
+  const links = [];
+  if (p.website) links.push(`<a class="wiki-link" target="_blank" rel="noopener" href="${p.website}">Official website</a>`);
+  if (p.wikipedia) links.push(`<a class="wiki-link" target="_blank" rel="noopener" href="https://en.wikipedia.org/wiki/${encodeURIComponent(p.wikipedia.replace(/ /g,'_'))}">Wikipedia article</a>`);
+  if (links.length) html += `<div class="links-row">${links.join('')}</div>`;
   const prov = [];
   if (p.source === 'osm') prov.push('Boundary: OpenStreetMap');
   if (p.meade_sources) prov.push('Catalogue: Meade, citing ' + p.meade_sources);
@@ -631,7 +633,10 @@ function showAll(id) {
   const body = document.getElementById('dbody');
   let html = `<h3>Notable burials</h3>` + renderPeople(ppl);
   if (p.n_notables > ppl.length) html += `<div class="empty-note">Showing the ${ppl.length} most-noted of ${p.n_notables} people recorded in Wikidata.</div>`;
-  if (p.wikipedia) html += `<div><a class="wiki-link" target="_blank" rel="noopener" href="https://en.wikipedia.org/wiki/${encodeURIComponent(p.wikipedia.replace(/ /g,'_'))}">Wikipedia article</a></div>`;
+  const links2 = [];
+  if (p.website) links2.push(`<a class="wiki-link" target="_blank" rel="noopener" href="${p.website}">Official website</a>`);
+  if (p.wikipedia) links2.push(`<a class="wiki-link" target="_blank" rel="noopener" href="https://en.wikipedia.org/wiki/${encodeURIComponent(p.wikipedia.replace(/ /g,'_'))}">Wikipedia article</a>`);
+  if (links2.length) html += `<div class="links-row">${links2.join('')}</div>`;
   body.innerHTML = html;
 }
 
