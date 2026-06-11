@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Methodology — The permanent residents</title>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600;700&family=Source+Sans+3:wght@400;600&display=swap" rel="stylesheet">
+<style>
+body { font-family: 'Source Sans 3', sans-serif; color: #1f2421; background: #f4f1e8; margin: 0; line-height: 1.55; }
+main { max-width: 760px; margin: 0 auto; padding: 40px 22px 80px; }
+h1 { font-family: 'Cormorant Garamond', serif; font-size: 34px; font-weight: 700; margin: 0 0 4px; }
+h2 { font-family: 'Cormorant Garamond', serif; font-size: 24px; font-weight: 600; margin: 34px 0 8px; border-bottom: 1px solid #c9c3b2; padding-bottom: 4px; }
+p, li { font-size: 15px; }
+a { color: #3d5743; }
+.back { font-size: 13px; letter-spacing: .07em; text-transform: uppercase; text-decoration: none; border: 1px solid #1f2421; padding: 5px 11px; color: #1f2421; display: inline-block; margin-bottom: 26px; }
+.back:hover { background: #1f2421; color: #f4f1e8; }
+code { background: #ebe6d8; padding: 1px 5px; font-size: 13px; }
+</style>
+</head>
+<body>
+<main>
+<a class="back" href="index.html">← Back to the map</a>
+<h1>Methodology</h1>
+<p><em>The permanent residents: a map of New York City's cemeteries.</em> Built June 2026.</p>
+
+<h2>What this map shows</h2>
+<p>Every named cemetery, churchyard and burial ground inside the five boroughs that is mapped in OpenStreetMap — 111 in all after cleanup — with documented burial counts where a published figure exists (33 cemeteries) and lists of notable people buried there where Wikidata records them (44 cemeteries, about 2,700 people).</p>
+
+<h2>Data sources</h2>
+<ul>
+<li><strong>Locations and boundaries:</strong> OpenStreetMap, queried via the Overpass API (June 10, 2026) for features tagged <code>landuse=cemetery</code> or <code>amenity=grave_yard</code>. Results were clipped to the New York City borough boundaries published by the Department of City Planning and deduplicated by name and proximity.</li>
+<li><strong>Notable burials:</strong> Wikidata, using the "place of burial" property (P119). Each person listed has a Wikidata entry recording burial at that cemetery; lists are sorted by how many Wikipedia language editions cover the person, as a rough proxy for prominence. Birth and death years and one-line descriptions also come from Wikidata.</li>
+<li><strong>Burial counts:</strong> assembled cemetery by cemetery from (in order of preference) the cemetery's own website, the text of its Wikipedia article and reputable secondary sources such as the New York City Cemetery Project (nycemetery.wordpress.com), a research project by historian Mary French. Every count on the map carries a link to its specific source and a confidence label.</li>
+</ul>
+
+<h2>How burial counts were handled</h2>
+<ul>
+<li>Each figure was verified against a fetched source page; counts were never estimated or extrapolated. Where a source gave a range or "more than X," the displayed text preserves that wording and the low end is used for sizing the map circles.</li>
+<li>Counts mix two measures, labeled on each cemetery: <strong>interments</strong> (people buried) and <strong>graves</strong> (plots, which can hold more than one person). Interment totals are used when both exist.</li>
+<li><strong>Confidence labels:</strong> "high" means the figure comes from the cemetery itself or a well-sourced Wikipedia article; "medium" means a single secondary source; figures we could not verify at all are shown as "no documented count" rather than guessed.</li>
+<li>78 of the 111 cemeteries display no count, because no published figure was found. Absence of a number is not a claim that few people are buried there.</li>
+<li>Calvary Cemetery's roughly 3 million figure covers all four of its sections (First through Fourth Calvary); the sections are drawn as their two large parcels on the map. Hart Island, the city's public cemetery, has more than 1 million burials per its Wikipedia article and city reporting.</li>
+</ul>
+
+<h2>What "notable" means here</h2>
+<ul>
+<li>A person appears only if Wikidata explicitly records the cemetery as their place of burial. This undercounts reality everywhere: Green-Wood says it has 580,000 permanent residents; Wikidata records under 900 of them.</li>
+<li>Coverage is uneven across cemeteries and eras, and reflects the biases of who gets a Wikipedia article. Cemeteries showing "no notable burials recorded" may simply be under-documented.</li>
+<li>For cemeteries with more than 150 recorded notables, the map ships the 150 most widely covered.</li>
+</ul>
+
+<h2>Known limitations</h2>
+<ul>
+<li>OpenStreetMap may miss small, vanished or private burial grounds, and some historic sites (for example, the African Burial Ground National Monument in Lower Manhattan) are not tagged as cemeteries there.</li>
+<li>Burial counts were published in different years and age at different rates; active cemeteries keep growing.</li>
+<li>Wikidata occasionally contains errors (misattributed burial places, reinterments recorded once). Claims were taken as recorded, not independently re-verified person by person.</li>
+<li>Cemetery religion labels come from OpenStreetMap tags and are incomplete.</li>
+</ul>
+
+<h2>Reproducibility</h2>
+<p>The processing pipeline (Overpass query, borough clipping, Wikidata SPARQL queries, Wikipedia infobox parsing and source-verified count research) is preserved in the project repository alongside the raw intermediate files. Map data files: <code>data/cemeteries.geojson</code> and <code>data/notables.json</code>.</p>
+</main>
+</body>
+</html>

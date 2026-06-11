@@ -1,0 +1,134 @@
+{
+ "titles": {
+  "Q104872221": "Frederick Douglass Memorial Park",
+  "Q106636536": "Flatbush African Burial Ground",
+  "Q107289125": "Union Field Cemetery",
+  "Q117676874": "Brinckerhoff Cemetery",
+  "Q1435187": "Congregation Shearith Israel",
+  "Q14706898": "Maple Grove Cemetery (Queens)",
+  "Q1625319": "Holy Cross Cemetery, Brooklyn",
+  "Q17109455": "Moore-Jackson Cemetery",
+  "Q2000666": "Woodlawn Cemetery (Bronx, New York)",
+  "Q21586308": "Mount Olivet Cemetery (Queens)",
+  "Q2341172": "Mount Hebron Cemetery (New York City)",
+  "Q239043": "Green-Wood Cemetery",
+  "Q2879976": "New York Marble Cemetery",
+  "Q2934520": "Calvary Cemetery (Queens)",
+  "Q2972519": "Cypress Hills Cemetery",
+  "Q2972524": "Flushing Cemetery",
+  "Q3945111": "St. John Cemetery (Queens)",
+  "Q4285547": "Mount Carmel Cemetery (Queens)",
+  "Q4862481": "Baron Hirsch Cemetery",
+  "Q4874823": "Bayside Cemetery",
+  "Q5056726": "Cedar Grove Cemetery (Queens)",
+  "Q5058720": "Cemetery of the Evergreens",
+  "Q5058721": "Cemetery of the Resurrection",
+  "Q5200340": "Cypress Hills National Cemetery",
+  "Q5453797": "First Shearith Israel Graveyard",
+  "Q55605270": "Beth Olam Cemetery",
+  "Q61359956": "St. Michael's Cemetery (Queens)",
+  "Q6723847": "Machpelah Cemetery (Queens)",
+  "Q6905058": "Montefiore Cemetery",
+  "Q6909343": "Moravian Cemetery",
+  "Q6924768": "Mount Zion Cemetery (New York City)",
+  "Q7013238": "New York City Marble Cemetery",
+  "Q7084131": "Old Gravesend Cemetery",
+  "Q7250729": "Prospect Cemetery (Queens)",
+  "Q7402126": "Saint Raymond's Cemetery (Bronx)",
+  "Q7404097": "Salem Fields Cemetery",
+  "Q7516207": "Silver Mount Cemetery",
+  "Q7591318": "St. Peter's Cemetery (Staten Island)",
+  "Q7842624": "Trinity Cemetery",
+  "Q7971720": "Washington Cemetery (Brooklyn)",
+  "Q85739283": "Vanderbilt Family Cemetery and Mausoleum",
+  "Q87489932": "Lawrence Cemetery",
+  "Q96371778": "All Faiths Cemetery"
+ },
+ "counts": {
+  "Q117676874": {
+   "field": "graves",
+   "raw": "More than 77",
+   "title": "Brinckerhoff Cemetery"
+  },
+  "Q1625319": {
+   "field": "graves",
+   "raw": "|website =",
+   "title": "Holy Cross Cemetery, Brooklyn"
+  },
+  "Q17109455": {
+   "field": "graves",
+   "raw": "| interments   = approximately 48",
+   "title": "Moore-Jackson Cemetery"
+  },
+  "Q2341172": {
+   "field": "graves",
+   "raw": "more than 220,000",
+   "title": "Mount Hebron Cemetery (New York City)"
+  },
+  "Q2934520": {
+   "field": "interments",
+   "raw": "\u2248 3 million",
+   "title": "Calvary Cemetery (Queens)"
+  },
+  "Q2972519": {
+   "field": "interments",
+   "raw": "Over 400,000",
+   "title": "Cypress Hills Cemetery"
+  },
+  "Q2972524": {
+   "field": "graves",
+   "raw": "",
+   "title": "Flushing Cemetery"
+  },
+  "Q3945111": {
+   "field": "graves",
+   "raw": "|website = [http://www.cathcemetery-bklyn.org/pages.php?page=122 St. John Cemetery]",
+   "title": "St. John Cemetery (Queens)"
+  },
+  "Q4862481": {
+   "field": "graves",
+   "raw": "|website     =",
+   "title": "Baron Hirsch Cemetery"
+  },
+  "Q4874823": {
+   "field": "graves",
+   "raw": "35,000",
+   "title": "Bayside Cemetery"
+  },
+  "Q6905058": {
+   "field": "graves",
+   "raw": ">160,000",
+   "title": "Montefiore Cemetery"
+  },
+  "Q6909343": {
+   "field": "graves",
+   "raw": "|website     =",
+   "title": "Moravian Cemetery"
+  },
+  "Q6924768": {
+   "field": "graves",
+   "raw": ">210,000",
+   "title": "Mount Zion Cemetery (New York City)"
+  },
+  "Q7402126": {
+   "field": "graves",
+   "raw": "",
+   "title": "Saint Raymond's Cemetery (Bronx)"
+  },
+  "Q7842624": {
+   "field": "graves",
+   "raw": "",
+   "title": "Trinity Cemetery"
+  },
+  "Q7971720": {
+   "field": "graves",
+   "raw": "|website     =",
+   "title": "Washington Cemetery (Brooklyn)"
+  },
+  "Q85739283": {
+   "field": "graves",
+   "raw": "|website     =",
+   "title": "Vanderbilt Family Cemetery and Mausoleum"
+  }
+ }
+}

@@ -1,0 +1,517 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>The permanent residents — a map of New York City's cemeteries</title>
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Source+Sans+3:wght@400;600;700&display=swap" rel="stylesheet">
+<style>
+:root {
+  --bone: #f4f1e8;
+  --bone-deep: #ebe6d8;
+  --ink: #1f2421;
+  --moss: #3d5743;
+  --moss-light: #5d7a63;
+  --stone: #8a8678;
+  --rule: #c9c3b2;
+  --maroon: #6e1423;
+  --navy: #1b2a41;
+  --gilt: #9c7c38;
+}
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html, body { height: 100%; }
+body {
+  font-family: 'Source Sans 3', sans-serif;
+  color: var(--ink);
+  background: var(--bone);
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+header {
+  background: var(--bone);
+  border-bottom: 1px solid var(--ink);
+  padding: 14px 22px 12px;
+  display: flex;
+  align-items: baseline;
+  gap: 18px;
+  flex-wrap: wrap;
+  z-index: 1200;
+}
+header h1 {
+  font-family: 'Cormorant Garamond', serif;
+  font-weight: 600;
+  font-size: 26px;
+  letter-spacing: .01em;
+}
+header h1 .amp { font-style: italic; color: var(--moss); }
+header .dek {
+  font-size: 13.5px;
+  color: var(--stone);
+  max-width: 56ch;
+}
+header .links { margin-left: auto; display: flex; gap: 10px; align-items: center; }
+header .links a, header .links button {
+  font-family: 'Source Sans 3', sans-serif;
+  font-size: 12px;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: var(--ink);
+  background: none;
+  border: 1px solid var(--ink);
+  padding: 5px 11px;
+  cursor: pointer;
+  transition: background .15s, color .15s;
+}
+header .links a:hover, header .links button:hover { background: var(--ink); color: var(--bone); }
+header .links button.ai { border-color: var(--maroon); color: var(--maroon); }
+header .links button.ai:hover { background: var(--maroon); color: #fff; }
+
+#wrap { flex: 1; display: flex; min-height: 0; position: relative; }
+
+/* ---------- sidebar ---------- */
+#side {
+  width: 360px;
+  min-width: 360px;
+  border-right: 1px solid var(--ink);
+  background: var(--bone);
+  display: flex;
+  flex-direction: column;
+  min-height: 0;
+  z-index: 1100;
+}
+#controls { padding: 14px 16px 10px; border-bottom: 1px solid var(--rule); }
+#search {
+  width: 100%;
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 17px;
+  padding: 8px 10px;
+  border: 1px solid var(--ink);
+  background: #fff;
+  color: var(--ink);
+  outline: none;
+}
+#search::placeholder { color: var(--stone); font-style: italic; }
+.row { display: flex; gap: 6px; margin-top: 9px; flex-wrap: wrap; }
+.chip {
+  font-size: 11.5px;
+  letter-spacing: .05em;
+  text-transform: uppercase;
+  border: 1px solid var(--stone);
+  background: none;
+  color: var(--ink);
+  padding: 3px 9px;
+  cursor: pointer;
+}
+.chip.on { background: var(--moss); border-color: var(--moss); color: var(--bone); }
+.sortrow { margin-top: 9px; font-size: 12px; color: var(--stone); display: flex; gap: 8px; align-items: center; }
+.sortrow select {
+  font-family: 'Source Sans 3', sans-serif;
+  font-size: 12px;
+  border: 1px solid var(--rule);
+  background: #fff;
+  padding: 2px 4px;
+}
+#count-note { font-size: 12px; color: var(--stone); padding: 8px 16px 6px; font-style: italic; }
+#list { flex: 1; overflow-y: auto; }
+.item {
+  padding: 10px 16px 11px;
+  border-bottom: 1px solid var(--rule);
+  cursor: pointer;
+}
+.item:hover { background: var(--bone-deep); }
+.item.active { background: var(--bone-deep); box-shadow: inset 3px 0 0 var(--moss); }
+.item .nm {
+  font-family: 'Cormorant Garamond', serif;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 1.15;
+}
+.item .meta { font-size: 12px; color: var(--stone); margin-top: 2px; }
+.item .meta b { color: var(--moss); font-weight: 600; }
+
+/* ---------- map ---------- */
+#map { flex: 1; min-width: 0; background: #e8e6dd; }
+.leaflet-container { font-family: 'Source Sans 3', sans-serif; }
+.cem-tip {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 14px;
+  font-weight: 600;
+  background: var(--bone);
+  border: 1px solid var(--ink);
+  border-radius: 0;
+  box-shadow: 2px 2px 0 rgba(31,36,33,.25);
+  padding: 3px 8px;
+}
+.cem-tip::before { display: none; }
+
+/* ---------- detail panel ---------- */
+#detail {
+  position: absolute;
+  top: 0; right: 0; bottom: 0;
+  width: 400px;
+  max-width: 92vw;
+  background: var(--bone);
+  border-left: 1px solid var(--ink);
+  transform: translateX(102%);
+  transition: transform .28s ease;
+  z-index: 1150;
+  display: flex;
+  flex-direction: column;
+  box-shadow: -6px 0 18px rgba(31,36,33,.12);
+}
+#detail.open { transform: translateX(0); }
+#detail .dhead {
+  padding: 18px 20px 14px;
+  border-bottom: 1px solid var(--ink);
+  position: relative;
+  background:
+    radial-gradient(circle at 100% 0, rgba(61,87,67,.08), transparent 60%),
+    var(--bone);
+}
+#detail .dhead .closer {
+  position: absolute; top: 10px; right: 12px;
+  border: none; background: none; font-size: 22px;
+  color: var(--stone); cursor: pointer; line-height: 1;
+}
+#detail .dhead .closer:hover { color: var(--ink); }
+#dname {
+  font-family: 'Cormorant Garamond', serif;
+  font-weight: 700;
+  font-size: 27px;
+  line-height: 1.08;
+  padding-right: 24px;
+}
+#dboro {
+  font-size: 12px;
+  letter-spacing: .14em;
+  text-transform: uppercase;
+  color: var(--moss);
+  margin-top: 5px;
+}
+#dstats {
+  display: flex;
+  border-bottom: 1px solid var(--rule);
+}
+#dstats .stat {
+  flex: 1;
+  padding: 13px 14px 11px;
+  border-right: 1px solid var(--rule);
+}
+#dstats .stat:last-child { border-right: none; }
+#dstats .num {
+  font-family: 'Cormorant Garamond', serif;
+  font-weight: 600;
+  font-size: 25px;
+  line-height: 1;
+  color: var(--ink);
+}
+#dstats .lbl {
+  font-size: 10.5px;
+  letter-spacing: .1em;
+  text-transform: uppercase;
+  color: var(--stone);
+  margin-top: 4px;
+}
+#dsrc { font-size: 11.5px; color: var(--stone); padding: 8px 20px; border-bottom: 1px solid var(--rule); font-style: italic; }
+#dsrc a { color: var(--moss); }
+#dbody { flex: 1; overflow-y: auto; padding: 14px 20px 26px; }
+#dbody h3 {
+  font-size: 12px;
+  letter-spacing: .14em;
+  text-transform: uppercase;
+  color: var(--stone);
+  font-weight: 600;
+  margin: 8px 0 8px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+#dbody h3::after { content: ""; flex: 1; height: 1px; background: var(--rule); }
+.person { padding: 7px 0; border-bottom: 1px dotted var(--rule); }
+.person .pn {
+  font-family: 'Cormorant Garamond', serif;
+  font-weight: 600;
+  font-size: 17px;
+}
+.person .pn a { color: var(--ink); text-decoration: none; border-bottom: 1px solid var(--rule); }
+.person .pn a:hover { color: var(--moss); border-color: var(--moss); }
+.person .yrs { font-size: 12.5px; color: var(--gilt); margin-left: 6px; font-family: 'Source Sans 3', sans-serif; }
+.person .pd { font-size: 12.5px; color: var(--stone); margin-top: 1px; }
+.more-btn, .wiki-link {
+  margin-top: 12px;
+  display: inline-block;
+  font-size: 12px;
+  letter-spacing: .07em;
+  text-transform: uppercase;
+  border: 1px solid var(--ink);
+  background: none;
+  color: var(--ink);
+  text-decoration: none;
+  padding: 6px 12px;
+  cursor: pointer;
+}
+.more-btn:hover, .wiki-link:hover { background: var(--ink); color: var(--bone); }
+.empty-note { font-size: 13px; color: var(--stone); font-style: italic; padding: 6px 0; }
+
+/* ---------- AI caution popover ---------- */
+#ai-pop {
+  display: none;
+  position: absolute;
+  top: 58px; right: 18px;
+  width: 360px;
+  max-width: 90vw;
+  background: var(--navy);
+  color: #e9eef5;
+  padding: 16px 18px;
+  z-index: 2000;
+  font-size: 13px;
+  line-height: 1.45;
+  box-shadow: 4px 4px 0 rgba(31,36,33,.3);
+}
+#ai-pop.open { display: block; }
+#ai-pop h4 { font-size: 13px; letter-spacing: .08em; text-transform: uppercase; margin-bottom: 8px; color: #fff; }
+#ai-pop ul { padding-left: 17px; }
+#ai-pop li { margin-bottom: 5px; }
+#ai-pop a { color: #aac4e2; }
+
+@media (max-width: 760px) {
+  header { padding: 10px 14px; }
+  header .dek { display: none; }
+  #side { position: absolute; left: 0; top: 0; bottom: 0; transform: translateX(-100%); transition: transform .25s; width: 320px; min-width: 320px; }
+  #side.open { transform: translateX(0); }
+  #side-toggle { display: inline-block !important; }
+}
+#side-toggle { display: none; }
+</style>
+</head>
+<body>
+<header>
+  <h1>The permanent residents</h1>
+  <div class="dek">Every mapped cemetery in New York City — where they are, how many people are buried in each and who the notable residents are.</div>
+  <div class="links">
+    <button id="side-toggle" class="chip">List</button>
+    <a href="methodology.html">Methodology</a>
+    <button class="ai" id="ai-btn">AI caution</button>
+  </div>
+</header>
+
+<div id="ai-pop">
+  <h4>About this page</h4>
+  <ul>
+    <li>This map was built with AI assistance. Locations come from OpenStreetMap; notable burials come from Wikidata; burial counts were checked against cemetery websites, Wikipedia article text and news sources, with a source link shown for every count.</li>
+    <li>Burial counts are estimates that vary in quality; each is labeled with a confidence level and most cemeteries publish no figure at all.</li>
+    <li>"Notable burials" means people with Wikipedia/Wikidata entries who are recorded there as buried at the cemetery — an incomplete and uneven list.</li>
+    <li>Spot-check anything you plan to rely on. See the <a href="methodology.html">methodology</a> for details.</li>
+  </ul>
+</div>
+
+<div id="wrap">
+  <aside id="side">
+    <div id="controls">
+      <input id="search" type="text" placeholder="Search cemeteries or a buried name…">
+      <div class="row" id="boros">
+        <button class="chip on" data-b="all">All</button>
+        <button class="chip" data-b="Manhattan">Mn</button>
+        <button class="chip" data-b="Brooklyn">Bk</button>
+        <button class="chip" data-b="Queens">Qn</button>
+        <button class="chip" data-b="Bronx">Bx</button>
+        <button class="chip" data-b="Staten Island">SI</button>
+      </div>
+      <div class="sortrow">
+        Sort by
+        <select id="sort">
+          <option value="count">burials (largest first)</option>
+          <option value="notables">notable burials</option>
+          <option value="name">name (A–Z)</option>
+        </select>
+      </div>
+    </div>
+    <div id="count-note"></div>
+    <div id="list"></div>
+  </aside>
+
+  <div id="map"></div>
+
+  <div id="detail">
+    <div class="dhead">
+      <button class="closer" id="dclose">×</button>
+      <div id="dname"></div>
+      <div id="dboro"></div>
+    </div>
+    <div id="dstats"></div>
+    <div id="dsrc"></div>
+    <div id="dbody"></div>
+  </div>
+</div>
+
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+<script>
+let CEMS = [], NOTABLES = {}, layerById = {}, activeId = null;
+
+const map = L.map('map', { zoomControl: true }).setView([40.69, -73.93], 11);
+L.tileLayer('https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png', {
+  attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors &copy; <a href="https://carto.com/">CARTO</a>',
+  maxZoom: 19
+}).addTo(map);
+
+const fmt = n => n >= 1000000 ? (n/1000000).toFixed(n%1000000?1:0).replace(/\.0$/,'') + ' million' : n.toLocaleString('en-US');
+const radiusFor = c => c ? Math.max(5, Math.min(26, Math.sqrt(c)/85)) : 4;
+
+Promise.all([
+  fetch('data/cemeteries.geojson').then(r => r.json()),
+  fetch('data/notables.json').then(r => r.json())
+]).then(([geo, nob]) => {
+  NOTABLES = nob;
+  CEMS = geo.features.map((f, i) => { f.properties._id = i; return f; });
+
+  geo.features.forEach(f => {
+    const p = f.properties;
+    const style = { color: '#3d5743', weight: 1, fillColor: '#5d7a63', fillOpacity: .35 };
+    let lyr;
+    if (f.geometry.type !== 'Point') {
+      lyr = L.geoJSON(f, { style }).addTo(map);
+    }
+    const mk = L.circleMarker(p.center, {
+      radius: radiusFor(p.count),
+      color: '#1f2421', weight: 1,
+      fillColor: p.n_notables ? '#3d5743' : '#8a8678',
+      fillOpacity: .82
+    }).addTo(map);
+    mk.bindTooltip(p.name, { className: 'cem-tip', direction: 'top', offset: [0, -6] });
+    mk.on('click', () => select(p._id, false));
+    if (lyr) lyr.on('click', () => select(p._id, false));
+    layerById[p._id] = mk;
+  });
+
+  renderList();
+});
+
+/* ---------- list ---------- */
+let boro = 'all', q = '';
+document.getElementById('boros').addEventListener('click', e => {
+  if (!e.target.dataset.b) return;
+  boro = e.target.dataset.b;
+  document.querySelectorAll('#boros .chip').forEach(c => c.classList.toggle('on', c.dataset.b === boro));
+  renderList();
+});
+document.getElementById('search').addEventListener('input', e => { q = e.target.value.trim().toLowerCase(); renderList(); });
+document.getElementById('sort').addEventListener('change', renderList);
+
+function personMatch(p, q) {
+  const ppl = NOTABLES[p.wikidata];
+  if (!ppl) return null;
+  const hit = ppl.find(x => x.n.toLowerCase().includes(q));
+  return hit ? hit.n : null;
+}
+
+function renderList() {
+  const sort = document.getElementById('sort').value;
+  let rows = CEMS.map(f => f.properties).filter(p => boro === 'all' || p.borough === boro);
+  let matchNote = {};
+  if (q) {
+    rows = rows.filter(p => {
+      if (p.name.toLowerCase().includes(q)) return true;
+      const m = personMatch(p, q);
+      if (m) { matchNote[p._id] = m; return true; }
+      return false;
+    });
+  }
+  rows.sort((a, b) => {
+    if (sort === 'name') return a.name.localeCompare(b.name);
+    if (sort === 'notables') return (b.n_notables - a.n_notables) || a.name.localeCompare(b.name);
+    return ((b.count||0) - (a.count||0)) || (b.n_notables - a.n_notables);
+  });
+  const withC = rows.filter(p => p.count).length;
+  document.getElementById('count-note').textContent =
+    rows.length + (rows.length === 1 ? ' cemetery' : ' cemeteries') + ' shown · documented burial counts for ' + withC;
+  document.getElementById('list').innerHTML = rows.map(p => `
+    <div class="item ${p._id===activeId?'active':''}" onclick="select(${p._id}, true)">
+      <div class="nm">${p.name}</div>
+      <div class="meta">${p.borough}
+        ${p.count ? ' · <b>' + p.count_display + '</b> ' + (p.count_type==='graves'?'graves':'buried') : ' · burial count not documented'}
+        ${p.n_notables ? ' · ' + p.n_notables + ' notable' : ''}
+        ${matchNote[p._id] ? ' · <b>' + matchNote[p._id] + '</b>' : ''}
+      </div>
+    </div>`).join('');
+}
+
+/* ---------- detail ---------- */
+function select(id, fly) {
+  activeId = id;
+  const p = CEMS[id].properties;
+  if (fly) {
+    map.flyTo(p.center, Math.max(map.getZoom(), 14), { duration: .7 });
+    if (window.innerWidth <= 760) document.getElementById('side').classList.remove('open');
+  }
+  document.getElementById('dname').textContent = p.name;
+  document.getElementById('dboro').textContent = p.borough + (p.religion ? ' · ' + p.religion : '');
+  let stats = '';
+  stats += `<div class="stat"><div class="num">${p.count ? p.count_display : '—'}</div><div class="lbl">${p.count ? (p.count_type==='graves'?'graves':'people buried') : 'no documented count'}</div></div>`;
+  if (p.founded) stats += `<div class="stat"><div class="num">${p.founded}</div><div class="lbl">founded</div></div>`;
+  stats += `<div class="stat"><div class="num">${p.n_notables || '—'}</div><div class="lbl">notable burials</div></div>`;
+  document.getElementById('dstats').innerHTML = stats;
+  const src = document.getElementById('dsrc');
+  if (p.count && p.count_source) {
+    let host = '';
+    try { host = new URL(p.count_source).hostname.replace('www.',''); } catch(e) {}
+    src.innerHTML = `Count source: <a href="${p.count_source}" target="_blank" rel="noopener">${host}</a> · confidence: ${p.count_confidence}`;
+    src.style.display = 'block';
+  } else { src.style.display = 'none'; }
+
+  const body = document.getElementById('dbody');
+  const ppl = NOTABLES[p.wikidata] || [];
+  let html = '';
+  if (ppl.length) {
+    html += `<h3>Notable burials</h3>`;
+    html += renderPeople(ppl.slice(0, 25));
+    if (ppl.length > 25) {
+      html += `<button class="more-btn" onclick="showAll(${id})">Show all ${ppl.length}</button>`;
+    }
+  } else {
+    html += `<div class="empty-note">No notable burials recorded in Wikidata for this cemetery. That reflects gaps in the database as much as the cemetery itself.</div>`;
+  }
+  if (p.wikipedia) {
+    html += `<div><a class="wiki-link" target="_blank" rel="noopener" href="https://en.wikipedia.org/wiki/${encodeURIComponent(p.wikipedia.replace(/ /g,'_'))}">Wikipedia article</a></div>`;
+  }
+  body.innerHTML = html;
+  body.scrollTop = 0;
+  document.getElementById('detail').classList.add('open');
+  renderList();
+}
+
+function renderPeople(ppl) {
+  return ppl.map(x => {
+    const yrs = (x.b || x.x) ? `<span class="yrs">${x.b||'?'}–${x.x||'?'}</span>` : '';
+    const nm = x.w
+      ? `<a target="_blank" rel="noopener" href="https://en.wikipedia.org/wiki/${encodeURIComponent(x.w.replace(/ /g,'_'))}">${x.n}</a>`
+      : x.n;
+    return `<div class="person"><div class="pn">${nm}${yrs}</div>${x.d ? `<div class="pd">${x.d}</div>` : ''}</div>`;
+  }).join('');
+}
+
+function showAll(id) {
+  const p = CEMS[id].properties;
+  const ppl = NOTABLES[p.wikidata] || [];
+  const body = document.getElementById('dbody');
+  let html = `<h3>Notable burials</h3>` + renderPeople(ppl);
+  if (p.n_notables > ppl.length) html += `<div class="empty-note">Showing the ${ppl.length} most-noted of ${p.n_notables} people recorded in Wikidata.</div>`;
+  if (p.wikipedia) html += `<div><a class="wiki-link" target="_blank" rel="noopener" href="https://en.wikipedia.org/wiki/${encodeURIComponent(p.wikipedia.replace(/ /g,'_'))}">Wikipedia article</a></div>`;
+  body.innerHTML = html;
+}
+
+document.getElementById('dclose').addEventListener('click', () => {
+  document.getElementById('detail').classList.remove('open');
+  activeId = null; renderList();
+});
+document.getElementById('ai-btn').addEventListener('click', () => document.getElementById('ai-pop').classList.toggle('open'));
+document.addEventListener('click', e => {
+  if (!e.target.closest('#ai-pop') && !e.target.closest('#ai-btn')) document.getElementById('ai-pop').classList.remove('open');
+});
+document.getElementById('side-toggle').addEventListener('click', () => document.getElementById('side').classList.toggle('open'));
+</script>
+</body>
+</html>

@@ -1,0 +1,4144 @@
+{
+  "version": 0.6,
+  "generator": "Overpass API 0.7.62.11 87bfad18",
+  "osm3s": {
+    "timestamp_osm_base": "2026-06-08T06:09:44Z",
+    "copyright": "The data included in this document is from www.openstreetmap.org. The data is made available under ODbL."
+  },
+  "elements": [
+
+{
+  "type": "node",
+  "id": 357609281,
+  "lat": 40.8087120,
+  "lon": -73.9173591,
+  "tags": {
+    "amenity": "grave_yard",
+    "ele": "9",
+    "gnis:feature_id": "2062125",
+    "name": "Saint Ann's Graveyard"
+  }
+},
+{
+  "type": "node",
+  "id": 357625228,
+  "lat": 40.6963889,
+  "lon": -73.8488889,
+  "tags": {
+    "amenity": "grave_yard",
+    "ele": "17",
+    "gnis:feature_id": "2104418",
+    "name": "Wyckoff-Snediker Cemetery"
+  }
+},
+{
+  "type": "node",
+  "id": 357718784,
+  "lat": 40.8023225,
+  "lon": -74.1982008,
+  "tags": {
+    "amenity": "grave_yard",
+    "ele": "42",
+    "gnis:feature_id": "874818",
+    "name": "Bloomfield Cemetery"
+  }
+},
+{
+  "type": "node",
+  "id": 357719951,
+  "lat": 40.7206571,
+  "lon": -74.2357017,
+  "tags": {
+    "amenity": "grave_yard",
+    "ele": "36",
+    "gnis:feature_id": "875508",
+    "name": "Clinton Cemetery"
+  }
+},
+{
+  "type": "node",
+  "id": 357722420,
+  "lat": 40.8067670,
+  "lon": -74.1762557,
+  "tags": {
+    "amenity": "grave_yard",
+    "ele": "31",
+    "gnis:feature_id": "876631",
+    "name": "Glendale Cemetery"
+  }
+},
+{
+  "type": "node",
+  "id": 357723454,
+  "lat": 40.7217681,
+  "lon": -74.2568134,
+  "tags": {
+    "amenity": "grave_yard",
+    "ele": "67",
+    "gnis:feature_id": "877179",
+    "name": "Hollywood Cemetery"
+  }
+},
+{
+  "type": "node",
+  "id": 357723812,
+  "lat": 40.8545439,
+  "lon": -74.1932006,
+  "tags": {
+    "amenity": "grave_yard",
+    "ele": "75",
+    "gnis:feature_id": "877311",
+    "name": "Immaculate Conception Cemetery"
+  }
+},
+{
+  "type": "node",
+  "id": 357724343,
+  "lat": 40.8417665,
+  "lon": -74.1493104,
+  "tags": {
+    "amenity": "grave_yard",
+    "ele": "35",
+    "gnis:feature_id": "877571",
+    "name": "King Solomon Memorial Park"
+  }
+},
+{
+  "type": "node",
+  "id": 357724947,
+  "lat": 40.6345476,
+  "lon": -74.2418124,
+  "tags": {
+    "amenity": "grave_yard",
+    "ele": "8",
+    "gnis:feature_id": "877809",
+    "name": "Linden Park Cemetery"
+  }
+},
+{
+  "type": "node",
+  "id": 357725591,
+  "lat": 40.8420442,
+  "lon": -74.1429213,
+  "tags": {
+    "amenity": "grave_yard",
+    "ele": "40",
+    "gnis:feature_id": "878261",
+    "name": "Menorah Cemetery"
+  }
+},
+{
+  "type": "node",
+  "id": 357726466,
+  "lat": 40.8092671,
+  "lon": -74.1101426,
+  "tags": {
+    "amenity": "grave_yard",
+    "ele": "37",
+    "gnis:feature_id": "878761",
+    "name": "New Zion Cemetery"
+  }
+},
+{
+  "type": "node",
+  "id": 357728766,
+  "lat": 40.9020435,
+  "lon": -74.0370844,
+  "tags": {
+    "amenity": "grave_yard",
+    "ele": "7",
+    "gnis:feature_id": "880041",
+    "name": "Saint Joseph Cemetery"
+  }
+},
+{
+  "type": "node",
+  "id": 4267003815,
+  "lat": 40.7863576,
+  "lon": -74.2410961,
+  "tags": {
+    "amenity": "grave_yard",
+    "name": "Thomas Edison Gravesite"
+  }
+},
+{
+  "type": "node",
+  "id": 10536262591,
+  "lat": 40.5999718,
+  "lon": -74.1634034,
+  "tags": {
+    "amenity": "grave_yard",
+    "name": "Asbury Methodist Cemetery"
+  }
+},
+{
+  "type": "way",
+  "id": 11836667,
+  "center": {
+    "lat": 40.7637089,
+    "lon": -73.8989193
+  },
+  "tags": {
+    "ele": "13",
+    "gnis:feature_id": "964007",
+    "landuse": "cemetery",
+    "name": "Saint Michael’s Cemetery",
+    "website": "https://stmichaelscemetery.com/",
+    "wikidata": "Q61359956",
+    "wikipedia": "en:St. Michael's Cemetery (Queens)"
+  }
+},
+{
+  "type": "way",
+  "id": 25345818,
+  "center": {
+    "lat": 40.7389067,
+    "lon": -73.9124019
+  },
+  "tags": {
+    "ele": "28",
+    "gnis:feature_id": "958397",
+    "landuse": "cemetery",
+    "name": "Third Calvary Cemetery"
+  }
+},
+{
+  "type": "way",
+  "id": 25346489,
+  "center": {
+    "lat": 40.7368556,
+    "lon": -73.8309919
+  },
+  "tags": {
+    "addr:housenumber": "130-04",
+    "addr:postcode": "11367",
+    "addr:street": "Horace Harding Expressway",
+    "landuse": "cemetery",
+    "name": "Mount Hebron Cemetery",
+    "note": "smaller parts of this area are actually \"Cedar Grove Cemetery\". See http://www.mounthebroncemetery.com/images/grounds_large.jpg",
+    "religion": "jewish",
+    "website": "https://www.mounthebroncemetery.com/",
+    "wikidata": "Q2341172",
+    "wikipedia": "en:Mount Hebron Cemetery (New York City)"
+  }
+},
+{
+  "type": "way",
+  "id": 25415827,
+  "center": {
+    "lat": 40.7516635,
+    "lon": -73.7994310
+  },
+  "tags": {
+    "addr:housenumber": "16306",
+    "addr:postcode": "11358",
+    "addr:street": "46th Avenue",
+    "landuse": "cemetery",
+    "name": "Flushing Cemetery",
+    "wikidata": "Q2972524",
+    "wikipedia": "en:Flushing Cemetery"
+  }
+},
+{
+  "type": "way",
+  "id": 25420818,
+  "center": {
+    "lat": 40.7329634,
+    "lon": -73.9307516
+  },
+  "tags": {
+    "addr:housenumber": "4902",
+    "addr:postcode": "11377",
+    "addr:street": "Laurel Hill Boulevard",
+    "area": "yes",
+    "ele": "22",
+    "gnis:feature_id": "945480",
+    "landuse": "cemetery",
+    "name": "First Calvary Cemetery"
+  }
+},
+{
+  "type": "way",
+  "id": 25493422,
+  "center": {
+    "lat": 40.7085901,
+    "lon": -73.8233889
+  },
+  "tags": {
+    "addr:housenumber": "127-15",
+    "addr:postcode": "11415",
+    "addr:street": "Kew Gardens Road",
+    "ele": "27",
+    "gnis:feature_id": "956395",
+    "landuse": "cemetery",
+    "name": "Maple Grove Cemetery",
+    "website": "http://www.maplegrove.biz/mgchome.htm",
+    "wikidata": "Q14706898"
+  }
+},
+{
+  "type": "way",
+  "id": 25703243,
+  "center": {
+    "lat": 40.7404145,
+    "lon": -73.8005869
+  },
+  "tags": {
+    "addr:housenumber": "172-00",
+    "addr:postcode": "11365",
+    "addr:street": "Booth Memorial Avenue",
+    "denomination": "catholic",
+    "gnis:feature_id": "973394",
+    "landuse": "cemetery",
+    "name": "Mount Saint Mary Cemetery",
+    "operator": "Roman Catholic Diocese of Brooklyn",
+    "religion": "christian",
+    "website": "https://www.ccbklyn.org/our-cemeteries/mount-st-mary-cemetery/",
+    "wikidata": "Q113307925"
+  }
+},
+{
+  "type": "way",
+  "id": 25758356,
+  "center": {
+    "lat": 40.7154642,
+    "lon": -73.8920901
+  },
+  "tags": {
+    "landuse": "cemetery",
+    "note": "north part of Lutheran All Faiths Cemetery",
+    "website": "https://lancastergraveyardrabbit.files.wordpress.com/2013/06/ofcmap.jpg"
+  }
+},
+{
+  "type": "way",
+  "id": 27166982,
+  "center": {
+    "lat": 40.7418878,
+    "lon": -74.0653910
+  },
+  "tags": {
+    "landuse": "cemetery",
+    "name": "Saint Peter's Cemetery",
+    "source": "NJ2002LULC",
+    "wikidata": "Q7402066"
+  }
+},
+{
+  "type": "way",
+  "id": 27459350,
+  "center": {
+    "lat": 40.7311472,
+    "lon": -74.0787491
+  },
+  "tags": {
+    "amenity": "grave_yard",
+    "ele": "12",
+    "gnis:feature_id": "877201",
+    "landuse": "cemetery",
+    "name": "Holy Name Cemetery",
+    "wikidata": "Q5885770"
+  }
+},
+{
+  "type": "way",
+  "id": 27463426,
+  "center": {
+    "lat": 40.7830591,
+    "lon": -74.0260981
+  },
+  "tags": {
+    "gnis:feature_id": "876833",
+    "landuse": "cemetery",
+    "name": "Grove Church Cemetery",
+    "wikidata": "Q5611374",
+    "wikipedia": "en:Grove Church Cemetery"
+  }
+},
+{
+  "type": "way",
+  "id": 27478719,
+  "center": {
+    "lat": 40.6952551,
+    "lon": -74.0868670
+  },
+  "tags": {
+    "amenity": "grave_yard",
+    "ele": "17",
+    "gnis:feature_id": "874559",
+    "landuse": "cemetery",
+    "name": "Bayview Cemetery",
+    "wikidata": "Q20668355"
+  }
+},
+{
+  "type": "way",
+  "id": 27478720,
+  "center": {
+    "lat": 40.6970183,
+    "lon": -74.0845897
+  },
+  "tags": {
+    "amenity": "grave_yard",
+    "ele": "21",
+    "gnis:feature_id": "878760",
+    "landuse": "cemetery",
+    "name": "New York Bay Cemetery",
+    "wikidata": "Q20668356"
+  }
+},
+{
+  "type": "way",
+  "id": 27478776,
+  "center": {
+    "lat": 40.7877340,
+    "lon": -74.0252452
+  },
+  "tags": {
+    "addr:city": "North Bergen",
+    "addr:housenumber": "5433",
+    "addr:postcode": "07047",
+    "addr:state": "NJ",
+    "addr:street": "John F. Kennedy Boulevard",
+    "gnis:feature_id": "876395",
+    "landuse": "cemetery",
+    "name": "Flower Hill Cemetery",
+    "wikidata": "Q5462169",
+    "wikipedia": "en:Flower Hill Cemetery (North Bergen, New Jersey)"
+  }
+},
+{
+  "type": "way",
+  "id": 27479303,
+  "center": {
+    "lat": 40.7271025,
+    "lon": -74.0550636
+  },
+  "tags": {
+    "landuse": "cemetery",
+    "name": "Jersey City Cemetery",
+    "wikidata": "Q6184803"
+  }
+},
+{
+  "type": "way",
+  "id": 27484884,
+  "center": {
+    "lat": 40.7893133,
+    "lon": -74.0269282
+  },
+  "tags": {
+    "addr:city": "North Bergen",
+    "addr:housenumber": "5500",
+    "addr:postcode": "07047",
+    "addr:state": "NJ",
+    "addr:street": "Tonnelle Avenue",
+    "gnis:feature_id": "877148",
+    "landuse": "cemetery",
+    "name": "Hoboken Cemetery",
+    "wikidata": "Q8509417"
+  }
+},
+{
+  "type": "way",
+  "id": 27484886,
+  "center": {
+    "lat": 40.7921844,
+    "lon": -74.0259095
+  },
+  "tags": {
+    "addr:city": "North Bergen",
+    "addr:housenumber": "5810",
+    "addr:postcode": "07047",
+    "addr:state": "NJ",
+    "addr:street": "Tonnelle Avenue",
+    "gnis:feature_id": "878014",
+    "landuse": "cemetery",
+    "name": "Macphelah Cemetery"
+  }
+},
+{
+  "type": "way",
+  "id": 28102772,
+  "center": {
+    "lat": 40.8149561,
+    "lon": -74.0065554
+  },
+  "tags": {
+    "amenity": "grave_yard",
+    "ele": "34",
+    "gnis:feature_id": "876279",
+    "landuse": "cemetery",
+    "name": "Fairview Cemetery",
+    "wikidata": "Q15217237"
+  }
+},
+{
+  "type": "way",
+  "id": 32137837,
+  "center": {
+    "lat": 40.6982235,
+    "lon": -73.7041204
+  },
+  "tags": {
+    "addr:housenumber": "300",
+    "addr:postcode": "11003",
+    "addr:street": "Elmont Road",
+    "ele": "19",
+    "gnis:feature_id": "943764",
+    "landuse": "cemetery",
+    "name": "Beth David Cemetery",
+    "religion": "jewish",
+    "wikidata": "Q43079593"
+  }
+},
+{
+  "type": "way",
+  "id": 33994833,
+  "center": {
+    "lat": 40.5830727,
+    "lon": -74.1174557
+  },
+  "tags": {
+    "ele": "27",
+    "gnis:feature_id": "957643",
+    "landuse": "cemetery",
+    "name": "Moravian Cemetery",
+    "website": "https://www.moraviancemetery.com/",
+    "wikidata": "Q6909343",
+    "wikipedia": "en:Moravian Cemetery"
+  }
+},
+{
+  "type": "way",
+  "id": 33995058,
+  "center": {
+    "lat": 40.5614837,
+    "lon": -74.1411353
+  },
+  "tags": {
+    "ele": "24",
+    "gnis:feature_id": "959212",
+    "landuse": "cemetery",
+    "name": "Ocean View Cemetery",
+    "operator": "Ocean View The Cemetery Beautiful, Inc.",
+    "website": "https://www.oceanviewcemetery.net/"
+  }
+},
+{
+  "type": "way",
+  "id": 34198779,
+  "center": {
+    "lat": 40.6197254,
+    "lon": -74.0973377
+  },
+  "tags": {
+    "ele": "73",
+    "gnis:feature_id": "971650",
+    "landuse": "cemetery",
+    "name": "Woodland Cemetery"
+  }
+},
+{
+  "type": "way",
+  "id": 34198834,
+  "center": {
+    "lat": 40.6220845,
+    "lon": -74.1559285
+  },
+  "tags": {
+    "ele": "18",
+    "landuse": "cemetery",
+    "name": "Baron Hirsch Cemetery",
+    "religion": "jewish",
+    "website": "https://baronhirschcemetery.org/",
+    "wikidata": "Q4862481",
+    "wikipedia": "en:Baron Hirsch Cemetery"
+  }
+},
+{
+  "type": "way",
+  "id": 34988423,
+  "center": {
+    "lat": 40.6376374,
+    "lon": -74.1006604
+  },
+  "tags": {
+    "landuse": "cemetery",
+    "name": "Snug Harbor Sailor's Cemetery"
+  }
+},
+{
+  "type": "way",
+  "id": 35276208,
+  "center": {
+    "lat": 40.5967858,
+    "lon": -74.0817482
+  },
+  "tags": {
+    "ele": "22",
+    "gnis:feature_id": "963870",
+    "landuse": "cemetery",
+    "name": "Saint Marys Cemetery",
+    "religion": "christian"
+  }
+},
+{
+  "type": "way",
+  "id": 35276638,
+  "center": {
+    "lat": 40.5939988,
+    "lon": -74.0819398
+  },
+  "tags": {
+    "ele": "6",
+    "gnis:feature_id": "963869",
+    "landuse": "cemetery",
+    "name": "Saint Marys Cemetery",
+    "religion": "christian"
+  }
+},
+{
+  "type": "way",
+  "id": 35601999,
+  "center": {
+    "lat": 40.5994489,
+    "lon": -74.1634485
+  },
+  "tags": {
+    "landuse": "cemetery",
+    "name": "Washington Cemetery"
+  }
+},
+{
+  "type": "way",
+  "id": 35744947,
+  "center": {
+    "lat": 40.6112077,
+    "lon": -74.1252179
+  },
+  "tags": {
+    "ele": "56",
+    "gnis:feature_id": "949849",
+    "landuse": "cemetery",
+    "name": "Fairview Cemetery"
+  }
+},
+{
+  "type": "way",
+  "id": 35745944,
+  "center": {
+    "lat": 40.5165563,
+    "lon": -74.2362193
+  },
+  "tags": {
+    "amenity": "grave_yard",
+    "ele": "12",
+    "gnis:feature_id": "2079284",
+    "landuse": "cemetery",
+    "name": "Bethel Cemetery",
+    "religion": "christian"
+  }
+},
+{
+  "type": "way",
+  "id": 35781256,
+  "center": {
+    "lat": 40.6387880,
+    "lon": -74.1204865
+  },
+  "tags": {
+    "disused": "yes",
+    "landuse": "cemetery",
+    "name": "Fountain Cemetery",
+    "ruins": "yes"
+  }
+},
+{
+  "type": "way",
+  "id": 35782710,
+  "center": {
+    "lat": 40.5412710,
+    "lon": -74.2203954
+  },
+  "tags": {
+    "ele": "39",
+    "gnis:feature_id": "971876",
+    "landuse": "cemetery",
+    "name": "Rossville A.M.E. Zion Church Cemetery"
+  }
+},
+{
+  "type": "way",
+  "id": 35782962,
+  "center": {
+    "lat": 40.6316527,
+    "lon": -74.1310824
+  },
+  "tags": {
+    "landuse": "cemetery",
+    "name": "St. John's Lutheran Church Cemetery",
+    "religion": "christian"
+  }
+},
+{
+  "type": "way",
+  "id": 35783200,
+  "center": {
+    "lat": 40.6304640,
+    "lon": -74.1450940
+  },
+  "tags": {
+    "landuse": "cemetery",
+    "name": "St. Mary's of the Assumption Church Cemetery"
+  }
+},
+{
+  "type": "way",
+  "id": 35784200,
+  "center": {
+    "lat": 40.5914559,
+    "lon": -74.1920277
+  },
+  "tags": {
+    "disused": "yes",
+    "landuse": "cemetery",
+    "name": "Sylvan Cemetery - Patterson Cemetery",
+    "ruins": "yes"
+  }
+},
+{
+  "type": "way",
+  "id": 35784336,
+  "center": {
+    "lat": 40.5525539,
+    "lon": -74.2194927
+  },
+  "tags": {
+    "landuse": "cemetery",
+    "name": "Saint Lukes Cemetery"
+  }
+},
+{
+  "type": "way",
+  "id": 35784430,
+  "center": {
+    "lat": 40.5513171,
+    "lon": -74.2154939
+  },
+  "tags": {
+    "ele": "13",
+    "gnis:feature_id": "963715",
+    "landuse": "cemetery",
+    "name": "Saint Josephs Cemetery"
+  }
+},
+{
+  "type": "way",
+  "id": 36882463,
+  "center": {
+    "lat": 40.7238383,
+    "lon": -73.9950362
+  },
+  "tags": {
+    "amenity": "grave_yard"
+  }
+},
+{
+  "type": "way",
+  "id": 36882464,
+  "center": {
+    "lat": 40.7233129,
+    "lon": -73.9952339
+  },
+  "tags": {
+    "amenity": "grave_yard"
+  }
+},
+{
+  "type": "way",
+  "id": 40164795,
+  "center": {
+    "lat": 40.6355085,
+    "lon": -74.2410336
+  },
+  "tags": {
+    "amenity": "grave_yard",
+    "ele": "9",
+    "gnis:feature_id": "879818",
+    "landuse": "cemetery",
+    "name": "Rosedale Cemetery",
+    "source": "NJ2002LULC"
+  }
+},
+{
+  "type": "way",
+  "id": 40165055,
+  "center": {
+    "lat": 40.7085455,
+    "lon": -74.2654797
+  },
+  "tags": {
+    "landuse": "cemetery",
+    "name": "Hollywood Memorial Park",
+    "operator": "Hollywood Memorial Park and Cemetery",
+    "source": "NJ2002LULC",
+    "website": "https://www.hollywoodmemorialpark.com"
+  }
+},
+{
+  "type": "way",
+  "id": 40165060,
+  "center": {
+    "lat": 40.7100937,
+    "lon": -74.2570824
+  },
+  "tags": {
+    "landuse": "cemetery",
+    "name": "Hollywood Cemetery",
+    "operator": "Hollywood Memorial Park and Cemetery",
+    "source": "NJ2002LULC",
+    "website": "https://www.hollywoodmemorialpark.com"
+  }
+},
+{
+  "type": "way",
+  "id": 40165068,
+  "center": {
+    "lat": 40.7205741,
+    "lon": -74.2354060
+  },
+  "tags": {
+    "landuse": "cemetery",
+    "name": "Clinton Cemetery",
+    "source": "NJ2002LULC"
+  }
+},
+{
+  "type": "way",
+  "id": 40165103,
+  "center": {
+    "lat": 40.7682260,
+    "lon": -74.1961311
+  },
+  "tags": {
+    "landuse": "cemetery",
+    "name": "Saint Mary's Cemetery",
+    "source": "NJ2002LULC"
+  }
+},
+{
+  "type": "way",
+  "id": 40165193,
+  "center": {
+    "lat": 40.7741436,
+    "lon": -74.1287093
+  },
+  "tags": {
+    "landuse": "cemetery",
+    "name": "Arlington Memorial Park"
+  }
+},
+{
+  "type": "way",
+  "id": 40165203,
+  "center": {
+    "lat": 40.7737824,
+    "lon": -74.1310816
+  },
+  "tags": {
+    "landuse": "cemetery",
+    "name": "Arlington Memorial Park",
+    "wikidata": "Q4792364"
+  }
+},
+{
+  "type": "way",
+  "id": 40165238,
+  "center": {
+    "lat": 40.7776986,
+    "lon": -74.2314622
+  },
+  "tags": {
+    "amenity": "grave_yard",
+    "ele": "65",
+    "gnis:feature_id": "2056400",
+    "name": "Saint Johns Cemetery",
+    "source": "NJ2002LULC"
+  }
+},
+{
+  "type": "way",
+  "id": 40165239,
+  "center": {
+    "lat": 40.7793281,
+    "lon": -74.0329609
+  },
+  "tags": {
+    "ele": "15",
+    "gnis:feature_id": "879100",
+    "landuse": "cemetery",
+    "name": "Palisades Cemetery",
+    "source": "NJ2002LULC",
+    "wikidata": "Q7127594",
+    "wikipedia": "en:Palisades Cemetery"
+  }
+},
+{
+  "type": "way",
+  "id": 40165240,
+  "center": {
+    "lat": 40.7793696,
+    "lon": -74.0294209
+  },
+  "tags": {
+    "ele": "20",
+    "gnis:feature_id": "881644",
+    "landuse": "cemetery",
+    "name": "Weehawken Cemetery",
+    "source": "NJ2002LULC",
+    "wikidata": "Q7979375",
+    "wikipedia": "en:Weehawken Cemetery"
+  }
+},
+{
+  "type": "way",
+  "id": 40165243,
+  "center": {
+    "lat": 40.7876591,
+    "lon": -74.2228051
+  },
+  "tags": {
+    "landuse": "cemetery",
+    "name": "Rosedale Cemetery",
+    "source": "NJ2002LULC",
+    "wikidata": "Q7368162"
+  }
+},
+{
+  "type": "way",
+  "id": 40165248,
+  "center": {
+    "lat": 40.7876280,
+    "lon": -74.1264937
+  },
+  "tags": {
+    "landuse": "cemetery",
+    "name": "Holy Cross Cemetery",
+    "wikidata": "Q5885104",
+    "wikipedia": "en:Holy Cross Cemetery (North Arlington, New Jersey)"
+  }
+},
+{
+  "type": "way",
+  "id": 40165260,
+  "center": {
+    "lat": 40.8023828,
+    "lon": -74.1988970
+  },
+  "tags": {
+    "landuse": "cemetery",
+    "name": "Bloomfield Cemetery",
+    "source": "NJ2002LULC",
+    "wikidata": "Q4928232",
+    "wikipedia": "en:Bloomfield Cemetery"
+  }
+},
+{
+  "type": "way",
+  "id": 40165262,
+  "center": {
+    "lat": 40.8040519,
+    "lon": -74.1872881
+  },
+  "tags": {
+    "landuse": "cemetery",
+    "name": "Mount Olivet Cemetery",
+    "source": "NJ2002LULC"
+  }
+},
+{
+  "type": "way",
+  "id": 40165281,
+  "center": {
+    "lat": 40.8070547,
+    "lon": -74.1772301
+  },
+  "tags": {
+    "landuse": "cemetery",
+    "name": "Glendale Cemetery",
+    "source": "NJ2002LULC",
+    "wikidata": "Q5568350",
+    "wikipedia": "en:Glendale Cemetery, Bloomfield"
+  }
+},
+{
+  "type": "way",
+  "id": 40165539,
+  "center": {
+    "lat": 40.8113881,
+    "lon": -74.1176468
+  },
+  "tags": {
+    "ele": "18",
+    "gnis:feature_id": "880049",
+    "landuse": "cemetery",
+    "name": "Saint Joseph's Cemetery",
+    "source": "NJ2002LULC"
+  }
+},
+{
+  "type": "way",
+  "id": 40165541,
+  "center": {
+    "lat": 40.8106251,
+    "lon": -74.1084884
+  },
+  "tags": {
+    "landuse": "cemetery",
+    "name": "Hillside Cemetery",
+    "source": "NJ2002LULC",
+    "wikidata": "Q5763902"
+  }
+},
+{
+  "type": "way",
+  "id": 40329398,
+  "center": {
+    "lat": 40.6471150,
+    "lon": -73.9380830
+  },
+  "tags": {
+    "addr:housenumber": "3620",
+    "addr:postcode": "11203",
+    "addr:street": "Tilden Avenue",
+    "check_date": "2023-11-19",
+    "denomination": "catholic",
+    "landuse": "cemetery",
+    "name": "Holy Cross Cemetery",
+    "operator": "Roman Catholic Diocese of Brooklyn",
+    "religion": "christian",
+    "website": "https://www.ccbklyn.org/our-cemeteries/holy-cross-cemetery/",
+    "wikidata": "Q1625319",
+    "wikipedia": "en:Holy Cross Cemetery, Brooklyn"
+  }
+},
+{
+  "type": "way",
+  "id": 40375705,
+  "center": {
+    "lat": 40.6286860,
+    "lon": -74.2354150
+  },
+  "tags": {
+    "ele": "4",
+    "gnis:feature_id": "879813",
+    "landuse": "cemetery",
+    "name": "Rose Hill Cemetery",
+    "source": "NJ2002LULC"
+  }
+},
+{
+  "type": "way",
+  "id": 41914865,
+  "center": {
+    "lat": 40.8221471,
+    "lon": -74.0028908
+  },
+  "tags": {
+    "amenity": "grave_yard",
+    "ele": "51",
+    "gnis:feature_id": "878562",
+    "landuse": "cemetery",
+    "name": "Mount Moriah Cemetery",
+    "source": "NJ2002LULC"
+  }
+},
+{
+  "type": "way",
+  "id": 41914872,
+  "center": {
+    "lat": 40.8344324,
+    "lon": -74.0137855
+  },
+  "tags": {
+    "landuse": "cemetery",
+    "source": "NJ2002LULC"
+  }
+},
+{
+  "type": "way",
+  "id": 41914950,
+  "center": {
+    "lat": 40.8618748,
+    "lon": -73.9795703
+  },
+  "tags": {
+    "landuse": "cemetery",
+    "name": "Cemetery of the Madonna",
+    "source": "NJ2002LULC"
+  }
+},
+{
+  "type": "way",
+  "id": 41914952,
+  "center": {
+    "lat": 40.9119051,
+    "lon": -73.9663148
+  },
+  "tags": {
+    "ele": "24",
+    "gnis:feature_id": "878527",
+    "landuse": "cemetery",
+    "name": "Mount Carmel Cemetery",
+    "source": "NJ2002LULC"
+  }
+},
+{
+  "type": "way",
+  "id": 41914969,
+  "center": {
+    "lat": 40.9123224,
+    "lon": -74.2023151
+  },
+  "tags": {
+    "landuse": "cemetery",
+    "source": "NJ2002LULC"
+  }
+},
+{
+  "type": "way",
+  "id": 41915005,
+  "center": {
+    "lat": 40.9001605,
+    "lon": -74.0948666
+  },
+  "tags": {
+    "landuse": "cemetery",
+    "name": "Passaic Junction Cemeteries",
+    "religion": "jewish",
+    "source": "NJ2002LULC"
+  }
+},
+{
+  "type": "way",
+  "id": 41915079,
+  "center": {
+    "lat": 40.9087978,
+    "lon": -74.1996845
+  },
+  "tags": {
+    "addr:city": "Totowa",
+    "addr:housenumber": "52",
+    "addr:state": "NJ",
+    "addr:street": "Totowa Avenue",
+    "denomination": "roman_catholic",
+    "ele": "39",
+    "gnis:feature_id": "877211",
+    "landuse": "cemetery",
+    "name": "Holy Sepulchre Cemetery",
+    "religion": "christian",
+    "source": "NJ2002LULC",
+    "wikidata": "Q15224690"
+  }
+},
+{
+  "type": "way",
+  "id": 41915125,
+  "center": {
+    "lat": 40.8421157,
+    "lon": -74.1434839
+  },
+  "tags": {
+    "landuse": "cemetery",
+    "name": "East Ridgelawn Cemetery, Menorah Section",
+    "source": "NJ2002LULC"
+  }
+},
+{
+  "type": "way",
+  "id": 41915226,
+  "center": {
+    "lat": 40.8373329,
+    "lon": -74.1412062
+  },
+  "tags": {
+    "landuse": "cemetery",
+    "name": "East Ridgelawn Cemetery",
+    "source": "NJ2002LULC",
+    "wikidata": "Q63061923"
+  }
+},
+{
+  "type": "way",
+  "id": 41915251,
+  "center": {
+    "lat": 40.8909762,
+    "lon": -74.0839409
+  },
+  "tags": {
+    "landuse": "cemetery",
+    "name": "Riverside Cemetery",
+    "religion": "jewish",
+    "source": "NJ2002LULC",
+    "wikidata": "Q7338445"
+  }
+},
+{
+  "type": "way",
+  "id": 41915347,
+  "center": {
+    "lat": 40.9300820,
+    "lon": -74.0033018
+  },
+  "tags": {
+    "landuse": "cemetery",
+    "source": "NJ2002LULC",
+    "wikidata": "Q117594655"
+  }
+},
+{
+  "type": "way",
+  "id": 41915383,
+  "center": {
+    "lat": 40.8885316,
+    "lon": -74.0908483
+  },
+  "tags": {
+    "denomination": "roman_catholic",
+    "landuse": "cemetery",
+    "name": "St Mary's Cemetery",
+    "religion": "christian",
+    "source": "NJ2002LULC"
+  }
+},
+{
+  "type": "way",
+  "id": 41915419,
+  "center": {
+    "lat": 40.9003651,
+    "lon": -74.2068566
+  },
+  "tags": {
+    "addr:city": "Totowa",
+    "addr:housenumber": "295",
+    "addr:street": "Totowa Road",
+    "amenity": "grave_yard",
+    "ele": "53",
+    "gnis:feature_id": "877675",
+    "landuse": "cemetery",
+    "name": "Laurel Hill Cemetery",
+    "religion": "multifaith",
+    "source": "NJ2002LULC",
+    "website": "https://www.cmsmidatlantic.com/"
+  }
+},
+{
+  "type": "way",
+  "id": 41915476,
+  "center": {
+    "lat": 40.8404534,
+    "lon": -74.1511629
+  },
+  "tags": {
+    "landuse": "cemetery",
+    "name": "King Solomon Cemetery",
+    "source": "NJ2002LULC"
+  }
+},
+{
+  "type": "way",
+  "id": 41915575,
+  "center": {
+    "lat": 40.8597597,
+    "lon": -74.0384954
+  },
+  "tags": {
+    "landuse": "cemetery",
+    "name": "Maple Grove Park Cemetary",
+    "source": "NJ2002LULC"
+  }
+},
+{
+  "type": "way",
+  "id": 41915611,
+  "center": {
+    "lat": 40.8650075,
+    "lon": -74.0956688
+  },
+  "tags": {
+    "landuse": "cemetery",
+    "name": "St Michael's Cemetery",
+    "religion": "christian",
+    "source": "NJ2002LULC"
+  }
+},
+{
+  "type": "way",
+  "id": 41915686,
+  "center": {
+    "lat": 40.9045440,
+    "lon": -74.0364442
+  },
+  "tags": {
+    "landuse": "cemetery",
+    "name": "Hackensack Cemetery",
+    "source": "NJ2002LULC",
+    "wikidata": "Q5637224"
+  }
+},
+{
+  "type": "way",
+  "id": 43317041,
+  "center": {
+    "lat": 40.8882909,
+    "lon": -73.8719746
+  },
+  "tags": {
+    "ele": "45",
+    "gnis:feature_id": "971674",
+    "landuse": "cemetery",
+    "name": "Woodlawn Cemetery",
+    "website": "https://www.thewoodlawncemetery.org/",
+    "wikidata": "Q2000666",
+    "wikipedia": "en:Woodlawn Cemetery (Bronx, New York)"
+  }
+},
+{
+  "type": "way",
+  "id": 44843917,
+  "center": {
+    "lat": 40.8494761,
+    "lon": -73.7841851
+  },
+  "tags": {
+    "landuse": "cemetery",
+    "name": "Pelham Cemetery"
+  }
+},
+{
+  "type": "way",
+  "id": 45755969,
+  "center": {
+    "lat": 40.8381172,
+    "lon": -73.8442874
+  },
+  "tags": {
+    "amenity": "grave_yard",
+    "ele": "9",
+    "gnis:feature_id": "2072368",
+    "name": "Saint Peter's Graveyard",
+    "source": "Bing"
+  }
+},
+{
+  "type": "way",
+  "id": 59559691,
+  "center": {
+    "lat": 40.5396913,
+    "lon": -74.2379865
+  },
+  "tags": {
+    "amenity": "grave_yard",
+    "ele": "17",
+    "gnis:feature_id": "2079170",
+    "name": "Charleston Cemetery"
+  }
+},
+{
+  "type": "way",
+  "id": 60687776,
+  "center": {
+    "lat": 40.7039875,
+    "lon": -73.7077481
+  },
+  "tags": {
+    "addr:city": "Elmont",
+    "addr:housenumber": "90",
+    "addr:postcode": "11003",
+    "addr:state": "NY",
+    "addr:street": "Elmont Road",
+    "ele": "19",
+    "gnis:feature_id": "956281",
+    "landuse": "cemetery",
+    "name": "Maimonides-Elmont Cemetery",
+    "nysgissam:nysaddresspointid": "NASS174237",
+    "religion": "jewish"
+  }
+},
+{
+  "type": "way",
+  "id": 60844328,
+  "center": {
+    "lat": 40.7094621,
+    "lon": -73.8835553
+  },
+  "tags": {
+    "landuse": "cemetery",
+    "note": "south part of Lutheran All Faiths Cemetery"
+  }
+},
+{
+  "type": "way",
+  "id": 60928528,
+  "center": {
+    "lat": 40.7201940,
+    "lon": -73.8966452
+  },
+  "tags": {
+    "landuse": "cemetery",
+    "name": "Mount Olivet Cemetery",
+    "religion": "multifaith",
+    "website": "https://www.nycmoc.com/",
+    "wikidata": "Q21586308",
+    "wikipedia": "en:Mount Olivet Cemetery (Queens)"
+  }
+},
+{
+  "type": "way",
+  "id": 61007706,
+  "center": {
+    "lat": 40.7381339,
+    "lon": -73.8315588
+  },
+  "tags": {
+    "addr:housenumber": "130-04",
+    "addr:postcode": "11367",
+    "addr:street": "Horace Harding Expressway",
+    "ele": "18",
+    "gnis:feature_id": "946106",
+    "landuse": "cemetery",
+    "name": "Cedar Grove Cemetery",
+    "source": "Yahoo",
+    "website": "https://www.thecedargrovecemetery.com/",
+    "wikidata": "Q5056726"
+  }
+},
+{
+  "type": "way",
+  "id": 62212495,
+  "center": {
+    "lat": 40.7246105,
+    "lon": -73.9888958
+  },
+  "tags": {
+    "access": "private",
+    "addr:housenumber": "74",
+    "addr:postcode": "10003",
+    "addr:street": "East 2nd Street",
+    "ele": "12",
+    "gnis:feature_id": "2082984",
+    "landuse": "cemetery",
+    "name": "New York City Marble Cemetery",
+    "website": "https://www.nycmc.org/",
+    "wikidata": "Q7013238",
+    "wikipedia": "en:New York City Marble Cemetery"
+  }
+},
+{
+  "type": "way",
+  "id": 62212952,
+  "center": {
+    "lat": 40.7256318,
+    "lon": -73.9909804
+  },
+  "tags": {
+    "addr:housenumber": "41 1/2",
+    "addr:postcode": "10003",
+    "addr:street": "2nd Avenue",
+    "landuse": "cemetery",
+    "name": "New York Marble Cemetery",
+    "website": "https://www.marblecemetery.org/",
+    "wikidata": "Q2879976",
+    "wikipedia": "en:New York Marble Cemetery"
+  }
+},
+{
+  "type": "way",
+  "id": 62461112,
+  "center": {
+    "lat": 40.8263405,
+    "lon": -73.8329854
+  },
+  "tags": {
+    "landuse": "cemetery"
+  }
+},
+{
+  "type": "way",
+  "id": 72011719,
+  "center": {
+    "lat": 40.9061552,
+    "lon": -73.7982632
+  },
+  "tags": {
+    "landuse": "cemetery",
+    "name": "Beechwoods Cemetery",
+    "wikidata": "Q4087600",
+    "wikipedia": "en:Beechwoods Cemetery (New Rochelle, New York)"
+  }
+},
+{
+  "type": "way",
+  "id": 72011726,
+  "center": {
+    "lat": 40.9043834,
+    "lon": -73.7974557
+  },
+  "tags": {
+    "denomination": "catholic",
+    "landuse": "cemetery",
+    "name": "Holy Sepulchre Cemetery",
+    "religion": "christian",
+    "wikidata": "Q5886182",
+    "wikipedia": "en:Holy Sepulchre Cemetery (New Rochelle, New York)"
+  }
+},
+{
+  "type": "way",
+  "id": 75309465,
+  "center": {
+    "lat": 40.7114926,
+    "lon": -74.0095562
+  },
+  "tags": {
+    "amenity": "grave_yard",
+    "barrier": "fence",
+    "height": "2",
+    "name": "St. Paul's Churchyard",
+    "name:el": "Κοιμητήριο Αγίου Παύλου",
+    "religion": "christian"
+  }
+},
+{
+  "type": "way",
+  "id": 75870619,
+  "center": {
+    "lat": 40.5142355,
+    "lon": -74.2181379
+  },
+  "tags": {
+    "amenity": "grave_yard",
+    "denomination": "catholic",
+    "religion": "christian"
+  }
+},
+{
+  "type": "way",
+  "id": 87821743,
+  "center": {
+    "lat": 40.6347959,
+    "lon": -73.7061984
+  },
+  "tags": {
+    "amenity": "grave_yard",
+    "ele": "8",
+    "gnis:feature_id": "967808",
+    "landuse": "cemetery",
+    "name": "Trinity Cemetery",
+    "religion": "christian",
+    "wikidata": "Q55875707"
+  }
+},
+{
+  "type": "way",
+  "id": 108237819,
+  "center": {
+    "lat": 40.8321935,
+    "lon": -73.9463217
+  },
+  "tags": {
+    "ele": "42",
+    "gnis:feature_id": "2083782",
+    "landuse": "cemetery",
+    "name": "Trinity Cemetery",
+    "start_date": "1869",
+    "wikidata": "Q7842624",
+    "wikipedia": "en:Trinity Cemetery"
+  }
+},
+{
+  "type": "way",
+  "id": 113757310,
+  "center": {
+    "lat": 40.7121205,
+    "lon": -73.9135367
+  },
+  "tags": {
+    "ele": "20",
+    "gnis:feature_id": "942211",
+    "landuse": "cemetery",
+    "name": "Ahawith Chesed Cemetery",
+    "source": "bing"
+  }
+},
+{
+  "type": "way",
+  "id": 113757311,
+  "center": {
+    "lat": 40.7106762,
+    "lon": -73.9137574
+  },
+  "tags": {
+    "ele": "30",
+    "gnis:feature_id": "955401",
+    "grass": "mown",
+    "landuse": "cemetery",
+    "name": "Linden Hill Cemetery",
+    "source": "bing"
+  }
+},
+{
+  "type": "way",
+  "id": 162618852,
+  "center": {
+    "lat": 40.9132988,
+    "lon": -73.9069649
+  },
+  "tags": {
+    "landuse": "cemetery"
+  }
+},
+{
+  "type": "way",
+  "id": 168659472,
+  "center": {
+    "lat": 40.8224030,
+    "lon": -73.6838360
+  },
+  "tags": {
+    "gnis:feature_id": "958282",
+    "landuse": "cemetery",
+    "name": "Nassau Knolls Cemetery",
+    "wikidata": "Q89194038"
+  }
+},
+{
+  "type": "way",
+  "id": 170606118,
+  "center": {
+    "lat": 40.6107614,
+    "lon": -74.0059822
+  },
+  "tags": {
+    "amenity": "grave_yard",
+    "ele": "8",
+    "gnis:feature_id": "2365069",
+    "name": "New Utrecht Cemetery"
+  }
+},
+{
+  "type": "way",
+  "id": 185020616,
+  "center": {
+    "lat": 40.6104572,
+    "lon": -74.1614766
+  },
+  "tags": {
+    "landuse": "cemetery",
+    "name": "Merrill Cemetery"
+  }
+},
+{
+  "type": "way",
+  "id": 188161561,
+  "center": {
+    "lat": 40.8960165,
+    "lon": -73.8923165
+  },
+  "tags": {
+    "landuse": "cemetery",
+    "name": "Van Courtlandt Family Vault",
+    "old_name": "Burial Plot of the VanCortlandt Family"
+  }
+},
+{
+  "type": "way",
+  "id": 188163030,
+  "center": {
+    "lat": 40.7426749,
+    "lon": -73.8352547
+  },
+  "tags": {
+    "landuse": "cemetery",
+    "name": "Willet Family Burial Ground",
+    "source": "http://nycemetery.wordpress.com/2011/04/28/willett-family-burial-ground/"
+  }
+},
+{
+  "type": "way",
+  "id": 197854531,
+  "center": {
+    "lat": 40.8436564,
+    "lon": -73.8792387
+  },
+  "tags": {
+    "ele": "16",
+    "gnis:feature_id": "2072314",
+    "landuse": "cemetery",
+    "name": "Old West Farms Soldiers Cemetery",
+    "religion": "christian"
+  }
+},
+{
+  "type": "way",
+  "id": 221156627,
+  "center": {
+    "lat": 40.7416151,
+    "lon": -73.9944212
+  },
+  "tags": {
+    "gnis:feature_id": "2083033",
+    "landuse": "cemetery",
+    "name": "Third Cemetery of the Spanish-Portuguese Synagogue",
+    "religion": "jewish",
+    "website": "https://www.shearithisrael.org/",
+    "wikidata": "Q1435187",
+    "wikipedia": "en:Congregation Shearith Israel"
+  }
+},
+{
+  "type": "way",
+  "id": 221190741,
+  "center": {
+    "lat": 40.7737898,
+    "lon": -73.9251922
+  },
+  "tags": {
+    "amenity": "grave_yard",
+    "barrier": "fence"
+  }
+},
+{
+  "type": "way",
+  "id": 229121195,
+  "center": {
+    "lat": 40.8569242,
+    "lon": -73.7690168
+  },
+  "tags": {
+    "amenity": "grave_yard",
+    "name": "Potters Field"
+  }
+},
+{
+  "type": "way",
+  "id": 229121196,
+  "center": {
+    "lat": 40.8470146,
+    "lon": -73.7702183
+  },
+  "tags": {
+    "amenity": "grave_yard",
+    "name": "Potters Field"
+  }
+},
+{
+  "type": "way",
+  "id": 229121197,
+  "center": {
+    "lat": 40.8491425,
+    "lon": -73.7701842
+  },
+  "tags": {
+    "amenity": "grave_yard",
+    "name": "Potters Field"
+  }
+},
+{
+  "type": "way",
+  "id": 247894168,
+  "center": {
+    "lat": 40.6876036,
+    "lon": -73.8821044
+  },
+  "tags": {
+    "addr:city": "Brooklyn",
+    "addr:housenumber": "625",
+    "addr:postcode": "11208",
+    "addr:state": "NY",
+    "addr:street": "Jamaica Avenue",
+    "fax": "+1-631-694-5422",
+    "landuse": "cemetery",
+    "name": "Cypress Hills National Cemetery",
+    "phone": "+1-631-454-4949",
+    "website": "https://www.cem.va.gov/cems/nchp/CypressHills.asp",
+    "wikidata": "Q5200340",
+    "wikipedia": "en:Cypress Hills National Cemetery"
+  }
+},
+{
+  "type": "way",
+  "id": 247959242,
+  "center": {
+    "lat": 40.6926459,
+    "lon": -73.8851635
+  },
+  "tags": {
+    "landuse": "cemetery",
+    "name": "Hungarian Cemetery"
+  }
+},
+{
+  "type": "way",
+  "id": 247959243,
+  "center": {
+    "lat": 40.6938664,
+    "lon": -73.8863386
+  },
+  "tags": {
+    "landuse": "cemetery",
+    "name": "Machpelah Cemetery",
+    "religion": "jewish",
+    "wikidata": "Q6723847",
+    "wikipedia": "en:Machpelah Cemetery (Queens)"
+  }
+},
+{
+  "type": "way",
+  "id": 247959244,
+  "center": {
+    "lat": 40.6951246,
+    "lon": -73.8870690
+  },
+  "tags": {
+    "landuse": "cemetery",
+    "name": "New Union Field Cemetery"
+  }
+},
+{
+  "type": "way",
+  "id": 250484797,
+  "center": {
+    "lat": 40.8964618,
+    "lon": -74.2153761
+  },
+  "tags": {
+    "landuse": "cemetery",
+    "name": "A M White Lodge Cemetery"
+  }
+},
+{
+  "type": "way",
+  "id": 259750680,
+  "center": {
+    "lat": 40.8375096,
+    "lon": -74.1478932
+  },
+  "tags": {
+    "landuse": "cemetery",
+    "name": "Crest Haven Cemetery"
+  }
+},
+{
+  "type": "way",
+  "id": 261712533,
+  "center": {
+    "lat": 40.7285005,
+    "lon": -74.2016817
+  },
+  "tags": {
+    "amenity": "grave_yard",
+    "ele": "57",
+    "gnis:feature_id": "881927",
+    "landuse": "cemetery",
+    "name": "Woodland Cemetery",
+    "source": "NJ2002LULC",
+    "wikidata": "Q8032817"
+  }
+},
+{
+  "type": "way",
+  "id": 262140495,
+  "center": {
+    "lat": 40.7039707,
+    "lon": -73.8013098
+  },
+  "tags": {
+    "ele": "17",
+    "gnis:feature_id": "2080464",
+    "landuse": "cemetery",
+    "name": "Grace Cemetery"
+  }
+},
+{
+  "type": "way",
+  "id": 267164747,
+  "center": {
+    "lat": 40.7736740,
+    "lon": -74.2344045
+  },
+  "tags": {
+    "addr:city": "Orange",
+    "addr:housenumber": "420",
+    "addr:postcode": "07050",
+    "addr:street": "Main Street",
+    "landuse": "cemetery",
+    "name": "First Presbyterian Churchyard",
+    "note": "Burial site for a number of Revolutionary War veterans"
+  }
+},
+{
+  "type": "way",
+  "id": 273798166,
+  "center": {
+    "lat": 40.7351001,
+    "lon": -73.9978629
+  },
+  "tags": {
+    "gnis:feature_id": "2082880",
+    "landuse": "cemetery",
+    "name": "Second Cemetery of Congregation Shearith Israel",
+    "religion": "jewish"
+  }
+},
+{
+  "type": "way",
+  "id": 275277328,
+  "center": {
+    "lat": 40.8992100,
+    "lon": -74.1993446
+  },
+  "tags": {
+    "landuse": "cemetery",
+    "name": "Independent United Jersey Verein Cemetery"
+  }
+},
+{
+  "type": "way",
+  "id": 277480677,
+  "center": {
+    "lat": 40.7001939,
+    "lon": -74.1906592
+  },
+  "tags": {
+    "landuse": "cemetery",
+    "name": "Floral Rest City Cemetery Memorial"
+  }
+},
+{
+  "type": "way",
+  "id": 277481155,
+  "center": {
+    "lat": 40.6905625,
+    "lon": -74.1951652
+  },
+  "tags": {
+    "landuse": "cemetery",
+    "name": "Mount Olivet Cemetery",
+    "religion": "christian",
+    "wikidata": "Q6922562"
+  }
+},
+{
+  "type": "way",
+  "id": 277481156,
+  "center": {
+    "lat": 40.6893986,
+    "lon": -74.1982642
+  },
+  "tags": {
+    "landuse": "cemetery",
+    "name": "B'nai Israel Cemetery",
+    "religion": "jewish"
+  }
+},
+{
+  "type": "way",
+  "id": 277481157,
+  "center": {
+    "lat": 40.6865688,
+    "lon": -74.1956428
+  },
+  "tags": {
+    "landuse": "cemetery",
+    "name": "Rosemont Memorial Park",
+    "religion": "christian"
+  }
+},
+{
+  "type": "way",
+  "id": 284911278,
+  "center": {
+    "lat": 40.7726419,
+    "lon": -73.9285273
+  },
+  "tags": {
+    "landuse": "cemetery"
+  }
+},
+{
+  "type": "way",
+  "id": 306813111,
+  "center": {
+    "lat": 40.6888565,
+    "lon": -73.9028519
+  },
+  "tags": {
+    "landuse": "cemetery",
+    "name": "Most Holy Trinity Cemetery",
+    "wikidata": "Q61478675"
+  }
+},
+{
+  "type": "way",
+  "id": 307016834,
+  "center": {
+    "lat": 40.8684420,
+    "lon": -74.0971469
+  },
+  "tags": {
+    "denomination": "greek_orthodox",
+    "landuse": "cemetery",
+    "name": "St Peter's Cemetery",
+    "religion": "christian",
+    "source": "NJ2002LULC"
+  }
+},
+{
+  "type": "way",
+  "id": 307016838,
+  "center": {
+    "lat": 40.8708695,
+    "lon": -74.0916218
+  },
+  "tags": {
+    "landuse": "cemetery",
+    "name": "Lodi Cemetery",
+    "religion": "christian",
+    "source": "NJ2002LULC"
+  }
+},
+{
+  "type": "way",
+  "id": 307016844,
+  "center": {
+    "lat": 40.8694838,
+    "lon": -74.0937699
+  },
+  "tags": {
+    "landuse": "cemetery",
+    "name": "St Nicholas Cemetery",
+    "religion": "christian",
+    "source": "NJ2002LULC"
+  }
+},
+{
+  "type": "way",
+  "id": 307023882,
+  "center": {
+    "lat": 40.8908107,
+    "lon": -74.0906058
+  },
+  "tags": {
+    "denomination": "orthodox",
+    "gnis:feature_id": "880229",
+    "landuse": "cemetery",
+    "name": "Saints Peter and Paul Cemetery",
+    "religion": "christian"
+  }
+},
+{
+  "type": "way",
+  "id": 307233085,
+  "center": {
+    "lat": 40.8998271,
+    "lon": -74.1381702
+  },
+  "tags": {
+    "addr:city": "Paterson",
+    "addr:housenumber": "50",
+    "addr:postcode": "07513",
+    "addr:state": "NJ",
+    "addr:street": "McLean Blvd",
+    "landuse": "cemetery",
+    "name": "Calvary Cemetery",
+    "source": "NJ2002LULC"
+  }
+},
+{
+  "type": "way",
+  "id": 307233089,
+  "center": {
+    "lat": 40.8958230,
+    "lon": -74.1365375
+  },
+  "tags": {
+    "amenity": "grave_yard",
+    "ele": "18",
+    "gnis:feature_id": "875304",
+    "landuse": "cemetery",
+    "name": "Cedar Lawn Cemetery",
+    "source": "NJ2002LULC",
+    "wikidata": "Q5056799"
+  }
+},
+{
+  "type": "way",
+  "id": 307534364,
+  "center": {
+    "lat": 40.7636184,
+    "lon": -74.1639167
+  },
+  "tags": {
+    "landuse": "cemetery",
+    "name": "Mount Pleasant Cemetery",
+    "source": "NJ2002LULC",
+    "wikidata": "Q6922895"
+  }
+},
+{
+  "type": "way",
+  "id": 309154410,
+  "center": {
+    "lat": 40.6499221,
+    "lon": -73.9595035
+  },
+  "tags": {
+    "landuse": "cemetery"
+  }
+},
+{
+  "type": "way",
+  "id": 313715836,
+  "center": {
+    "lat": 40.8551774,
+    "lon": -74.1973900
+  },
+  "tags": {
+    "landuse": "cemetery",
+    "name": "Mount Hebron Cemetery",
+    "wikidata": "Q6921120"
+  }
+},
+{
+  "type": "way",
+  "id": 313715840,
+  "center": {
+    "lat": 40.8543757,
+    "lon": -74.1940203
+  },
+  "tags": {
+    "denomination": "catholic",
+    "landuse": "cemetery",
+    "name": "Immaculate Conception Cemetery",
+    "religion": "christian"
+  }
+},
+{
+  "type": "way",
+  "id": 321445104,
+  "center": {
+    "lat": 40.8114572,
+    "lon": -73.7350072
+  },
+  "tags": {
+    "gnis:feature_id": "942327",
+    "landuse": "cemetery",
+    "name": "All Saints Cemetery",
+    "wikidata": "Q99336824"
+  }
+},
+{
+  "type": "way",
+  "id": 359180376,
+  "center": {
+    "lat": 40.5563703,
+    "lon": -74.2125940
+  },
+  "tags": {
+    "alt_name": "Sleight Family Graveyard",
+    "alt_name_1": "Rossville Cemetery",
+    "amenity": "grave_yard",
+    "name": "Blazing Star Cemetery"
+  }
+},
+{
+  "type": "way",
+  "id": 377492264,
+  "center": {
+    "lat": 40.7499261,
+    "lon": -73.8944446
+  },
+  "tags": {
+    "landuse": "cemetery",
+    "name": "Leverich Cemetery"
+  }
+},
+{
+  "type": "way",
+  "id": 378384808,
+  "center": {
+    "lat": 40.7934912,
+    "lon": -73.6971802
+  },
+  "tags": {
+    "amenity": "grave_yard",
+    "ele": "43",
+    "gnis:feature_id": "2501696",
+    "name": "Episcopal Cemetery"
+  }
+},
+{
+  "type": "way",
+  "id": 380134178,
+  "center": {
+    "lat": 40.7401548,
+    "lon": -73.8775045
+  },
+  "tags": {
+    "check_date": "2026-04-26",
+    "landuse": "cemetery",
+    "religion": "christian"
+  }
+},
+{
+  "type": "way",
+  "id": 412090800,
+  "center": {
+    "lat": 40.7463433,
+    "lon": -74.2028106
+  },
+  "tags": {
+    "landuse": "cemetery",
+    "name": "Fairmount Cemetery",
+    "wikidata": "Q5430637"
+  }
+},
+{
+  "type": "way",
+  "id": 412152563,
+  "center": {
+    "lat": 40.7477951,
+    "lon": -74.2076670
+  },
+  "tags": {
+    "landuse": "cemetery",
+    "name": "Grove Street Cemetery"
+  }
+},
+{
+  "type": "way",
+  "id": 412156198,
+  "center": {
+    "lat": 40.7453001,
+    "lon": -74.2118182
+  },
+  "tags": {
+    "landuse": "cemetery",
+    "name": "Talmud Torah Cemetery"
+  }
+},
+{
+  "type": "way",
+  "id": 412156199,
+  "center": {
+    "lat": 40.7423548,
+    "lon": -74.2100802
+  },
+  "tags": {
+    "landuse": "cemetery",
+    "name": "Union Field Cemetery"
+  }
+},
+{
+  "type": "way",
+  "id": 412156200,
+  "center": {
+    "lat": 40.7422668,
+    "lon": -74.2095746
+  },
+  "tags": {
+    "landuse": "cemetery",
+    "name": "B'nai Abraham"
+  }
+},
+{
+  "type": "way",
+  "id": 412157619,
+  "center": {
+    "lat": 40.6953019,
+    "lon": -74.2133109
+  },
+  "tags": {
+    "addr:city": "Hillside",
+    "addr:housenumber": "1321",
+    "addr:postcode": "07205",
+    "addr:street": "North Broad Street",
+    "landuse": "cemetery",
+    "name": "Oheb Shalom Cemetery",
+    "opening_hours": "Su-Fr 08:00-16:30",
+    "religion": "jewish",
+    "website": "https://www.ohebshalomcemetery.org",
+    "wikidata": "Q117491383"
+  }
+},
+{
+  "type": "way",
+  "id": 412157620,
+  "center": {
+    "lat": 40.6899977,
+    "lon": -74.2102647
+  },
+  "tags": {
+    "addr:city": "Elizabeth",
+    "addr:housenumber": "1351",
+    "addr:postcode": "07208",
+    "addr:street": "Lower Road",
+    "landuse": "cemetery",
+    "name": "B'nai Jeshurun Cemetery",
+    "opening_hours": "Su-Fr 09:00-16:00; PH off",
+    "religion": "jewish",
+    "website": "https://tbj.org/cemetery/",
+    "wikidata": "Q117444368"
+  }
+},
+{
+  "type": "way",
+  "id": 412157621,
+  "center": {
+    "lat": 40.6920845,
+    "lon": -74.2100735
+  },
+  "tags": {
+    "addr:city": "Hillside",
+    "addr:housenumber": "1137",
+    "addr:postcode": "07205",
+    "addr:street": "North Broad Street",
+    "alt_name": "Evergreen Cemetery and Crematory",
+    "landuse": "cemetery",
+    "name": "Evergreen Cemetery",
+    "opening_hours": "08:00-16:45",
+    "phone": "+1 908-352-7940",
+    "website": "https://www.evergreencemetery.net",
+    "wikidata": "Q5417175",
+    "wikipedia": "en:Evergreen Cemetery (Hillside, New Jersey)"
+  }
+},
+{
+  "type": "way",
+  "id": 424955737,
+  "center": {
+    "lat": 40.7479555,
+    "lon": -74.2145592
+  },
+  "tags": {
+    "landuse": "cemetery",
+    "name": "Holy Sepulchre Cemetery"
+  }
+},
+{
+  "type": "way",
+  "id": 424972308,
+  "center": {
+    "lat": 40.7485681,
+    "lon": -74.2096815
+  },
+  "tags": {
+    "landuse": "cemetery",
+    "name": "Holy Sepulchre Cemetery",
+    "wikimedia_commons": "File:Holy Sepulchre Cemetery, Newark, NJ, Dec. 2024.jpg"
+  }
+},
+{
+  "type": "way",
+  "id": 424972309,
+  "center": {
+    "lat": 40.7466606,
+    "lon": -74.2137921
+  },
+  "tags": {
+    "landuse": "cemetery",
+    "name": "Holy Sepulchre Cemetery"
+  }
+},
+{
+  "type": "way",
+  "id": 433174617,
+  "center": {
+    "lat": 40.6337506,
+    "lon": -74.2349154
+  },
+  "tags": {
+    "ele": "6",
+    "gnis:feature_id": "878521",
+    "landuse": "cemetery",
+    "name": "Mount Calvary Cemetery",
+    "source": "NJ2002LULC"
+  }
+},
+{
+  "type": "way",
+  "id": 446153560,
+  "center": {
+    "lat": 40.7014743,
+    "lon": -73.7997200
+  },
+  "tags": {
+    "ele": "18",
+    "gnis:feature_id": "2368036",
+    "landuse": "cemetery",
+    "name": "Prospect Cemetery",
+    "wikidata": "Q7250729",
+    "wikipedia": "en:Prospect Cemetery (Queens)"
+  }
+},
+{
+  "type": "way",
+  "id": 446153562,
+  "center": {
+    "lat": 40.6999639,
+    "lon": -73.7968779
+  },
+  "tags": {
+    "ele": "14",
+    "gnis:feature_id": "2104425",
+    "landuse": "cemetery",
+    "name": "Saint Monica's Cemetery"
+  }
+},
+{
+  "type": "way",
+  "id": 451801079,
+  "center": {
+    "lat": 40.6706860,
+    "lon": -73.8442545
+  },
+  "tags": {
+    "amenity": "grave_yard",
+    "name": "Southside Burial Ground",
+    "ref:nycparks": "Q481",
+    "website": "https://www.nycgovparks.org/parks/southside-burial-ground/"
+  }
+},
+{
+  "type": "way",
+  "id": 468928104,
+  "center": {
+    "lat": 40.8188824,
+    "lon": -74.1630423
+  },
+  "tags": {
+    "landuse": "cemetery"
+  }
+},
+{
+  "type": "way",
+  "id": 479601712,
+  "center": {
+    "lat": 40.5445674,
+    "lon": -74.2193834
+  },
+  "tags": {
+    "landuse": "cemetery",
+    "name": "Bloomingdale Road Cemetery",
+    "religion": "multifaith",
+    "source": "They had a sign up stating it's historical means"
+  }
+},
+{
+  "type": "way",
+  "id": 484450731,
+  "center": {
+    "lat": 40.8754904,
+    "lon": -74.0798774
+  },
+  "tags": {
+    "landuse": "cemetery"
+  }
+},
+{
+  "type": "way",
+  "id": 511374017,
+  "center": {
+    "lat": 40.8708476,
+    "lon": -73.8049654
+  },
+  "tags": {
+    "amenity": "grave_yard"
+  }
+},
+{
+  "type": "way",
+  "id": 531073083,
+  "center": {
+    "lat": 40.7661892,
+    "lon": -73.7429622
+  },
+  "tags": {
+    "denomination": "episcopal",
+    "landuse": "cemetery",
+    "name": "Zion Episcopal Cemetery",
+    "religion": "christian"
+  }
+},
+{
+  "type": "way",
+  "id": 558631169,
+  "center": {
+    "lat": 40.5946698,
+    "lon": -73.9746300
+  },
+  "tags": {
+    "landuse": "cemetery",
+    "name": "Old Gravesend Cemetery",
+    "wikidata": "Q7084131",
+    "wikipedia": "en:Old Gravesend Cemetery"
+  }
+},
+{
+  "type": "way",
+  "id": 562836103,
+  "center": {
+    "lat": 40.9281552,
+    "lon": -74.2266767
+  },
+  "tags": {
+    "landuse": "cemetery",
+    "name": "Berry Family Burial Ground"
+  }
+},
+{
+  "type": "way",
+  "id": 566388093,
+  "center": {
+    "lat": 40.5038099,
+    "lon": -74.2651175
+  },
+  "tags": {
+    "landuse": "cemetery"
+  }
+},
+{
+  "type": "way",
+  "id": 568791849,
+  "center": {
+    "lat": 40.6364473,
+    "lon": -73.9042288
+  },
+  "tags": {
+    "addr:city": "Brooklyn",
+    "addr:housenumber": "1370",
+    "addr:postcode": "11236",
+    "addr:state": "NY",
+    "addr:street": "Remsen Avenue",
+    "landuse": "cemetery",
+    "name": "Canarsie Cemetery",
+    "opening_hours": "08:00-16:30",
+    "website": "https://www.canarsiecemetery.com/"
+  }
+},
+{
+  "type": "way",
+  "id": 582706067,
+  "center": {
+    "lat": 40.6648457,
+    "lon": -73.8853579
+  },
+  "tags": {
+    "landuse": "cemetery"
+  }
+},
+{
+  "type": "way",
+  "id": 605959990,
+  "center": {
+    "lat": 40.8633724,
+    "lon": -73.8858953
+  },
+  "tags": {
+    "denomination": "roman_catholic",
+    "landuse": "cemetery",
+    "name": "Jesuit Cemetery, Fordham University",
+    "religion": "christian"
+  }
+},
+{
+  "type": "way",
+  "id": 638469713,
+  "center": {
+    "lat": 40.9122027,
+    "lon": -74.1090214
+  },
+  "tags": {
+    "gnis:feature_id": "874436",
+    "landuse": "cemetery",
+    "name": "B'Nai Israel Cemetery"
+  }
+},
+{
+  "type": "way",
+  "id": 638469714,
+  "center": {
+    "lat": 40.9128168,
+    "lon": -74.1091749
+  },
+  "tags": {
+    "gnis:feature_id": "874331",
+    "landuse": "cemetery",
+    "name": "Americus Cemetery"
+  }
+},
+{
+  "type": "way",
+  "id": 701967111,
+  "center": {
+    "lat": 40.6599679,
+    "lon": -73.9727499
+  },
+  "tags": {
+    "access": "private",
+    "alt_name": "Friends Cemetary",
+    "barrier": "fence",
+    "denomination": "quaker",
+    "ele": "48",
+    "fence_type": "metal",
+    "gnis:feature_id": "962033",
+    "landuse": "cemetery",
+    "name": "Quaker Cemetery",
+    "religion": "christian",
+    "wikimedia_commons": "Category:Friends Cemetery (Prospect Park)"
+  }
+},
+{
+  "type": "way",
+  "id": 728247312,
+  "center": {
+    "lat": 40.7560068,
+    "lon": -73.9076820
+  },
+  "tags": {
+    "addr:housenumber": "31-36",
+    "addr:street": "51st Street",
+    "landuse": "cemetery",
+    "name": "Moore-Jackson Cemetery",
+    "opening_hours": "Sa 09:00-12:00",
+    "wikidata": "Q17109455",
+    "wikipedia": "en:Moore-Jackson Cemetery"
+  }
+},
+{
+  "type": "way",
+  "id": 734953962,
+  "center": {
+    "lat": 40.7274225,
+    "lon": -74.0665101
+  },
+  "tags": {
+    "landuse": "cemetery",
+    "name": "Old Bergen Church Cemetery",
+    "religion": "christian",
+    "wikidata": "Q115411193"
+  }
+},
+{
+  "type": "way",
+  "id": 735298228,
+  "center": {
+    "lat": 40.8103348,
+    "lon": -73.8825391
+  },
+  "tags": {
+    "landuse": "cemetery"
+  }
+},
+{
+  "type": "way",
+  "id": 765429585,
+  "center": {
+    "lat": 40.7381360,
+    "lon": -73.7452029
+  },
+  "tags": {
+    "description": "This burial ground is reserved by Jacob Johnson for his family and his brethren of Flushing, referring to the Afro-American residents of Queens.",
+    "landuse": "cemetery",
+    "name": "Johnson Burial Ground",
+    "website": "https://nycemetery.wordpress.com/2010/11/09/johnson-burial-ground/"
+  }
+},
+{
+  "type": "way",
+  "id": 781449942,
+  "center": {
+    "lat": 40.9175747,
+    "lon": -74.2293044
+  },
+  "tags": {
+    "landuse": "cemetery",
+    "name": "Dey-Hogencamp Cemetery"
+  }
+},
+{
+  "type": "way",
+  "id": 786097793,
+  "center": {
+    "lat": 40.7320325,
+    "lon": -73.7882503
+  },
+  "tags": {
+    "landuse": "cemetery",
+    "name": "Brinckerhoff Cemetery",
+    "wikidata": "Q117676874",
+    "wikipedia": "en:Brinckerhoff Cemetery"
+  }
+},
+{
+  "type": "way",
+  "id": 799382859,
+  "center": {
+    "lat": 40.7284375,
+    "lon": -74.0678340
+  },
+  "tags": {
+    "landuse": "cemetery",
+    "name": "Speer Cemetery",
+    "wikidata": "Q7575740"
+  }
+},
+{
+  "type": "way",
+  "id": 802276290,
+  "center": {
+    "lat": 40.9272006,
+    "lon": -73.7529645
+  },
+  "tags": {
+    "amenity": "grave_yard",
+    "elevation": "19",
+    "gnis:feature_id": "2516634",
+    "name": "Quaker Burial Grounds"
+  }
+},
+{
+  "type": "way",
+  "id": 830858152,
+  "center": {
+    "lat": 40.7626602,
+    "lon": -73.8301069
+  },
+  "tags": {
+    "denomination": "quaker",
+    "landuse": "cemetery",
+    "religion": "christian"
+  }
+},
+{
+  "type": "way",
+  "id": 874060068,
+  "center": {
+    "lat": 40.6941739,
+    "lon": -73.7159372
+  },
+  "tags": {
+    "landuse": "cemetery"
+  }
+},
+{
+  "type": "way",
+  "id": 886579596,
+  "center": {
+    "lat": 40.7033339,
+    "lon": -73.7108638
+  },
+  "tags": {
+    "addr:housenumber": "300",
+    "addr:postcode": "11003",
+    "addr:street": "Elmont Road",
+    "ele": "17",
+    "gnis:feature_id": "949583",
+    "landuse": "cemetery",
+    "name": "Elmont Cemetery",
+    "religion": "jewish"
+  }
+},
+{
+  "type": "way",
+  "id": 886583402,
+  "center": {
+    "lat": 40.8311127,
+    "lon": -73.6820489
+  },
+  "tags": {
+    "ele": "39",
+    "gnis:feature_id": "2462696",
+    "heritage": "2",
+    "heritage:operator": "nrhp",
+    "heritage:since": "1988-01-07",
+    "heritage:website": "https://catalog.archives.gov/id/75319155",
+    "historic": "cemetery",
+    "landuse": "cemetery",
+    "name": "Monfort Cemetery",
+    "ref:nrhp": "87002301",
+    "religion": "christian",
+    "start_date": "1737",
+    "wikidata": "Q6899369",
+    "wikipedia": "en:Monfort Cemetery"
+  }
+},
+{
+  "type": "way",
+  "id": 886587180,
+  "center": {
+    "lat": 40.6964698,
+    "lon": -73.7145630
+  },
+  "tags": {
+    "amenity": "grave_yard",
+    "ele": "16",
+    "gnis:feature_id": "964097",
+    "historic": "cemetery",
+    "landuse": "cemetery",
+    "name": "St. Paul's German Presbyterian Cemetery",
+    "start_date": "~1870"
+  }
+},
+{
+  "type": "way",
+  "id": 886589568,
+  "center": {
+    "lat": 40.7127692,
+    "lon": -73.9983604
+  },
+  "tags": {
+    "addr:city": "New York",
+    "addr:housenumber": "59",
+    "addr:state": "NY",
+    "addr:street": "Saint James Place",
+    "alt_name": "First Cemetery of Congregation Shearith Israel;First Shearith Israel Graveyard",
+    "amenity": "grave_yard",
+    "ele": "5",
+    "gnis:feature_id": "2063252",
+    "landuse": "cemetery",
+    "name": "Chatham Square Cemetery",
+    "religion": "jewish",
+    "wikidata": "Q5453797"
+  }
+},
+{
+  "type": "way",
+  "id": 889503082,
+  "center": {
+    "lat": 40.7772910,
+    "lon": -73.9056408
+  },
+  "tags": {
+    "ele": "14",
+    "gnis:feature_id": "955102",
+    "landuse": "cemetery",
+    "name": "Lawrence Cemetery"
+  }
+},
+{
+  "type": "way",
+  "id": 890040751,
+  "center": {
+    "lat": 40.5845753,
+    "lon": -74.1214125
+  },
+  "tags": {
+    "ele": "65",
+    "gnis:feature_id": "968450",
+    "landuse": "cemetery",
+    "name": "Vanderbilt Cemetery",
+    "name:etymology:wikidata": "Q284829",
+    "ref:nrhp": "100006780",
+    "wikidata": "Q85739283",
+    "wikipedia": "en:Vanderbilt Family Cemetery and Mausoleum"
+  }
+},
+{
+  "type": "way",
+  "id": 890044160,
+  "center": {
+    "lat": 40.6206112,
+    "lon": -74.0969538
+  },
+  "tags": {
+    "ele": "71",
+    "gnis:feature_id": "965269",
+    "landuse": "cemetery",
+    "name": "Silver Lake Cemetery"
+  }
+},
+{
+  "type": "way",
+  "id": 890044161,
+  "center": {
+    "lat": 40.6219986,
+    "lon": -74.0952168
+  },
+  "tags": {
+    "ele": "80",
+    "gnis:feature_id": "965281",
+    "landuse": "cemetery",
+    "name": "Silver Mount Cemetery",
+    "wikidata": "Q7516207"
+  }
+},
+{
+  "type": "way",
+  "id": 890067178,
+  "center": {
+    "lat": 40.5633517,
+    "lon": -74.1351214
+  },
+  "tags": {
+    "alt_name": "Frederick Douglass Cemetery",
+    "ele": "21",
+    "gnis:feature_id": "948607",
+    "historic": "yes",
+    "landuse": "cemetery",
+    "name": "Frederick Douglass Memorial Park",
+    "name:etymology:wikidata": "Q215562",
+    "operator": "Historic Frederick Douglass Memorial Park, Inc.",
+    "website": "https://www.fdcemetery.com/",
+    "wikidata": "Q104872221",
+    "wikipedia": "en:Frederick Douglass Memorial Park"
+  }
+},
+{
+  "type": "way",
+  "id": 890067179,
+  "center": {
+    "lat": 40.5674506,
+    "lon": -74.1464734
+  },
+  "tags": {
+    "ele": "14",
+    "gnis:feature_id": "968241",
+    "landuse": "cemetery",
+    "name": "United Hebrew Cemetery",
+    "religion": "jewish"
+  }
+},
+{
+  "type": "way",
+  "id": 890067180,
+  "center": {
+    "lat": 40.5677455,
+    "lon": -74.1430807
+  },
+  "tags": {
+    "ele": "15",
+    "gnis:feature_id": "957898",
+    "landuse": "cemetery",
+    "name": "Mount Richmond Cemetery",
+    "operator": "Hebrew Free Burial Association",
+    "religion": "jewish",
+    "website": "https://www.hebrewfreeburial.org/"
+  }
+},
+{
+  "type": "way",
+  "id": 898000389,
+  "center": {
+    "lat": 40.9215892,
+    "lon": -73.8474223
+  },
+  "tags": {
+    "ele": "25",
+    "gnis:feature_id": "965099",
+    "landuse": "cemetery",
+    "name": "Sherwood Park Cemetery"
+  }
+},
+{
+  "type": "way",
+  "id": 898009433,
+  "center": {
+    "lat": 40.9092201,
+    "lon": -73.7850497
+  },
+  "tags": {
+    "ele": "27",
+    "gnis:feature_id": "2516630",
+    "landuse": "cemetery",
+    "name": "Trinity Protestant Episcopal Cemetery"
+  }
+},
+{
+  "type": "way",
+  "id": 927702374,
+  "center": {
+    "lat": 40.8564820,
+    "lon": -73.7704301
+  },
+  "tags": {
+    "amenity": "grave_yard",
+    "name": "Potters Field"
+  }
+},
+{
+  "type": "way",
+  "id": 947350100,
+  "center": {
+    "lat": 40.8142612,
+    "lon": -74.1555386
+  },
+  "tags": {
+    "landuse": "cemetery",
+    "name": "Vincent Cemetery"
+  }
+},
+{
+  "type": "way",
+  "id": 998121690,
+  "center": {
+    "lat": 40.8553649,
+    "lon": -74.0416751
+  },
+  "tags": {
+    "landuse": "cemetery",
+    "name": "Gethsemane Cemetery",
+    "wikidata": "Q5554454"
+  }
+},
+{
+  "type": "way",
+  "id": 1010072739,
+  "center": {
+    "lat": 40.7910031,
+    "lon": -74.0263899
+  },
+  "tags": {
+    "gnis:feature_id": "876395",
+    "landuse": "cemetery",
+    "name": "Flower Hill Cemetery",
+    "wikidata": "Q5462169",
+    "wikipedia": "en:Flower Hill Cemetery (North Bergen, New Jersey)"
+  }
+},
+{
+  "type": "way",
+  "id": 1038183570,
+  "center": {
+    "lat": 40.6238360,
+    "lon": -73.9366696
+  },
+  "tags": {
+    "amenity": "grave_yard"
+  }
+},
+{
+  "type": "way",
+  "id": 1040329398,
+  "center": {
+    "lat": 40.7936966,
+    "lon": -73.6939289
+  },
+  "tags": {
+    "amenity": "grave_yard",
+    "ele": "43",
+    "historic": "cemetery",
+    "landuse": "cemetery",
+    "name": "Manhasset Friends Meeting House Cemetery",
+    "start_date": "~1730"
+  }
+},
+{
+  "type": "way",
+  "id": 1050408664,
+  "center": {
+    "lat": 40.8439264,
+    "lon": -73.7065619
+  },
+  "tags": {
+    "landuse": "cemetery",
+    "name": "Cornwall Cemetery"
+  }
+},
+{
+  "type": "way",
+  "id": 1051038443,
+  "center": {
+    "lat": 40.7602301,
+    "lon": -73.8315635
+  },
+  "tags": {
+    "amenity": "grave_yard"
+  }
+},
+{
+  "type": "way",
+  "id": 1091646605,
+  "center": {
+    "lat": 40.9249658,
+    "lon": -74.0285558
+  },
+  "tags": {
+    "alt_name": "French Huguenot Cemetery",
+    "amenity": "grave_yard",
+    "ele": "7",
+    "gnis:feature_id": "876508",
+    "name": "French Burial Ground",
+    "religion": "christian",
+    "wikidata": "Q132732948"
+  }
+},
+{
+  "type": "way",
+  "id": 1113769515,
+  "center": {
+    "lat": 40.5708083,
+    "lon": -74.1459221
+  },
+  "tags": {
+    "amenity": "grave_yard",
+    "name": "Rezeau-Van Pelt Cemetery"
+  }
+},
+{
+  "type": "way",
+  "id": 1119761125,
+  "center": {
+    "lat": 40.6238352,
+    "lon": -74.1446174
+  },
+  "tags": {
+    "landuse": "cemetery",
+    "name": "Heart of Jesus Cemetery",
+    "religion": "christian"
+  }
+},
+{
+  "type": "way",
+  "id": 1119761133,
+  "center": {
+    "lat": 40.6243146,
+    "lon": -74.1449041
+  },
+  "tags": {
+    "landuse": "cemetery",
+    "name": "Lake/Silvie's Cemetery",
+    "operator": "Friends of Abandoned Cemeteries, Inc."
+  }
+},
+{
+  "type": "way",
+  "id": 1122134173,
+  "center": {
+    "lat": 40.8088301,
+    "lon": -74.2573502
+  },
+  "tags": {
+    "landuse": "cemetery",
+    "source": "Bing"
+  }
+},
+{
+  "type": "way",
+  "id": 1126699529,
+  "center": {
+    "lat": 40.6501793,
+    "lon": -73.9561342
+  },
+  "tags": {
+    "addr:housenumber": "2286",
+    "addr:postcode": "11226",
+    "addr:street": "Church Avenue",
+    "historic": "yes",
+    "landuse": "cemetery",
+    "name": "Flatbush African Burial Ground",
+    "website": "https://www.flatbushafricanburialground.org"
+  }
+},
+{
+  "type": "way",
+  "id": 1137106853,
+  "center": {
+    "lat": 40.7124136,
+    "lon": -73.8585062
+  },
+  "tags": {
+    "amenity": "grave_yard",
+    "name": "Remsen Family Cemetery"
+  }
+},
+{
+  "type": "way",
+  "id": 1154577622,
+  "center": {
+    "lat": 40.7394352,
+    "lon": -73.8775131
+  },
+  "tags": {
+    "amenity": "grave_yard",
+    "check_date": "2026-04-26"
+  }
+},
+{
+  "type": "way",
+  "id": 1162840214,
+  "center": {
+    "lat": 40.8379045,
+    "lon": -74.0876626
+  },
+  "tags": {
+    "ele": "9",
+    "gnis:feature_id": "2054745",
+    "landuse": "cemetery",
+    "name": "Berry Lawn Cemetery"
+  }
+},
+{
+  "type": "way",
+  "id": 1189445987,
+  "center": {
+    "lat": 40.5615182,
+    "lon": -74.1851795
+  },
+  "tags": {
+    "amenity": "grave_yard"
+  }
+},
+{
+  "type": "way",
+  "id": 1242137092,
+  "center": {
+    "lat": 40.6001102,
+    "lon": -73.7496139
+  },
+  "tags": {
+    "landuse": "cemetery",
+    "name": "Cornell Burial Ground",
+    "source": "Interment.net"
+  }
+},
+{
+  "type": "way",
+  "id": 1255715155,
+  "center": {
+    "lat": 40.5432852,
+    "lon": -74.2014339
+  },
+  "tags": {
+    "amenity": "grave_yard"
+  }
+},
+{
+  "type": "way",
+  "id": 1307266173,
+  "center": {
+    "lat": 40.5726186,
+    "lon": -74.1477947
+  },
+  "tags": {
+    "amenity": "grave_yard",
+    "name": "A Cemetery for All God's Creatures",
+    "religion": "christian"
+  }
+},
+{
+  "type": "way",
+  "id": 1318180385,
+  "center": {
+    "lat": 40.7845935,
+    "lon": -74.1570332
+  },
+  "tags": {
+    "denomination": "catholic",
+    "landuse": "cemetery",
+    "name": "Saint Peters Churchyard Cemetery",
+    "religion": "christian"
+  }
+},
+{
+  "type": "way",
+  "id": 1319989324,
+  "center": {
+    "lat": 40.7866492,
+    "lon": -74.1494036
+  },
+  "tags": {
+    "landuse": "cemetery"
+  }
+},
+{
+  "type": "way",
+  "id": 1321846450,
+  "center": {
+    "lat": 40.6874878,
+    "lon": -74.1984915
+  },
+  "tags": {
+    "landuse": "cemetery",
+    "note": "Used to be a bunch of different, small cemeteries for various organizations.",
+    "religion": "jewish"
+  }
+},
+{
+  "type": "way",
+  "id": 1321851928,
+  "center": {
+    "lat": 40.6884397,
+    "lon": -74.1964483
+  },
+  "tags": {
+    "landuse": "cemetery",
+    "note": "This used to be a variety of smaller cemeteries run by various organizations.",
+    "religion": "jewish"
+  }
+},
+{
+  "type": "way",
+  "id": 1321851929,
+  "center": {
+    "lat": 40.6887233,
+    "lon": -74.1946970
+  },
+  "tags": {
+    "landuse": "cemetery",
+    "name": "Beth El Cemetery",
+    "religion": "jewish"
+  }
+},
+{
+  "type": "way",
+  "id": 1321854399,
+  "center": {
+    "lat": 40.6873973,
+    "lon": -74.1955272
+  },
+  "tags": {
+    "landuse": "cemetery",
+    "name": "First Robishower Chelmer Cemetery",
+    "religion": "jewish"
+  }
+},
+{
+  "type": "way",
+  "id": 1321854400,
+  "center": {
+    "lat": 40.6873579,
+    "lon": -74.1956931
+  },
+  "tags": {
+    "landuse": "cemetery",
+    "name": "The Link",
+    "religion": "jewish"
+  }
+},
+{
+  "type": "way",
+  "id": 1321854401,
+  "center": {
+    "lat": 40.6873334,
+    "lon": -74.1958188
+  },
+  "tags": {
+    "landuse": "cemetery",
+    "name": "Talmud Torah Cemetery",
+    "religion": "jewish"
+  }
+},
+{
+  "type": "way",
+  "id": 1321856524,
+  "center": {
+    "lat": 40.6884816,
+    "lon": -74.1979632
+  },
+  "tags": {
+    "landuse": "cemetery",
+    "name": "Gomel Chesed Cemetery",
+    "religion": "jewish"
+  }
+},
+{
+  "type": "way",
+  "id": 1356549076,
+  "center": {
+    "lat": 40.6541268,
+    "lon": -74.2191501
+  },
+  "tags": {
+    "access": "private",
+    "amenity": "grave_yard",
+    "denomination": "roman_catholic",
+    "ele": "8",
+    "gnis:feature_id": "880100",
+    "name": "Saint Mary of the Assumption Cemetery",
+    "religion": "christian"
+  }
+},
+{
+  "type": "way",
+  "id": 1373210002,
+  "center": {
+    "lat": 40.6576350,
+    "lon": -74.1068480
+  },
+  "tags": {
+    "landuse": "cemetery",
+    "name": "Bayonne Constable Hook Cemetery",
+    "wikidata": "Q5163472",
+    "wikipedia": "en:Constable Hook Cemetery"
+  }
+},
+{
+  "type": "way",
+  "id": 1376907695,
+  "center": {
+    "lat": 40.8576130,
+    "lon": -73.7242041
+  },
+  "tags": {
+    "description": "Cemetery for the Sands family.",
+    "heritage": "2",
+    "heritage:operator": "nrhp",
+    "heritage:since": "1992-03-12",
+    "heritage:website": "https://catalog.archives.gov/id/75319195",
+    "historic": "cemetery",
+    "landuse": "cemetery",
+    "name": "Sands Family Cemetery",
+    "ref:find_a_grave": "2356134",
+    "ref:nrhp": "92000092",
+    "start_date": "~1704",
+    "wikidata": "Q7416897",
+    "wikipedia": "en:Sands Family Cemetery"
+  }
+},
+{
+  "type": "way",
+  "id": 1379558797,
+  "center": {
+    "lat": 40.7738363,
+    "lon": -73.7036294
+  },
+  "tags": {
+    "historic": "cemetery",
+    "landuse": "cemetery",
+    "name": "Lakeville A.M.E. Zionist Church Cemetery",
+    "start_date": "1820"
+  }
+},
+{
+  "type": "way",
+  "id": 1424492347,
+  "center": {
+    "lat": 40.8903124,
+    "lon": -73.8926499
+  },
+  "tags": {
+    "amenity": "grave_yard",
+    "barrier": "fence",
+    "fence_type": "post_and_rail",
+    "fixme": "geometry is approximate",
+    "name": "Enslaved African and Kingsbridge Burial Grounds",
+    "note": "This roughly represents the fenced-in section; the actual burial ground may be larger, see https://kingsbridgehistoricalsociety.org/kingsbridge-burial-grounds-within-van-cortlandt-park/",
+    "website": "https://www.nycgovparks.org/parks/VanCortlandtPark/highlights/19847"
+  }
+},
+{
+  "type": "way",
+  "id": 1441532059,
+  "center": {
+    "lat": 40.8974221,
+    "lon": -73.7869469
+  },
+  "tags": {
+    "amenity": "grave_yard",
+    "ele": "23",
+    "gnis:feature_id": "944240",
+    "landuse": "cemetery",
+    "name": "Blessed Sacrament Cemetery"
+  }
+},
+{
+  "type": "way",
+  "id": 1454431190,
+  "center": {
+    "lat": 40.7838371,
+    "lon": -74.1503910
+  },
+  "tags": {
+    "denomination": "coptic_orthodox",
+    "landuse": "cemetery",
+    "name": "Christ Church Cemetery & Coptic Mausoleum",
+    "religion": "christian"
+  }
+},
+{
+  "type": "way",
+  "id": 1460810276,
+  "center": {
+    "lat": 40.8400879,
+    "lon": -73.6961053
+  },
+  "tags": {
+    "landuse": "cemetery",
+    "name": "Free Church Cemetery",
+    "religion": "christian"
+  }
+},
+{
+  "type": "way",
+  "id": 1497795697,
+  "center": {
+    "lat": 40.7304732,
+    "lon": -73.9298798
+  },
+  "tags": {
+    "denomination": "protestant",
+    "landuse": "cemetery",
+    "name": "Alsop Family Cemetery",
+    "religion": "christian"
+  }
+},
+{
+  "type": "way",
+  "id": 1499991981,
+  "center": {
+    "lat": 40.7296762,
+    "lon": -73.9148866
+  },
+  "tags": {
+    "ele": "28",
+    "gnis:feature_id": "958397",
+    "landuse": "cemetery",
+    "name": "Fourth Calvary Cemetery"
+  }
+},
+{
+  "type": "way",
+  "id": 1499991982,
+  "center": {
+    "lat": 40.7331674,
+    "lon": -73.9141570
+  },
+  "tags": {
+    "ele": "28",
+    "gnis:feature_id": "958397",
+    "landuse": "cemetery",
+    "name": "Second Calvary Cemetery"
+  }
+},
+{
+  "type": "relation",
+  "id": 947064,
+  "center": {
+    "lat": 40.7124883,
+    "lon": -73.8874540
+  },
+  "tags": {
+    "addr:city": "Middle Village",
+    "addr:housenumber": "67-29",
+    "addr:postcode": "11379",
+    "addr:state": "NY",
+    "addr:street": "Metropolitan Avenue",
+    "alt_name": "Lutheran All Faiths Cemetery",
+    "ele": "41",
+    "gnis:feature_id": "956156",
+    "landuse": "cemetery",
+    "name": "All Faiths Cemetery",
+    "old_name": "Lutheran Cemetery",
+    "phone": "+1 718-821-1750",
+    "religion": "multifaith",
+    "type": "multipolygon",
+    "website": "https://allfaithscemetery.org/",
+    "wikidata": "Q96371778",
+    "wikipedia": "en:All Faiths Cemetery"
+  }
+},
+{
+  "type": "relation",
+  "id": 949973,
+  "center": {
+    "lat": 40.7148217,
+    "lon": -73.8660993
+  },
+  "tags": {
+    "addr:housenumber": "80-01",
+    "addr:postcode": "11379",
+    "addr:street": "Metropolitan Avenue",
+    "denomination": "catholic",
+    "gnis:feature_id": "963596",
+    "landuse": "cemetery",
+    "name": "Saint John Cemetery",
+    "religion": "christian",
+    "type": "multipolygon",
+    "website": "https://www.ccbklyn.org/our-cemeteries/st-john-cemetery/",
+    "wikidata": "Q3945111",
+    "wikipedia": "en:St. John Cemetery (Queens)"
+  }
+},
+{
+  "type": "relation",
+  "id": 950813,
+  "center": {
+    "lat": 40.6931582,
+    "lon": -73.8910187
+  },
+  "tags": {
+    "gnis:feature_id": "968192",
+    "landuse": "cemetery",
+    "name": "Union Field Cemetery",
+    "operator": "Congregation Rodeph Sholom",
+    "religion": "jewish",
+    "source": "Yahoo",
+    "type": "multipolygon",
+    "website": "https://unionfieldcemetery.org/",
+    "wikidata": "Q107289125"
+  }
+},
+{
+  "type": "relation",
+  "id": 950814,
+  "center": {
+    "lat": 40.6906195,
+    "lon": -73.8919741
+  },
+  "tags": {
+    "gnis:feature_id": "957851",
+    "landuse": "cemetery",
+    "name": "Mount Judah Cemetery",
+    "religion": "jewish",
+    "source": "Yahoo",
+    "type": "multipolygon"
+  }
+},
+{
+  "type": "relation",
+  "id": 950815,
+  "center": {
+    "lat": 40.6865328,
+    "lon": -73.8989755
+  },
+  "tags": {
+    "gnis:feature_id": "946178",
+    "landuse": "cemetery",
+    "name": "Cemetery of the Evergreens",
+    "type": "multipolygon",
+    "website": "https://www.theevergreenscemetery.com/",
+    "wikidata": "Q5058720",
+    "wikipedia": "en:Cemetery of the Evergreens"
+  }
+},
+{
+  "type": "relation",
+  "id": 950816,
+  "center": {
+    "lat": 40.6917222,
+    "lon": -73.8984764
+  },
+  "tags": {
+    "gnis:feature_id": "954788",
+    "landuse": "cemetery",
+    "name": "Knollwood Park Cemetery",
+    "note": "Section 5 of Mount Carmel Cemetery",
+    "operator": "Mount Carmel Cemetery Association",
+    "religion": "jewish",
+    "type": "multipolygon"
+  }
+},
+{
+  "type": "relation",
+  "id": 950817,
+  "center": {
+    "lat": 40.6888565,
+    "lon": -73.9028519
+  },
+  "tags": {
+    "addr:housename": "675",
+    "addr:postcode": "11207",
+    "addr:street": "Central Avenue",
+    "denomination": "roman_catholic",
+    "landuse": "cemetery",
+    "name": "Most Holy Trinity Cemetery",
+    "religion": "christian",
+    "type": "multipolygon",
+    "website": "https://www.cathcemetery-bklyn.org/"
+  }
+},
+{
+  "type": "relation",
+  "id": 951278,
+  "center": {
+    "lat": 40.6957180,
+    "lon": -73.8838210
+  },
+  "tags": {
+    "addr:housenumber": "82-07",
+    "addr:postcode": "11385",
+    "addr:street": "Cypress Hills Street",
+    "gnis:feature_id": "957866",
+    "landuse": "cemetery",
+    "name": "Mount Neboh Cemetery",
+    "religion": "jewish",
+    "source": "Yahoo",
+    "type": "multipolygon"
+  }
+},
+{
+  "type": "relation",
+  "id": 951279,
+  "center": {
+    "lat": 40.6962662,
+    "lon": -73.8828688
+  },
+  "tags": {
+    "gnis:feature_id": "957812",
+    "landuse": "cemetery",
+    "name": "Mount Carmel Cemetery",
+    "religion": "jewish",
+    "type": "multipolygon",
+    "website": "https://www.mountcarmelcemetery.com/",
+    "wikidata": "Q4285547",
+    "wikipedia": "en:Mount Carmel Cemetery (Queens)"
+  }
+},
+{
+  "type": "relation",
+  "id": 951303,
+  "center": {
+    "lat": 40.6999917,
+    "lon": -73.8733781
+  },
+  "tags": {
+    "addr:housenumber": "7800",
+    "addr:postcode": "11385",
+    "addr:street": "Myrtle Avenue",
+    "gnis:feature_id": "970372",
+    "landuse": "cemetery",
+    "name": "Mount Lebanon Cemetery",
+    "religion": "jewish",
+    "type": "multipolygon",
+    "website": "https://www.mountlebanoncemetery.com/"
+  }
+},
+{
+  "type": "relation",
+  "id": 951318,
+  "center": {
+    "lat": 40.6948583,
+    "lon": -73.8762275
+  },
+  "tags": {
+    "addr:housenumber": "833",
+    "addr:postcode": "11208",
+    "addr:street": "Jamaica Avenue",
+    "gnis:feature_id": "947976",
+    "landuse": "cemetery",
+    "name": "Cypress Hills Cemetery",
+    "opening_hours": "Mo-Su 08:00-16:30",
+    "type": "multipolygon",
+    "website": "https://www.cypresshillscemetery.org/",
+    "wikidata": "Q2972519",
+    "wikipedia": "en:Cypress Hills Cemetery"
+  }
+},
+{
+  "type": "relation",
+  "id": 951319,
+  "center": {
+    "lat": 40.6920172,
+    "lon": -73.8700744
+  },
+  "tags": {
+    "landuse": "cemetery",
+    "name": "Mount Hope Cemetery",
+    "religion": "jewish",
+    "type": "multipolygon"
+  }
+},
+{
+  "type": "relation",
+  "id": 951320,
+  "center": {
+    "lat": 40.6883873,
+    "lon": -73.8793609
+  },
+  "tags": {
+    "addr:housenumber": "775",
+    "addr:postcode": "11208",
+    "addr:street": "Jamaica Avenue",
+    "gnis:feature_id": "964299",
+    "landuse": "cemetery",
+    "name": "Salem Fields Cemetery",
+    "religion": "jewish",
+    "type": "multipolygon",
+    "wikidata": "Q7404097",
+    "wikipedia": "en:Salem Fields Cemetery"
+  }
+},
+{
+  "type": "relation",
+  "id": 951332,
+  "center": {
+    "lat": 40.6906332,
+    "lon": -73.8801620
+  },
+  "tags": {
+    "addr:housenumber": "2",
+    "addr:postcode": "11208",
+    "addr:street": "Cypress Hills Street",
+    "gnis:feature_id": "977523",
+    "landuse": "cemetery",
+    "name": "Beth Olom Cemetery",
+    "note": "aka Beth Olom Fields Cemetery;Shearith Israel Cemetery",
+    "operator": "Congregation Shearith Israel;Congregation B'nai Jeshrun;Temple Shaaray Tefilah",
+    "religion": "jewish",
+    "type": "multipolygon",
+    "wikidata": "Q55605270",
+    "wikipedia": "en:Beth Olam Cemetery"
+  }
+},
+{
+  "type": "relation",
+  "id": 952189,
+  "center": {
+    "lat": 40.6916988,
+    "lon": -73.8717962
+  },
+  "tags": {
+    "access": "private",
+    "fixme": "I did not find reliable information on this cemetery. Operator is named in some internet posts.",
+    "landuse": "cemetery",
+    "name": "Maimonides Cemetery",
+    "operator": "Maimonides Benevolent Society",
+    "religion": "jewish",
+    "type": "multipolygon",
+    "wikidata": "Q85138141"
+  }
+},
+{
+  "type": "relation",
+  "id": 958145,
+  "center": {
+    "lat": 40.6201714,
+    "lon": -73.9765164
+  },
+  "tags": {
+    "addr:city": "Brooklyn",
+    "addr:housenumber": "5400",
+    "addr:postcode": "11230",
+    "addr:state": "NY",
+    "addr:street": "Bay Parkway",
+    "gnis:feature_id": "968843",
+    "landuse": "cemetery",
+    "name": "Washington Cemetery",
+    "phone": "+1-718-377-8690",
+    "religion": "jewish",
+    "start_date": "1850",
+    "type": "multipolygon",
+    "wikidata": "Q7971720",
+    "wikipedia": "en:Washington Cemetery (Brooklyn)"
+  }
+},
+{
+  "type": "relation",
+  "id": 959258,
+  "center": {
+    "lat": 40.6776024,
+    "lon": -73.8551506
+  },
+  "tags": {
+    "gnis:feature_id": "943211",
+    "landuse": "cemetery",
+    "name": "Bayside Cemetery",
+    "religion": "jewish",
+    "type": "multipolygon",
+    "wikidata": "Q4874823",
+    "wikipedia": "en:Bayside Cemetery"
+  }
+},
+{
+  "type": "relation",
+  "id": 959259,
+  "center": {
+    "lat": 40.6775030,
+    "lon": -73.8535514
+  },
+  "tags": {
+    "gnis:feature_id": "942133",
+    "landuse": "cemetery",
+    "name": "Acacia Cemetery",
+    "religion": "jewish",
+    "type": "multipolygon"
+  }
+},
+{
+  "type": "relation",
+  "id": 959260,
+  "center": {
+    "lat": 40.6778473,
+    "lon": -73.8567641
+  },
+  "tags": {
+    "landuse": "cemetery",
+    "name": "Mokom Sholom Cemetery",
+    "religion": "jewish",
+    "type": "multipolygon"
+  }
+},
+{
+  "type": "relation",
+  "id": 960782,
+  "center": {
+    "lat": 40.6866381,
+    "lon": -73.7475206
+  },
+  "tags": {
+    "gnis:feature_id": "959323",
+    "landuse": "cemetery",
+    "name": "Old Springfield Cemetery",
+    "religion": "christian",
+    "type": "multipolygon"
+  }
+},
+{
+  "type": "relation",
+  "id": 960784,
+  "center": {
+    "lat": 40.6858759,
+    "lon": -73.7419852
+  },
+  "tags": {
+    "gnis:feature_id": "957547",
+    "landuse": "cemetery",
+    "name": "Montefiore Cemetery",
+    "religion": "jewish",
+    "type": "multipolygon",
+    "website": "http://www.montefiores.com/montefiore.htm",
+    "wikidata": "Q6905058",
+    "wikipedia": "en:Montefiore Cemetery"
+  }
+},
+{
+  "type": "relation",
+  "id": 974758,
+  "center": {
+    "lat": 40.8271543,
+    "lon": -73.8317745
+  },
+  "tags": {
+    "addr:city": "Bronx",
+    "addr:housenumber": "2600",
+    "addr:postcode": "10465",
+    "addr:state": "NY",
+    "addr:street": "Lafayette Avenue",
+    "denomination": "catholic",
+    "fax": "+1-718-792-0638",
+    "gnis:feature_id": "964186",
+    "landuse": "cemetery",
+    "name": "Saint Raymonds Cemetery",
+    "phone": "+1-718-792-1133",
+    "religion": "christian",
+    "type": "multipolygon",
+    "website": "https://www.straymondparish.org/our-cemetery-1",
+    "wikidata": "Q7402126",
+    "wikipedia": "en:Saint Raymond's Cemetery (Bronx)"
+  }
+},
+{
+  "type": "relation",
+  "id": 3222004,
+  "center": {
+    "lat": 40.6867639,
+    "lon": -73.7226659
+  },
+  "tags": {
+    "landuse": "cemetery",
+    "name": "Saint Johns Cemetery",
+    "religion": "christian",
+    "type": "multipolygon",
+    "wikidata": "Q99739487"
+  }
+},
+{
+  "type": "relation",
+  "id": 4618832,
+  "center": {
+    "lat": 40.6174810,
+    "lon": -73.7331688
+  },
+  "tags": {
+    "elevation": "7",
+    "gnis:feature_id": "963871",
+    "landuse": "cemetery",
+    "name": "Saint Marys Cemetery",
+    "religion": "christian",
+    "type": "multipolygon"
+  }
+},
+{
+  "type": "relation",
+  "id": 5536977,
+  "center": {
+    "lat": 40.7329634,
+    "lon": -73.9307516
+  },
+  "tags": {
+    "denomination": "roman_catholic",
+    "landuse": "cemetery",
+    "name": "Calvary Cemetery",
+    "religion": "christian",
+    "type": "multipolygon",
+    "website": "https://calvaryandalliedcemeteries.com/",
+    "wikidata": "Q2934520",
+    "wikipedia": "en:Calvary Cemetery (Queens)"
+  }
+},
+{
+  "type": "relation",
+  "id": 6749729,
+  "center": {
+    "lat": 40.8927726,
+    "lon": -73.8256581
+  },
+  "tags": {
+    "boundary": "protected_area",
+    "gnis:feature_id": "2063009",
+    "landuse": "cemetery",
+    "name": "Saint Paul's Church National Historic Site",
+    "operator": "National Park Service",
+    "protect_class": "3",
+    "protected_area": "historic_site",
+    "protection_title": "National Historic Site",
+    "type": "boundary",
+    "website": "https://www.nps.gov/sapa/index.htm"
+  }
+},
+{
+  "type": "relation",
+  "id": 10213172,
+  "center": {
+    "lat": 40.6519060,
+    "lon": -73.9923642
+  },
+  "tags": {
+    "gnis:feature_id": "970181",
+    "landuse": "cemetery",
+    "name": "Green-Wood Cemetery",
+    "pets_allowed": "no",
+    "type": "multipolygon",
+    "website": "https://www.green-wood.com/",
+    "wikidata": "Q239043",
+    "wikipedia": "en:Green-Wood Cemetery"
+  }
+},
+{
+  "type": "relation",
+  "id": 10892344,
+  "center": {
+    "lat": 40.9066306,
+    "lon": -73.9657122
+  },
+  "tags": {
+    "amenity": "grave_yard",
+    "ele": "25",
+    "gnis:feature_id": "874967",
+    "landuse": "cemetery",
+    "name": "Brookside Cemetery",
+    "source": "NJ2002LULC",
+    "type": "multipolygon",
+    "wikidata": "Q4975102"
+  }
+},
+{
+  "type": "relation",
+  "id": 12309302,
+  "center": {
+    "lat": 40.5157391,
+    "lon": -74.2115236
+  },
+  "tags": {
+    "alt_name": "Resurrection Cemetery",
+    "denomination": "catholic",
+    "landuse": "cemetery",
+    "name": "Cemetery of the Resurrection",
+    "operator": "Calvary and Allied Cemeteries",
+    "religion": "christian",
+    "type": "multipolygon",
+    "website": "https://calvaryandalliedcemeteries.com/resurrection-cemetery/",
+    "wikidata": "Q5058721",
+    "wikipedia": "en:Cemetery of the Resurrection"
+  }
+},
+{
+  "type": "relation",
+  "id": 14356428,
+  "center": {
+    "lat": 40.7321096,
+    "lon": -73.9064317
+  },
+  "tags": {
+    "addr:city": "Maspeth",
+    "addr:housenumber": "59-63",
+    "addr:postcode": "11378",
+    "addr:state": "NY",
+    "addr:street": "54th Avenue",
+    "gnis:feature_id": "957930",
+    "landuse": "cemetery",
+    "name": "Mount Zion Cemetery",
+    "religion": "jewish",
+    "type": "multipolygon",
+    "website": "https://www.mountzioncemetery.com/",
+    "wikidata": "Q6924768",
+    "wikipedia": "en:Mount Zion Cemetery (New York City)"
+  }
+},
+{
+  "type": "relation",
+  "id": 14731891,
+  "center": {
+    "lat": 40.6225240,
+    "lon": -74.1141501
+  },
+  "tags": {
+    "denomination": "catholic",
+    "landuse": "cemetery",
+    "name": "Saint Peter’s Cemetery",
+    "religion": "christian",
+    "type": "multipolygon",
+    "wikidata": "Q7591318",
+    "wikipedia": "en:St. Peter's Cemetery (Staten Island)"
+  }
+},
+{
+  "type": "relation",
+  "id": 15066640,
+  "center": {
+    "lat": 40.6397306,
+    "lon": -74.1327650
+  },
+  "tags": {
+    "landuse": "cemetery",
+    "name": "Reformed Church on Staten Island Cemetery",
+    "religion": "christian",
+    "type": "multipolygon"
+  }
+},
+{
+  "type": "relation",
+  "id": 15080415,
+  "center": {
+    "lat": 40.7081698,
+    "lon": -74.0120391
+  },
+  "tags": {
+    "denomination": "baptist",
+    "landuse": "cemetery",
+    "name": "Trinity Churchyard",
+    "name:es": "Cementerio de la Iglesia Trinity",
+    "religion": "christian",
+    "type": "multipolygon",
+    "website": "https://www.nps.gov/places/000/trinity-church-cemetery.htm",
+    "wikidata": "Q42720227"
+  }
+},
+{
+  "type": "relation",
+  "id": 20457124,
+  "center": {
+    "lat": 40.7351988,
+    "lon": -73.9132897
+  },
+  "tags": {
+    "landuse": "cemetery",
+    "name": "New Calvary Cemetery"
+  }
+}
+
+  ]
+}

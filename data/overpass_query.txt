@@ -1,0 +1,8 @@
+[out:json][timeout:180];
+(
+  way["landuse"="cemetery"](40.49,-74.27,40.93,-73.68);
+  relation["landuse"="cemetery"](40.49,-74.27,40.93,-73.68);
+  way["amenity"="grave_yard"](40.49,-74.27,40.93,-73.68);
+  node["amenity"="grave_yard"](40.49,-74.27,40.93,-73.68);
+);
+out tags center;
