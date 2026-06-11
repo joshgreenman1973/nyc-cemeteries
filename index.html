@@ -69,6 +69,7 @@ header .links a, header .links button {
 header .links a:hover, header .links button:hover { background: var(--ink); color: var(--bone); }
 header .links button.ai { border-color: var(--maroon); color: var(--maroon); }
 header .links button.ai:hover { background: var(--maroon); color: #fff; }
+header .links button#sat-btn.on { background: var(--navy); color: #fff; border-color: var(--navy); }
 
 #wrap { flex: 1; display: flex; min-height: 0; position: relative; }
 
@@ -315,6 +316,7 @@ header .links button.ai:hover { background: var(--maroon); color: #fff; }
   <div class="dek">Nearly 600 cemeteries and burial grounds across the five boroughs — the active, the preserved and the long-paved-over — with burial counts and notable residents where they're documented.</div>
   <div class="links">
     <button id="side-toggle" class="chip">List</button>
+    <button id="sat-btn">Satellite</button>
     <a href="methodology.html">Methodology</a>
     <button class="ai" id="ai-btn">AI caution</button>
   </div>
@@ -376,6 +378,7 @@ header .links button.ai:hover { background: var(--maroon); color: #fff; }
 </div>
 
 <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+<script src="https://unpkg.com/leaflet-boundary-canvas@1.0.0/src/BoundaryCanvas.js"></script>
 <script>
 let CEMS = [], NOTABLES = {}, layerById = {}, activeId = null;
 
@@ -423,8 +426,43 @@ Promise.all([
     layerById[p._id] = { mk, lyr, status: p.status, borough: p.borough };
   });
 
+  buildSatelliteLayer(geo);
   applyMapFilter();
   renderList();
+});
+
+/* ---------- satellite (clipped to cemetery shapes) ---------- */
+let satLayer = null, satOn = false;
+function buildSatelliteLayer(geo) {
+  // merge every polygon footprint into one MultiPolygon boundary
+  const polys = [];
+  geo.features.forEach(f => {
+    const g = f.geometry;
+    if (g.type === 'Polygon') polys.push(g.coordinates);
+    else if (g.type === 'MultiPolygon') g.coordinates.forEach(c => polys.push(c));
+  });
+  const boundary = { type: 'Feature', geometry: { type: 'MultiPolygon', coordinates: polys } };
+  satLayer = L.TileLayer.boundaryCanvas(
+    'https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}',
+    { boundary, maxZoom: 19, opacity: 1,
+      attribution: 'Imagery &copy; <a href="https://www.esri.com/">Esri</a>, Maxar, Earthstar Geographics' }
+  );
+}
+function setPolygonFill(on) {
+  Object.values(layerById).forEach(o => {
+    if (!o.lyr) return;
+    const col = STATUS_COLOR[o.status] || '#5d7a63';
+    o.lyr.setStyle(on
+      ? { color: '#ffffff', weight: 1.5, fillOpacity: 0 }
+      : { color: col, weight: 1, fillColor: col, fillOpacity: .3 });
+  });
+}
+document.getElementById('sat-btn').addEventListener('click', () => {
+  satOn = !satOn;
+  document.getElementById('sat-btn').classList.toggle('on', satOn);
+  if (satOn && satLayer) satLayer.addTo(map);
+  else if (satLayer) map.removeLayer(satLayer);
+  setPolygonFill(satOn);
 });
 
 function applyMapFilter() {
