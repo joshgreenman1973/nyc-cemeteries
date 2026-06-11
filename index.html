@@ -70,6 +70,21 @@ header .links a:hover, header .links button:hover { background: var(--ink); colo
 header .links button.ai { border-color: var(--maroon); color: var(--maroon); }
 header .links button.ai:hover { background: var(--maroon); color: #fff; }
 header .links button#sat-btn.on { background: var(--navy); color: #fff; border-color: var(--navy); }
+#sat-btn { position: relative; }
+#sat-btn::after {
+  content: attr(data-tip);
+  position: absolute; top: calc(100% + 8px); right: 0;
+  width: 250px;
+  background: var(--navy); color: #e9eef5;
+  font-size: 12px; line-height: 1.4; letter-spacing: 0;
+  text-transform: none; text-align: left; font-weight: 400;
+  padding: 9px 11px;
+  box-shadow: 3px 3px 0 rgba(31,36,33,.3);
+  opacity: 0; visibility: hidden; transition: opacity .15s; z-index: 3000;
+  pointer-events: none;
+}
+#sat-btn:hover::after { opacity: 1; visibility: visible; }
+@media (max-width: 760px) { #sat-btn::after { right: auto; left: 0; width: 220px; } }
 
 #wrap { flex: 1; display: flex; min-height: 0; position: relative; }
 
@@ -316,7 +331,7 @@ header .links button#sat-btn.on { background: var(--navy); color: #fff; border-c
   <div class="dek">Nearly 600 cemeteries and burial grounds across the five boroughs — the active, the preserved and the long-paved-over — with burial counts and notable residents where they're documented.</div>
   <div class="links">
     <button id="side-toggle" class="chip">List</button>
-    <button id="sat-btn">Satellite</button>
+    <button id="sat-btn" data-tip="Satellite imagery appears only for cemeteries large enough to have a mapped outline. The smaller historic and no-longer-extant sites are mapped as single points, so they don't show an aerial view.">Satellite</button>
     <a href="methodology.html">Methodology</a>
     <button class="ai" id="ai-btn">AI caution</button>
   </div>
