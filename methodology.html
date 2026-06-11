@@ -24,11 +24,12 @@ code { background: #ebe6d8; padding: 1px 5px; font-size: 13px; }
 <p><em>The permanent residents: a map of New York City's cemeteries.</em> Built June 2026.</p>
 
 <h2>What this map shows</h2>
-<p>Every named cemetery, churchyard and burial ground inside the five boroughs that is mapped in OpenStreetMap — 111 in all after cleanup — with documented burial counts where a published figure exists (33 cemeteries) and lists of notable people buried there where Wikidata records them (44 cemeteries, about 2,700 people).</p>
+<p>598 cemeteries, churchyards and burial grounds across the five boroughs — including ones that no longer physically exist. Each is labeled with a status: <strong>Active</strong> (127), <strong>Preserved</strong> (119, historic but no longer taking burials) or <strong>Obliterated</strong> (352, paved over or built upon). Founding years are shown for 496 of them, documented burial counts for 32 (each linked to its source with a confidence label) and lists of notable people buried there for 44 (about 2,800 people from Wikidata). By default the map shows active and preserved cemeteries; toggle "Obliterated" to reveal the vanished ones.</p>
 
 <h2>Data sources</h2>
 <ul>
-<li><strong>Locations and boundaries:</strong> OpenStreetMap, queried via the Overpass API (June 10, 2026) for features tagged <code>landuse=cemetery</code> or <code>amenity=grave_yard</code>. Results were clipped to the New York City borough boundaries published by the Department of City Planning and deduplicated by name and proximity.</li>
+<li><strong>The cemetery inventory, founding years and status:</strong> the <a href="https://www.cemeteriesofnyc.com/map">Cemeteries of New York City</a> catalogue compiled by Elizabeth D. Meade, PhD, an archaeologist whose doctoral research identified and mapped the city's burial grounds (including long-obliterated ones) from historical records. Used here are her name, type, religion, status, founding/closing/obliteration years, notes and per-cemetery source citations. Her published map is an embedded Esri/ArcGIS web map; the underlying feature data was read from that map's public service. See her site for her full methodology and bibliography.</li>
+<li><strong>Boundaries of active cemeteries:</strong> OpenStreetMap, queried via the Overpass API (June 10, 2026) for features tagged <code>landuse=cemetery</code> or <code>amenity=grave_yard</code>, clipped to the New York City borough boundaries published by the Department of City Planning and deduplicated by name and proximity. These supply the drawn polygons; 62 of these OpenStreetMap cemeteries were matched by name and location to Meade's catalogue to add status and founding years.</li>
 <li><strong>Notable burials:</strong> Wikidata, using the "place of burial" property (P119). Each person listed has a Wikidata entry recording burial at that cemetery; lists are sorted by how many Wikipedia language editions cover the person, as a rough proxy for prominence. Birth and death years and one-line descriptions also come from Wikidata.</li>
 <li><strong>Burial counts:</strong> assembled cemetery by cemetery from (in order of preference) the cemetery's own website, the text of its Wikipedia article and reputable secondary sources such as the New York City Cemetery Project (nycemetery.wordpress.com), a research project by historian Mary French. Every count on the map carries a link to its specific source and a confidence label.</li>
 </ul>
@@ -51,14 +52,16 @@ code { background: #ebe6d8; padding: 1px 5px; font-size: 13px; }
 
 <h2>Known limitations</h2>
 <ul>
-<li>OpenStreetMap may miss small, vanished or private burial grounds, and some historic sites (for example, the African Burial Ground National Monument in Lower Manhattan) are not tagged as cemeteries there.</li>
+<li>The map is only as complete as its two inventories. Meade's catalogue is the most thorough public accounting of NYC burial grounds, but no such list is ever final — small family plots and undocumented grounds are certainly missing.</li>
+<li>For obliterated and some preserved sites, the point marks an approximate location, not a precise boundary; Meade flags cemeteries whose exact location could not be determined, and those are placed at a general vicinity.</li>
+<li>Status and founding years for the 49 active OpenStreetMap cemeteries that did not match a catalogue record are inferred (status shown as "Active"); a name-matching step links the rest, and imperfect matches are possible.</li>
 <li>Burial counts were published in different years and age at different rates; active cemeteries keep growing.</li>
 <li>Wikidata occasionally contains errors (misattributed burial places, reinterments recorded once). Claims were taken as recorded, not independently re-verified person by person.</li>
 <li>Cemetery religion labels come from OpenStreetMap tags and are incomplete.</li>
 </ul>
 
 <h2>Reproducibility</h2>
-<p>The processing pipeline (Overpass query, borough clipping, Wikidata SPARQL queries, Wikipedia infobox parsing and source-verified count research) is preserved in the project repository alongside the raw intermediate files. Map data files: <code>data/cemeteries.geojson</code> and <code>data/notables.json</code>.</p>
+<p>The processing pipeline (Overpass query, borough clipping, the Cemeteries of New York City catalogue extraction and merge, Wikidata SPARQL queries, Wikipedia infobox parsing and source-verified count research) is preserved in the project repository alongside the raw intermediate files. Map data files: <code>data/cemeteries.geojson</code> and <code>data/notables.json</code>; the catalogue extract is <code>data/meade_cemeteries.json</code>.</p>
 </main>
 </body>
 </html>
