@@ -399,7 +399,7 @@ header .links button#sat-btn.on { background: var(--navy); color: #fff; border-c
 let CEMS = [], NOTABLES = {}, layerById = {}, activeId = null;
 
 const map = L.map('map', { zoomControl: true }).setView([40.69, -73.93], 11);
-L.tileLayer('https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png', {
+L.tileLayer('https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png?key=cb1_2r82_1_ae4e70b6166057bc41b89638', {
   attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors &copy; <a href="https://carto.com/">CARTO</a>',
   maxZoom: 19
 }).addTo(map);
