@@ -9,6 +9,7 @@ Inventory, founding years and status come from Elizabeth D. Meade's [Cemeteries 
 - `data/cemeteries.geojson` — cemetery boundaries and attributes used by the map
 - `data/notables.json` — notable burials keyed by the cemetery's Wikidata ID
 - `scripts/2026-10-fact-check/` — the scripts and source files used for the October 2026 corrections
+- `data/meade_webmap.json` — the full web map behind Meade's catalogue, including the footprint she mapped for each site and her reinterment records
 - Other files in `data/` are preserved intermediates from the June 2026 build (raw Overpass output, the Meade catalogue extract, raw burial query results, Wikipedia infobox parses). The scripts that produced them were not saved.
 
 Built June 2026; corrected October 6, 2026, after a full fact-check. See `methodology.html` for details.

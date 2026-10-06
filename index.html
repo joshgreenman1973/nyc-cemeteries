@@ -361,6 +361,13 @@ header .links button#sat-btn.on { background: var(--navy); color: #fff; border-c
 .tot-waffle { display: grid; grid-template-columns: repeat(auto-fill, 7px); gap: 2px; margin-bottom: 8px; }
 .tot-waffle i { width: 7px; height: 7px; border-radius: 1px; display: block; }
 .tot-waffle i.none { border: 1px solid #b9b3a3; box-sizing: border-box; }
+.tot-p { margin: 0 0 8px; }
+.tot-land { position: relative; height: 18px; margin-bottom: 8px; }
+.tot-land .seg { position: absolute; top: 0; bottom: 0; border-right: 2px solid var(--bone); box-sizing: border-box; }
+.tot-land .seg:first-child { border-radius: 4px 0 0 4px; }
+.tot-land .seg:last-child { border-radius: 0 4px 4px 0; border-right: 0; }
+.tot-land .seg.light, .tot-legend .sw.light { box-shadow: inset 0 0 0 1px var(--stone); }
+.tot-note { font-size: 11.5px; color: var(--stone); margin: 6px 0 0; }
 .tot-why { padding-left: 17px; margin: 0; }
 .tot-why li { margin-bottom: 6px; }
 .tot-bottom { margin: 10px 0 8px; font-weight: 600; }
@@ -417,6 +424,11 @@ header .links button#sat-btn.on { background: var(--navy); color: #fff; border-c
   <h5 id="tot-sites-h"></h5>
   <div class="tot-waffle" id="tot-waffle" aria-hidden="true"></div>
   <div class="tot-legend" id="tot-waffle-legend"></div>
+  <h5>How big are the sites without counts?</h5>
+  <p class="tot-p" id="tot-size-p"></p>
+  <div class="tot-land" id="tot-land"></div>
+  <div class="tot-legend" id="tot-land-legend"></div>
+  <p class="tot-note" id="tot-size-note"></p>
   <h5>Why the rest is unknown</h5>
   <ul class="tot-why" id="tot-why"></ul>
   <p class="tot-bottom" id="tot-bottom"></p>
@@ -668,6 +680,8 @@ function select(id, fly) {
   if (p.close_yr && p.close_yr.toLowerCase() !== 'present') facts.push(['Closed', p.close_yr]);
   if (p.oblit_yr && p.oblit_yr.toLowerCase() !== 'n/a') facts.push([p.status === 'Obliterated' ? 'No longer extant' : 'Partly obliterated', p.oblit_yr]);
   if (p.approx) facts.push(['Location', 'Approximate; the exact site is not known']);
+  if (p.meade_acres != null) facts.push(['Mapped area', p.meade_acres < 1 ? `About ${p.meade_acres.toFixed(2)} acre` : `About ${commas(Math.round(p.meade_acres))} acres`]);
+  if (p.reinterment) facts.push(['Remains moved', p.reinterment]);
   const srcLink = (u, l) => l ? `Source: <a href="${u}" target="_blank" rel="noopener">${l}</a>.` : '';
   if (p.founded_source_label) facts.push(['Founding year', [p.founded_note, srcLink(p.founded_source, p.founded_source_label)].filter(Boolean).join(' ')]);
   if (p.status_note) facts.push(['Status', p.status_note + ' ' + srcLink(p.status_source, p.status_source_label)]);
@@ -802,21 +816,56 @@ function buildTotals() {
     `<span class="sw empty"></span><span>No published count</span><span class="v">${none.length}</span>`;
 
   // why the rest is unknown, from the data
+  const acres = rows => rows.reduce((s, p) => s + (p.meade_acres || 0), 0);
+  const countedSites = P.filter(p => p.count || p.count_included_in);
   const activeNone = none.filter(p => p.status === 'Active');
-  const big = activeNone.filter(p => p.acres).sort((a, b) => b.acres - a.acres).slice(0, 5);
-  const acresNone = activeNone.reduce((s, p) => s + (p.acres || 0), 0);
-  const acresCounted = P.filter(p => p.acres && (p.count || p.count_included_in)).reduce((s, p) => s + p.acres, 0);
-  const round50 = n => commas(Math.round(n / 50) * 50);
+  const otherNone = none.filter(p => p.status !== 'Active');
+  const big = activeNone.filter(p => p.meade_acres).sort((a, b) => b.meade_acres - a.meade_acres).slice(0, 5);
   const gone = P.filter(p => p.status === 'Obliterated');
-  const moved = gone.filter(p => /remov|moved|reinter|exhum|disinter|transferred/i.test(p.other || ''));
-  const named = big.map((p, i) => `${short(p.name)} (${p.acres}${i === 0 ? ' acres' : ''})`);
+  // Meade's reinterment field: remains moved, in whole or part (entries marked "possibly" are left out)
+  const movedTo = (name, extra) => gone.filter(p => {
+    const r = p.reinterment || '';
+    return !/^(possibl|unknown, possibl)/i.test(r) && extra(r);
+  }).length;
+  const toCH = movedTo('Cypress Hills', r => /Cypress Hills(?! National)/.test(r));
+  const toGW = movedTo('Green-Wood', r => /Green-Wood/.test(r));
+  const toWL = movedTo('Woodlawn', r => /Woodlawn/.test(r) && !/Yonkers/.test(r));
+  const named = big.map((p, i) => `${short(p.name)} (${Math.round(p.meade_acres)}${i === 0 ? ' acres' : ''})`);
   const list = named.slice(0, -1).join(', ') + ' and ' + named[named.length - 1];
   document.getElementById('tot-why').innerHTML = [
     `No one keeps a running total. New York State asks cemetery corporations to report each year’s burials, not cumulative totals, and we found no published data.`,
-    `${activeNone.length} active cemeteries publish no count, among them ${list}. Together they cover about ${round50(acresNone)} acres, against about ${round50(acresCounted)} acres for the cemeteries with counts.`,
-    `${gone.length} of the sites no longer exist, and none has a published count. Meade’s catalogue records remains being moved from at least ${moved.length} of them.`,
+    `${activeNone.length} active cemeteries publish no count, among them ${list}. Together they cover ${commas(Math.round(acres(activeNone)))} acres of mapped ground.`,
+    `${gone.length} of the sites no longer exist, and none has a published count. Many were emptied: Meade records remains moved, in whole or part, from at least ${toCH} of them to Cypress Hills, ${toGW} to Green-Wood and ${toWL} to Woodlawn. All three are counted here, so some of those dead are already in the total.`,
     `The counts that do exist have limits: many are stated as minimums (“more than”), some are years old (Flushing’s is from 1951) and one covers only part of a cemetery (Mokom Sholom).`,
   ].map(t => `<li>${t}</li>`).join('');
+  const median = arr => { const a = [...arr].sort((x, y) => x - y), m = a.length >> 1; return a.length % 2 ? a[m] : (a[m - 1] + a[m]) / 2; };
+  const noneSized = none.filter(p => p.meade_acres != null).map(p => p.meade_acres);
+  const countedSized = countedSites.filter(p => p.meade_acres != null).map(p => p.meade_acres);
+  const under1 = noneSized.filter(a => a < 1).length;
+  const land = [
+    { label: 'Counted cemeteries', rows: countedSites, color: '#2e4434' },
+    { label: 'No count: active cemeteries', rows: activeNone, color: '#8a8678' },
+    { label: 'No count: preserved or gone', rows: otherNone, color: '#d2ccbb', light: true },
+  ].map(l => ({ ...l, acres: acres(l.rows), n: l.rows.filter(p => p.meade_acres != null).length }));
+  const landTotal = land.reduce((s, l) => s + l.acres, 0);
+  let lx = 0;
+  document.getElementById('tot-land').innerHTML = land.map((l, i) => {
+    const seg = `<div class="seg${l.light ? ' light' : ''}" data-land="${i}" style="left:${lx / landTotal * 100}%;width:${l.acres / landTotal * 100}%;background-color:${l.color}"></div>`;
+    lx += l.acres; return seg;
+  }).join('');
+  document.getElementById('tot-land-legend').innerHTML = land.map(l =>
+    `<span class="sw${l.light ? ' light' : ''}" style="background-color:${l.color}"></span><span>${l.label}</span>` +
+    `<span class="v">${commas(Math.round(l.acres))} acres <small>· ${l.n} measured</small></span>`).join('');
+  const m = median(noneSized);
+  const typical = m < 0.2 ? `${m.toFixed(2)} acre` : m < 0.42 ? 'about a third of an acre' : m < 0.6 ? 'about half an acre' : `${m.toFixed(1)} acres`;
+  const shareNone = Math.round((land[1].acres + land[2].acres) / landTotal * 100);
+  document.getElementById('tot-size-p').textContent =
+    `Most are small. The typical site with no count covers ${typical}; the typical counted cemetery covers ${Math.round(median(countedSized))} acres. ` +
+    `${under1} of the ${noneSized.length} measured sites without counts are under an acre. Together, though, they cover ${shareNone}% of the burial ground Meade mapped:`;
+  document.getElementById('tot-size-note').textContent =
+    `Sizes are the footprints Meade mapped for each site; ${none.length - noneSized.length} sites without counts are mapped only to a general vicinity and are not measured. ` +
+    `Area is a rough guide to burials: density varies widely, and many vanished grounds were emptied.`;
+
   document.getElementById('tot-bottom').textContent =
     `So ${millions(solid)} covers only the documented cemeteries: a floor for the city, not an estimate. Published figures can’t settle whether the people buried in the city outnumber the ${millions(NYC_POP)} who live here.`;
 
@@ -830,11 +879,17 @@ function buildTotals() {
     tip.style.left = left + 'px'; tip.style.top = top + 'px';
   };
   pop.addEventListener('mousemove', e => {
-    const seg = e.target.closest('.seg'), sq = e.target.closest('.tot-waffle i');
+    const seg = e.target.closest('.tot-bar .seg'), sq = e.target.closest('.tot-waffle i');
     if (seg) {
       if (seg.dataset.tier === 'u') return showTip(e, `<b>Not counted</b><br>${none.length} sites have no published count. How many people they hold is unknown.`);
       const t = tiers[+seg.dataset.tier];
       return showTip(e, `<b>${t.label}</b><br>${commas(t.sum)} people in ${t.rows.length} cemeteries<br>Largest: ${t.rows.slice(0, 3).map(p => short(p.name)).join(', ')}`);
+    }
+    const ls = e.target.closest('.tot-land .seg');
+    if (ls) {
+      const l = land[+ls.dataset.land];
+      const top = l.rows.filter(p => p.meade_acres).sort((a, b) => b.meade_acres - a.meade_acres).slice(0, 3);
+      return showTip(e, `<b>${l.label}</b><br>${commas(Math.round(l.acres))} acres across ${l.n} measured sites<br>Largest: ${top.map(p => `${short(p.name)} (${Math.round(p.meade_acres)})`).join(', ')}`);
     }
     if (sq) {
       const p = CEMS[+sq.dataset.id].properties;

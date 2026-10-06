@@ -59,6 +59,33 @@ for p in sorted(P, key=lambda p: p['name']):
                    f"Source: <a href=\"{e(p['status_source'])}\">{e(p['status_source_label'])}</a>.</li>")
 dep_list = '\n'.join(dep)
 
+import re as _re, statistics as _st
+counted_sites = [p for p in P if p.get('count') or p.get('count_included_in')]
+none_sites = [p for p in P if not p.get('count') and not p.get('count_included_in')]
+def _sized(rows): return sorted(p['meade_acres'] for p in rows if p.get('meade_acres') is not None)
+cs, ns = _sized(counted_sites), _sized(none_sites)
+def _q(a, f): return a[min(len(a) - 1, int(f * len(a)))]
+active_none = [p for p in none_sites if p['status'] == 'Active']
+acres_of = lambda rows: sum(p.get('meade_acres') or 0 for p in rows)
+land_total = acres_of(counted_sites) + acres_of(none_sites)
+share_none = round(acres_of(none_sites) / land_total * 100)
+big_none = sorted([p for p in active_none if p.get('meade_acres')], key=lambda p: -p['meade_acres'])[:5]
+big_list = ', '.join(f"{e(p['name'])} ({round(p['meade_acres'])} acres)" for p in big_none[:-1]) + f" and {e(big_none[-1]['name'])} ({round(big_none[-1]['meade_acres'])} acres)"
+sub = collections.Counter(p.get('subtype') for p in none_sites)
+gone_sites = [p for p in P if p['status'] == 'Obliterated']
+def _moved(test):
+    return sum(1 for p in gone_sites if (r := p.get('reinterment') or '') and not _re.match(r'(possibl|unknown, possibl)', r, _re.I) and test(r))
+to_ch = _moved(lambda r: _re.search(r'Cypress Hills(?! National)', r))
+to_gw = _moved(lambda r: 'Green-Wood' in r)
+to_wl = _moved(lambda r: 'Woodlawn' in r and 'Yonkers' not in r)
+size_table = f"""<tr><th></th><th>Sites with a count</th><th>Sites with no count</th></tr>
+<tr><td>Sites</td><td>{len(counted_sites)}</td><td>{len(none_sites)}</td></tr>
+<tr><td>With a mapped footprint</td><td>{len(cs)}</td><td>{len(ns)}</td></tr>
+<tr><td>Median size</td><td>{_st.median(cs):.0f} acres</td><td>{_st.median(ns):.2f} acre</td></tr>
+<tr><td>Middle half of sites</td><td>{_q(cs, .25):.0f} to {_q(cs, .75):.0f} acres</td><td>{_q(ns, .25):.2f} to {_q(ns, .75):.2f} acre</td></tr>
+<tr><td>Under 1 acre</td><td>{sum(1 for x in cs if x < 1)}</td><td>{sum(1 for x in ns if x < 1)}</td></tr>
+<tr><td>Total land</td><td>{fmt(round(sum(cs)))} acres</td><td>{fmt(round(sum(ns)))} acres</td></tr>"""
+
 page = f"""<!DOCTYPE html>
 <html lang="en">
 <head>
@@ -98,7 +125,7 @@ td:nth-child(2) {{ white-space: nowrap; }}
 
 <h2>Data sources</h2>
 <ul>
-<li><strong>The cemetery inventory, founding years and status:</strong> the <a href="https://www.cemeteriesofnyc.com/map">Cemeteries of New York City</a> catalogue by Elizabeth D. Meade, PhD, which she built for her doctoral dissertation in anthropology at the CUNY Graduate Center, <a href="https://academicworks.cuny.edu/gc_etds/3725">"Prepare for Death and Follow Me": An Archaeological Survey of the Historic Period Cemeteries of New York City</a> (2020). Through documentary research she identified 527 burial sites in the city and mapped each one. Her catalogue has {len(meade)} records, because some sites are split into parts; the map includes {meade_on_map} of them. Four that repeat a cemetery already shown were left off: destroyed edges of Washington, Cypress Hills and Mount Carmel cemeteries, and a second Cypress Hills parcel. Used here are her name, type, religion, status, founding, closing and obliteration years, notes, location-precision flag and per-site citations, which appear in each cemetery's detail panel. Her published map is an embedded Esri/ArcGIS web map; the underlying feature data was read from that map's public service. See her site for her full methodology and bibliography.</li>
+<li><strong>The cemetery inventory, founding years and status:</strong> the <a href="https://www.cemeteriesofnyc.com/map">Cemeteries of New York City</a> catalogue by Elizabeth D. Meade, PhD, which she built for her doctoral dissertation in anthropology at the CUNY Graduate Center, <a href="https://academicworks.cuny.edu/gc_etds/3725">"Prepare for Death and Follow Me": An Archaeological Survey of the Historic Period Cemeteries of New York City</a> (2020). Through documentary research she identified 527 burial sites in the city and mapped each one. Her catalogue has {len(meade)} records, because some sites are split into parts; the map includes {meade_on_map} of them. Four that repeat a cemetery already shown were left off: destroyed edges of Washington, Cypress Hills and Mount Carmel cemeteries, and a second Cypress Hills parcel. Used here are her name, type, religion, status, founding, closing and obliteration years, notes, record of where removed remains were reinterred, location-precision flag, per-site citations and the footprint she mapped for each site, all shown in each cemetery's detail panel. Her published map is an embedded Esri/ArcGIS web map; the underlying feature data was read from that map's public service. See her site for her full methodology and bibliography.</li>
 <li><strong>Boundaries of cemeteries:</strong> OpenStreetMap, queried via the Overpass API (June 10, 2026) for features tagged <code>landuse=cemetery</code> or <code>amenity=grave_yard</code> and clipped to the borough boundaries published by the Department of City Planning. These supply the {n_poly} drawn outlines (plus {len(osm) - n_poly} OpenStreetMap points). Each was matched to its record in Meade's catalogue by name and location, and every match was checked by hand in October 2026. One, {e(', '.join(osm_unmatched))} on Staten Island, has no clear catalogue match, so its status comes from OpenStreetMap.</li>
 <li><strong>Satellite imagery (optional toggle):</strong> Esri World Imagery (Maxar, Earthstar Geographics), shown only inside the cemetery outlines. Sites mapped as single points show nothing under the satellite view.</li>
 <li><strong>Official websites:</strong> the cemetery's own or its operator's website, linked from the detail panel for {n_web} cemeteries. They come from Wikidata's official-website property (P856) and OpenStreetMap <code>website</code> tags, and every link was tested in October 2026.</li>
@@ -123,6 +150,14 @@ td:nth-child(2) {{ white-space: nowrap; }}
 <tr><td>Plus low-confidence sources ({num(n['low'])} more)</td><td>{fmt(s['high'] + s['medium'] + s['low'])}</td></tr>
 </table></div>
 <p>The conservative figure is the middle one: about {round((s['high'] + s['medium']) / 1e5) / 10} million people buried in the {n['high'] + n['medium']} cemeteries with a reasonably sourced count. The {num(len(graves))} grave counts ({fmt(graves_sum)} graves) are left out, because a grave can hold more than one person. These totals are floors for a small share of the city's {fmt(n_sites)} sites, not a citywide count: most cemeteries publish no figure, several figures are years old, and Mokom Sholom's covers only one section. Calvary is counted at its operator's figure of 1.75 million rather than the widely repeated 3 million.</p>
+
+<h2 id="sizes">How big are the sites without counts?</h2>
+<p>Meade's catalogue maps a footprint for each site whose location is known. Measured from those shapes (the "sites with a count" include the three Calvary divisions covered by Calvary's figure):</p>
+<div class="tablewrap"><table class="totals">
+{size_table}
+</table></div>
+<p>Most sites without a count are small: {sub.get('House of Worship', 0)} are church or synagogue burial grounds and {sub.get('Family Burying Ground', 0)} are family burying grounds. Most of the uncounted land is in {len(active_none)} active cemeteries that publish no figure, led by {big_list}. Together the sites without counts cover {share_none}% of the burial ground Meade mapped. {len(none_sites) - len(ns)} of them are mapped only to a general vicinity and are not measured.</p>
+<p>Area is only a rough guide to burials: density varies widely, and many vanished grounds were emptied. Meade records remains moved, in whole or part, from at least {to_ch} of them to Cypress Hills, {to_gw} to Green-Wood and {to_wl} to Woodlawn (entries she marks "possibly" are not counted here). All three cemeteries have counts above, so some of those people are already in the totals.</p>
 
 <h2>Why most cemeteries have no count</h2>
 <p>There is no central, authoritative dataset of how many people are buried in New York City's cemeteries. The New York State Division of Cemeteries asks cemetery corporations to report their "Number of Body Burials" for each year on their <a href="https://dos.ny.gov/annual-financial-report-cemetery-corporation-parts-1-3-printable">annual financial reports</a>, but these are yearly figures, not running totals, and we found no published dataset of them. The Diocese of Brooklyn's cemetery office publishes no totals; the Archdiocese of New York's cemetery arm gives figures for Calvary and Resurrection and a combined figure for its five cemeteries. The open-data portals (New York State's Public Cemetery Locations, NYC Open Data, the federal USGS gazetteer) carry locations only. Find A Grave's per-cemetery figures count volunteer-created memorials rather than actual interments, and its terms prohibit automated collection, so it is not used. Absence of a number on the map is not a claim that few people are buried there.</p>
@@ -151,7 +186,7 @@ td:nth-child(2) {{ white-space: nowrap; }}
 </ul>
 
 <h2>Reproducibility</h2>
-<p>The raw inputs and intermediate files are in the project repository: the Overpass query and its output, the Meade catalogue extract (<code>data/meade_cemeteries.json</code>), Wikidata query results and Wikipedia infobox parses. The scripts that first processed them in June 2026 were not saved. The October 2026 corrections were made with scripts that are saved in <code>scripts/2026-10-fact-check/</code>. The map's data files are <code>data/cemeteries.geojson</code> and <code>data/notables.json</code>.</p>
+<p>The raw inputs and intermediate files are in the project repository: the Overpass query and its output, the Meade catalogue extract (<code>data/meade_cemeteries.json</code>) and the full web map it came from, with her mapped footprints (<code>data/meade_webmap.json</code>), Wikidata query results and Wikipedia infobox parses. The scripts that first processed them in June 2026 were not saved. The October 2026 corrections were made with scripts that are saved in <code>scripts/2026-10-fact-check/</code>. The map's data files are <code>data/cemeteries.geojson</code> and <code>data/notables.json</code>.</p>
 
 <h2 id="corrections">Corrections</h2>
 <p>October 6, 2026. A full fact-check of the map found and fixed these errors:</p>
