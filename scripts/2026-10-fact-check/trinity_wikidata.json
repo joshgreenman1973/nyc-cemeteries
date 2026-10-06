@@ -1,0 +1,1999 @@
+{
+"Q42720261": [
+{
+"q": "Q182882",
+"n": "John James Audubon",
+"d": "French-American ornithologist, naturalist, and painter (1785–1851)",
+"b": "1785",
+"x": "1851",
+"w": "John James Audubon",
+"l": 77
+},
+{
+"q": "Q299965",
+"n": "Ralph Ellison",
+"d": "American novelist, literary critic, scholar and writer (1914-1994)",
+"b": "1914",
+"x": "1994",
+"w": "Ralph Ellison",
+"l": 51
+},
+{
+"q": "Q467122",
+"n": "Ed Koch",
+"d": "former mayor of New York City (1924-2013)",
+"b": "1924",
+"x": "2013",
+"w": "Ed Koch",
+"l": 38
+},
+{
+"q": "Q270643",
+"n": "Mercedes de Acosta",
+"d": "American poet, playwright, and novelist (1893-1968)",
+"b": "1892",
+"x": "1968",
+"w": "Mercedes de Acosta",
+"l": 24
+},
+{
+"q": "Q720259",
+"n": "John Adams Dix",
+"d": "Union Army General (1798-1879)",
+"b": "1798",
+"x": "1879",
+"w": "John Adams Dix",
+"l": 24
+},
+{
+"q": "Q2020205",
+"n": "Oliver Evans",
+"d": "American inventor",
+"b": "1755",
+"x": "1819",
+"w": "Oliver Evans",
+"l": 17
+},
+{
+"q": "Q430443",
+"n": "Fernando Wood",
+"d": "American politician (1812-1881)",
+"b": "1812",
+"x": "1881",
+"w": "Fernando Wood",
+"l": 14
+},
+{
+"q": "Q1111370",
+"n": "Fitzhugh Townsend",
+"d": "American fencer and electrical engineering professor (1872-1906)",
+"b": "1872",
+"x": "1906",
+"w": "Fitzhugh Townsend",
+"l": 14
+},
+{
+"q": "Q705748",
+"n": "Cuba Gooding Sr.",
+"d": "American singer and actor (1944–2017)",
+"b": "1944",
+"x": "2017",
+"w": "Cuba Gooding Sr.",
+"l": 12
+},
+{
+"q": "Q3018093",
+"n": "David Hosack",
+"d": "American physician, botanist, and educator (1769–1835)",
+"b": "1769",
+"x": "1835",
+"w": "David Hosack",
+"l": 10
+},
+{
+"q": "Q3161458",
+"n": "James Van Der Zee",
+"d": "African American photographer (1886–1983)",
+"b": "1886",
+"x": "1983",
+"w": "James Van Der Zee",
+"l": 10
+},
+{
+"q": "Q4310868",
+"n": "Estelle Bennett",
+"d": "American singer (1941–2009)",
+"b": "1941",
+"x": "2009",
+"w": "Estelle Bennett",
+"l": 9
+},
+{
+"q": "Q1566998",
+"n": "Will Barnet",
+"d": "American artist (1911-2012)",
+"b": "1911",
+"x": "2012",
+"w": "Will Barnet",
+"l": 8
+},
+{
+"q": "Q3760426",
+"n": "George J. Adler",
+"d": "German-American philologist and linguist (1821-1868)",
+"b": "1821",
+"x": "1868",
+"w": "George J. Adler",
+"l": 8
+},
+{
+"q": "Q6287228",
+"n": "Joseph Striker",
+"d": "film actor (1898-1974)",
+"b": "1898",
+"x": "1974",
+"w": "Joseph Striker",
+"l": 8
+},
+{
+"q": "Q74554",
+"n": "Cadwallader David Colden",
+"d": "American politician (1769-1834)",
+"b": "1769",
+"x": "1834",
+"w": "Cadwallader D. Colden",
+"l": 7
+},
+{
+"q": "Q1192972",
+"n": "John Winthrop Chanler",
+"d": "American politician (1826-1877)",
+"b": "1826",
+"x": "1877",
+"w": "John Winthrop Chanler",
+"l": 7
+},
+{
+"q": "Q7323665",
+"n": "Richard Aldrich",
+"d": "American music critic and journalist (1863–1937)",
+"b": "1863",
+"x": "1937",
+"w": "Richard Aldrich (music critic)",
+"l": 7
+},
+{
+"q": "Q5353662",
+"n": "Elba Lightfoot",
+"d": "African-American painter",
+"b": "1910",
+"x": "1989",
+"w": "Elba Lightfoot",
+"l": 6
+},
+{
+"q": "Q6537037",
+"n": "Q6537037",
+"d": "American physician (1820–1900)",
+"b": "1820",
+"x": "1900",
+"w": "Lewis Sayre",
+"l": 6
+},
+{
+"q": "Q1590783",
+"n": "William Augustus Darling",
+"d": "American politician (1817-1895)",
+"b": "1817",
+"x": "1895",
+"w": "William Augustus Darling",
+"l": 5
+},
+{
+"q": "Q20872284",
+"n": "Marion Satterlee",
+"d": "American botanical artist",
+"b": "1868",
+"x": "1965",
+"w": "Marion Satterlee",
+"l": 5
+},
+{
+"q": "Q336615",
+"n": "James Monroe",
+"d": "American congressman for New York (1799-1870)",
+"b": "1799",
+"x": "1870",
+"w": "James Monroe (New York politician)",
+"l": 4
+},
+{
+"q": "Q367942",
+"n": "Thomas Storm",
+"d": "American politician (1749-1833)",
+"b": "1749",
+"x": "1833",
+"w": "Thomas Storm",
+"l": 4
+},
+{
+"q": "Q1590745",
+"n": "Edward Haight",
+"d": "American congressman for New York (1817-1885)",
+"b": "1817",
+"x": "1885",
+"w": "Edward Haight (politician)",
+"l": 4
+},
+{
+"q": "Q7308861",
+"n": "Reginald Sayre",
+"d": "American orthopedic surgeon and sport shooter (1859–1929)",
+"b": "1859",
+"x": "1929",
+"w": "Reginald Sayre",
+"l": 4
+},
+{
+"q": "Q7342254",
+"n": "Robert Bowne Minturn",
+"d": "Merchant and shipper (1805–1866)",
+"b": "1805",
+"x": "1866",
+"w": "Robert Bowne Minturn",
+"l": 4
+},
+{
+"q": "Q7412584",
+"n": "Samuel Seabury",
+"d": "American judge (1873–1958)",
+"b": "1873",
+"x": "1958",
+"w": "Samuel Seabury (judge)",
+"l": 4
+},
+{
+"q": "Q44301406",
+"n": "Dita Hopkins Kinney",
+"d": "First superintendent of the United States Army Nurse Corps",
+"b": "1855",
+"x": "1921",
+"w": "Dita Hopkins Kinney",
+"l": 4
+},
+{
+"q": "Q94507458",
+"n": "Maude Miner Hadden",
+"d": "American social worker and writer",
+"b": "1880",
+"x": "1967",
+"w": "Maude Miner Hadden",
+"l": 4
+},
+{
+"q": "Q5407045",
+"n": "Eugene Augustus Hoffman",
+"d": "American priest (1829–1902)",
+"b": "1829",
+"x": "1902",
+"w": "Eugene Augustus Hoffman",
+"l": 3
+},
+{
+"q": "Q5720869",
+"n": "Henry Erben",
+"d": "United States Navy admiral (1832–1909)",
+"b": "1832",
+"x": "1909",
+"w": "Henry Erben",
+"l": 3
+},
+{
+"q": "Q7342255",
+"n": "Robert Bowne Minturn, Jr.",
+"d": "businessperson (1836–1889)",
+"b": "1836",
+"x": "1889",
+"w": "Robert Bowne Minturn Jr.",
+"l": 3
+},
+{
+"q": "Q7410841",
+"n": "Samuel B. Ruggles",
+"d": "American politician (1799-1881)",
+"b": "1799",
+"x": "1881",
+"w": "Samuel B. Ruggles",
+"l": 3
+},
+{
+"q": "Q7789306",
+"n": "Thomas Egleston",
+"d": "American engineer (1832–1900)",
+"b": "1832",
+"x": "1900",
+"w": "Thomas Egleston",
+"l": 3
+},
+{
+"q": "Q18911244",
+"n": "Louis Pope Gratacap",
+"d": "American geologist and author (1851-1917)",
+"b": "1850",
+"x": "1917",
+"w": "Louis Pope Gratacap",
+"l": 3
+},
+{
+"q": "Q22018616",
+"n": "J. Hooker Hamersley",
+"d": "American heir, lawyer and poet from New York City",
+"b": "1844",
+"x": "1901",
+"w": "J. Hooker Hamersley",
+"l": 3
+},
+{
+"q": "Q61591325",
+"n": "Beatrice Chanler",
+"d": "American actor, artist and philanthropist (1881-1946)",
+"b": "1880",
+"x": "1946",
+"w": "Beatrice Chanler",
+"l": 3
+},
+{
+"q": "Q1293515",
+"n": "Edward Savage Crocker II",
+"d": "American diplomat",
+"b": "1895",
+"x": "1968",
+"w": "",
+"l": 2
+},
+{
+"q": "Q44186138",
+"n": "F. W. Christern",
+"d": "",
+"b": "1816",
+"x": "1891",
+"w": "",
+"l": 2
+},
+{
+"q": "Q116953349",
+"n": "Charles Edward Davis Phelps",
+"d": "American author (1851-1934)",
+"b": "1851",
+"x": "1934",
+"w": "",
+"l": 2
+},
+{
+"q": "Q5497587",
+"n": "Frederick Courtney",
+"d": "Bishop of Nova Scotia; British Anglican colonial bishop (1837–1918)",
+"b": "1837",
+"x": "1918",
+"w": "Frederick Courtney",
+"l": 2
+},
+{
+"q": "Q5546305",
+"n": "George William Burleigh",
+"d": "American industrialist and militia officer (1870–1940)",
+"b": "1870",
+"x": "1940",
+"w": "George William Burleigh",
+"l": 2
+},
+{
+"q": "Q6687856",
+"n": "Louis Munzinger",
+"d": "American politician (1851–1916)",
+"b": "1851",
+"x": "1916",
+"w": "Louis Munzinger",
+"l": 2
+},
+{
+"q": "Q14949031",
+"n": "Robert Tomes",
+"d": "American diplomat",
+"b": "1817",
+"x": "1882",
+"w": "Robert Tomes",
+"l": 2
+},
+{
+"q": "Q29908661",
+"n": "George H. Bend",
+"d": "American banker, member of the New York Stock Exchange (1838-1900)",
+"b": "1838",
+"x": "1900",
+"w": "George H. Bend",
+"l": 2
+},
+{
+"q": "Q94291150",
+"n": "Haley Fiske",
+"d": "American insurance executive and lawyer (1852–1929)",
+"b": "1852",
+"x": "1929",
+"w": "Haley Fiske",
+"l": 2
+},
+{
+"q": "Q97736332",
+"n": "Louis Gordon Hamersley",
+"d": "American sportsman and businessman (1892 - 1942)",
+"b": "1892",
+"x": "1942",
+"w": "Louis Gordon Hamersley",
+"l": 2
+},
+{
+"q": "Q75380197",
+"n": "Margaret Astor Chanler",
+"d": "wife of John Winthrop Chanler (1838-1875)",
+"b": "1838",
+"x": "1875",
+"w": "",
+"l": 1
+},
+{
+"q": "Q75990594",
+"n": "John Maunsell",
+"d": "British Lt. General (1724-1795)",
+"b": "",
+"x": "1795",
+"w": "",
+"l": 1
+},
+{
+"q": "Q94122343",
+"n": "Robert Ludlow Fowler",
+"d": "American jurist and author",
+"b": "1849",
+"x": "1936",
+"w": "",
+"l": 1
+},
+{
+"q": "Q94362007",
+"n": "Louisa Pierpont Morgan",
+"d": "(1866-1946)",
+"b": "1866",
+"x": "1946",
+"w": "",
+"l": 1
+},
+{
+"q": "Q105822376",
+"n": "Robert Fanshawe Bloodgood",
+"d": "American artist (1840–1930)",
+"b": "1848",
+"x": "1930",
+"w": "",
+"l": 1
+},
+{
+"q": "Q108104354",
+"n": "Albert Rolaz Gallatin",
+"d": "American lawyer",
+"b": "1800",
+"x": "1890",
+"w": "",
+"l": 1
+},
+{
+"q": "Q131681485",
+"n": "Charles Frederick Hoffman Jr.",
+"d": "Partner in Hoffman Brothers Real Estate",
+"b": "1856",
+"x": "1919",
+"w": "",
+"l": 1
+},
+{
+"q": "Q138637914",
+"n": "Aileen Cavendish Foster",
+"d": "",
+"b": "1886",
+"x": "1978",
+"w": "",
+"l": 1
+},
+{
+"q": "Q5344788",
+"n": "Edward Payson Dutton",
+"d": "American publisher (1831-1923)",
+"b": "1831",
+"x": "1923",
+"w": "Edward Payson Dutton",
+"l": 1
+},
+{
+"q": "Q5545690",
+"n": "George W. Matsell",
+"d": "American police commissioner",
+"b": "1811",
+"x": "1877",
+"w": "George W. Matsell",
+"l": 1
+},
+{
+"q": "Q7103441",
+"n": "Ormond Gerald Smith",
+"d": "American publisher (1860-1933)",
+"b": "1860",
+"x": "1933",
+"w": "Ormond Gerald Smith",
+"l": 1
+},
+{
+"q": "Q15621236",
+"n": "Francis Shubael Smith",
+"d": "American publisher",
+"b": "1819",
+"x": "1887",
+"w": "Francis Shubael Smith",
+"l": 1
+},
+{
+"q": "Q23020536",
+"n": "Charles Fiske",
+"d": "American Episcopal bishop",
+"b": "1868",
+"x": "1992",
+"w": "Charles Fiske",
+"l": 1
+},
+{
+"q": "Q75413993",
+"n": "Emily Astor",
+"d": "American socialite",
+"b": "1854",
+"x": "1881",
+"w": "Emily Astor",
+"l": 1
+},
+{
+"q": "Q76192196",
+"n": "Mahlon Sands",
+"d": "American merchant",
+"b": "1842",
+"x": "1888",
+"w": "Mahlon Day Sands",
+"l": 1
+},
+{
+"q": "Q76331891",
+"n": "George Richard Schieffelin",
+"d": "American lawyer (1836–1910)",
+"b": "1836",
+"x": "1910",
+"w": "George Richard Schieffelin",
+"l": 1
+},
+{
+"q": "Q98562538",
+"n": "Charles Wilkes",
+"d": "president of the Bank of New York 1825-1832 (1764-1833)",
+"b": "1764",
+"x": "1833",
+"w": "Charles Wilkes (banker)",
+"l": 1
+},
+{
+"q": "Q116742419",
+"n": "Frances Platt Townsend Lupton",
+"d": "American sculptor",
+"b": "1779",
+"x": "1833",
+"w": "Frances Platt Townsend Lupton",
+"l": 1
+},
+{
+"q": "Q56232560",
+"n": "Martin P. Parks",
+"d": "American clergyman (1804–1853)",
+"b": "1804",
+"x": "1854",
+"w": "",
+"l": 0
+},
+{
+"q": "Q75413939",
+"n": "Sarah Todd",
+"d": "wife of John Jacob Astor",
+"b": "1761",
+"x": "1832",
+"w": "",
+"l": 0
+},
+{
+"q": "Q76331893",
+"n": "Richard Lawrence Schieffelin",
+"d": "(1801-1889)",
+"b": "1801",
+"x": "1889",
+"w": "",
+"l": 0
+},
+{
+"q": "Q81548847",
+"n": "Thomas Swords",
+"d": "American printer, bookseller, publisher (1764-1843)",
+"b": "1764",
+"x": "1843",
+"w": "",
+"l": 0
+},
+{
+"q": "Q86346117",
+"n": "John Maunsell Bradhurst",
+"d": "1782 - 1855",
+"b": "1782",
+"x": "1867",
+"w": "",
+"l": 0
+},
+{
+"q": "Q86460321",
+"n": "James Francis Ruggles",
+"d": "",
+"b": "1827",
+"x": "1895",
+"w": "",
+"l": 0
+},
+{
+"q": "Q94125799",
+"n": "Olivia P. Frost",
+"d": "American sociologist and educator (1915–2009)",
+"b": "1915",
+"x": "2009",
+"w": "",
+"l": 0
+},
+{
+"q": "Q94573053",
+"n": "E. Winchester Donald",
+"d": "American cleric (1848–1904)",
+"b": "1848",
+"x": "1904",
+"w": "",
+"l": 0
+},
+{
+"q": "Q94995150",
+"n": "Anna Mary Wendell Minturn",
+"d": "(1811-1886)",
+"b": "1811",
+"x": "1886",
+"w": "",
+"l": 0
+},
+{
+"q": "Q96083606",
+"n": "Elizabeth Mary Douglas",
+"d": "(1799-1852)",
+"b": "1799",
+"x": "1852",
+"w": "",
+"l": 0
+},
+{
+"q": "Q98558449",
+"n": "Frances Wilkes Colden",
+"d": "(1796-1877)",
+"b": "1796",
+"x": "1877",
+"w": "",
+"l": 0
+},
+{
+"q": "Q105576282",
+"n": "Otis Fenner Wood",
+"d": "American publisher",
+"b": "1868",
+"x": "1939",
+"w": "",
+"l": 0
+},
+{
+"q": "Q105576482",
+"n": "Washington Fernando Wood",
+"d": "American newspaperman (1870-1940)",
+"b": "1870",
+"x": "1940",
+"w": "",
+"l": 0
+},
+{
+"q": "Q106629573",
+"n": "Samuel Stillwell Bradhurst",
+"d": "(1810-1861)",
+"b": "1810",
+"x": "1861",
+"w": "",
+"l": 0
+},
+{
+"q": "Q106693932",
+"n": "Mary Morton Hartpence",
+"d": "",
+"b": "1853",
+"x": "1896",
+"w": "",
+"l": 0
+},
+{
+"q": "Q112463317",
+"n": "Howard Thayer Kingsbury",
+"d": "American lawyer (1870–1937)",
+"b": "1870",
+"x": "1937",
+"w": "",
+"l": 0
+},
+{
+"q": "Q116953359",
+"n": "Leigh North",
+"d": "American author",
+"b": "",
+"x": "1920",
+"w": "",
+"l": 0
+},
+{
+"q": "Q116972687",
+"n": "Charles Edward Phelps",
+"d": "American clergyman (1823-1910)",
+"b": "1823",
+"x": "1910",
+"w": "",
+"l": 0
+},
+{
+"q": "Q118247694",
+"n": "Catherine Rebecca Bronson Townsend",
+"d": "",
+"b": "1832",
+"x": "1926",
+"w": "",
+"l": 0
+},
+{
+"q": "Q123588121",
+"n": "Louisa Jauncey Ketchum",
+"d": "botanical artist",
+"b": "1797",
+"x": "1890",
+"w": "",
+"l": 0
+},
+{
+"q": "Q132863327",
+"n": "Benjamin Kissam",
+"d": "American physician (1782-1831)",
+"b": "1782",
+"x": "1831",
+"w": "",
+"l": 0
+},
+{
+"q": "Q134952549",
+"n": "Q134952549",
+"d": "American actor",
+"b": "1818",
+"x": "1880",
+"w": "",
+"l": 0
+},
+{
+"q": "Q136048094",
+"n": "Q136048094",
+"d": "American banker (1854-1924)",
+"b": "1854",
+"x": "1924",
+"w": "",
+"l": 0
+},
+{
+"q": "Q136109163",
+"n": "Richard Kip Anthony",
+"d": "",
+"b": "1812",
+"x": "1886",
+"w": "",
+"l": 0
+},
+{
+"q": "Q136226007",
+"n": "Sophia Rebecca Catherine Furniss",
+"d": "Millionaire heiress",
+"b": "1824",
+"x": "1912",
+"w": "",
+"l": 0
+},
+{
+"q": "Q136231357",
+"n": "Margaret Willing Chisolm",
+"d": "",
+"b": "1863",
+"x": "1904",
+"w": "",
+"l": 0
+},
+{
+"q": "Q136263332",
+"n": "Elizabeth Wakefield",
+"d": "",
+"b": "1896",
+"x": "1964",
+"w": "",
+"l": 0
+},
+{
+"q": "Q136263348",
+"n": "Stephen Higginson Tyng III",
+"d": "",
+"b": "1864",
+"x": "1929",
+"w": "",
+"l": 0
+},
+{
+"q": "Q136264236",
+"n": "Henry Graff Trevor",
+"d": "Millionaire heir",
+"b": "1863",
+"x": "1937",
+"w": "",
+"l": 0
+},
+{
+"q": "Q136370596",
+"n": "Arthur Tryon Kemp",
+"d": "Heir",
+"b": "1871",
+"x": "1945",
+"w": "",
+"l": 0
+},
+{
+"q": "Q136377438",
+"n": "Margaret Helen Schieffelin",
+"d": "",
+"b": "1870",
+"x": "1949",
+"w": "",
+"l": 0
+},
+{
+"q": "Q136383824",
+"n": "James Lorimer Graham",
+"d": "Millionaire",
+"b": "1804",
+"x": "1882",
+"w": "",
+"l": 0
+},
+{
+"q": "Q136442604",
+"n": "Louis Stanislaus Hargous",
+"d": "Millionaire",
+"b": "1809",
+"x": "1886",
+"w": "",
+"l": 0
+},
+{
+"q": "Q136442609",
+"n": "Anita Hargous",
+"d": "Socialite",
+"b": "1857",
+"x": "1932",
+"w": "",
+"l": 0
+},
+{
+"q": "Q136442615",
+"n": "William Warren Appleton",
+"d": "",
+"b": "1848",
+"x": "1932",
+"w": "",
+"l": 0
+},
+{
+"q": "Q136442620",
+"n": "Nina Hargous Appleton",
+"d": "",
+"b": "1864",
+"x": "1922",
+"w": "",
+"l": 0
+},
+{
+"q": "Q136442631",
+"n": "Sallie Jeannette Hargous",
+"d": "Socialite",
+"b": "1866",
+"x": "1956",
+"w": "",
+"l": 0
+},
+{
+"q": "Q136451597",
+"n": "Frederic Gallatin",
+"d": "Millionaire heir",
+"b": "1841",
+"x": "1927",
+"w": "",
+"l": 0
+},
+{
+"q": "Q136451601",
+"n": "Almy Goelet Gerry",
+"d": "",
+"b": "1840",
+"x": "1917",
+"w": "",
+"l": 0
+},
+{
+"q": "Q136451672",
+"n": "James Nicholson Gallatin",
+"d": "Millionaire heir",
+"b": "1846",
+"x": "1890",
+"w": "",
+"l": 0
+},
+{
+"q": "Q136459989",
+"n": "Julia Groesbeck Fowler",
+"d": "",
+"b": "1853",
+"x": "1919",
+"w": "",
+"l": 0
+},
+{
+"q": "Q136525380",
+"n": "Elizabeth Austen Townsend",
+"d": "",
+"b": "1846",
+"x": "1928",
+"w": "",
+"l": 0
+},
+{
+"q": "Q136541750",
+"n": "Samuel Verplanck Hoffman",
+"d": "Heir (1866–1942)",
+"b": "1866",
+"x": "1942",
+"w": "",
+"l": 0
+},
+{
+"q": "Q136549231",
+"n": "Marione Cowles Cushman",
+"d": "",
+"b": "1866",
+"x": "1946",
+"w": "",
+"l": 0
+},
+{
+"q": "Q136689802",
+"n": "Charles Ferdinand Southmayd",
+"d": "Millionaire",
+"b": "1824",
+"x": "1911",
+"w": "",
+"l": 0
+},
+{
+"q": "Q136758512",
+"n": "Susan Jeanette Appleton",
+"d": "",
+"b": "",
+"x": "1929",
+"w": "",
+"l": 0
+},
+{
+"q": "Q136768038",
+"n": "Sophia Eliza Thurston",
+"d": "",
+"b": "1827",
+"x": "1858",
+"w": "",
+"l": 0
+},
+{
+"q": "Q136776570",
+"n": "Louise Foote Bowler",
+"d": "",
+"b": "1861",
+"x": "1933",
+"w": "",
+"l": 0
+},
+{
+"q": "Q141624295",
+"n": "Q141624295",
+"d": "(mid 20th century) Miniature painting - New Jersey",
+"b": "",
+"x": "1963",
+"w": "",
+"l": 0
+}
+],
+"Q42720227": [
+{
+"q": "Q178903",
+"n": "Alexander Hamilton",
+"d": "American Founding Father and statesman (1755/1757–1804)",
+"b": "1757",
+"x": "1804",
+"w": "Alexander Hamilton",
+"l": 104
+},
+{
+"q": "Q878535",
+"n": "William Livingston",
+"d": "American politician (1723–1790)",
+"b": "1723",
+"x": "1790",
+"w": "William Livingston",
+"l": 21
+},
+{
+"q": "Q215838",
+"n": "John Peter Zenger",
+"d": "German printer and journalist in New York City",
+"b": "1697",
+"x": "1746",
+"w": "John Peter Zenger",
+"l": 20
+},
+{
+"q": "Q540530",
+"n": "Luther Martin",
+"d": "American politician and leading Anti-Federalist (1748–1826)",
+"b": "1748",
+"x": "1826",
+"w": "Luther Martin",
+"l": 10
+},
+{
+"q": "Q339946",
+"n": "George Templeton Strong",
+"d": "American lawyer and diarist (1820–1875)",
+"b": "1820",
+"x": "1875",
+"w": "George Templeton Strong",
+"l": 7
+},
+{
+"q": "Q1702115",
+"n": "John Watts de Peyster",
+"d": "Author, General, Historian (1821–1907)",
+"b": "1821",
+"x": "1907",
+"w": "John Watts de Peyster",
+"l": 7
+},
+{
+"q": "Q6911643",
+"n": "Morgan Dix",
+"d": "American theologian and priest (1827–1908)",
+"b": "1827",
+"x": "1908",
+"w": "Morgan Dix",
+"l": 5
+},
+{
+"q": "Q5497176",
+"n": "Frederic de Peyster",
+"d": "American lawyer",
+"b": "1796",
+"x": "1882",
+"w": "Frederic de Peyster",
+"l": 4
+},
+{
+"q": "Q15525010",
+"n": "John Henry Hobart",
+"d": "Episcopal Bishop of New York (1775-1830)",
+"b": "1775",
+"x": "1830",
+"w": "John Henry Hobart",
+"l": 4
+},
+{
+"q": "Q16203667",
+"n": "Benjamin Moore",
+"d": "Episcopal bishop of New York (1748-1816)",
+"b": "1748",
+"x": "1816",
+"w": "Benjamin Moore (bishop)",
+"l": 3
+},
+{
+"q": "Q6829539",
+"n": "Michael Cresap",
+"d": "Continental Army officer (1742–1775)",
+"b": "1742",
+"x": "1775",
+"w": "Michael Cresap",
+"l": 2
+},
+{
+"q": "Q19282337",
+"n": "Anthony Lispenard Bleecker",
+"d": "United States banker, businessman",
+"b": "1741",
+"x": "1816",
+"w": "Anthony Lispenard Bleecker",
+"l": 1
+},
+{
+"q": "Q104871988",
+"n": "Charles McEvers",
+"d": "(1739-1808)",
+"b": "1739",
+"x": "1808",
+"w": "",
+"l": 1
+},
+{
+"q": "Q61830851",
+"n": "John Ogilvie",
+"d": "American Anglican priest (1722–1774)",
+"b": "1722",
+"x": "1774",
+"w": "",
+"l": 0
+},
+{
+"q": "Q91173538",
+"n": "Q91173538",
+"d": "American lawyer and landowner",
+"b": "1807",
+"x": "1879",
+"w": "",
+"l": 0
+},
+{
+"q": "Q92977496",
+"n": "Robert Watts",
+"d": "American businessman (1743-1814)",
+"b": "1743",
+"x": "1814",
+"w": "",
+"l": 0
+},
+{
+"q": "Q92979128",
+"n": "Mary Watts",
+"d": "eldest daughter of William Alexander, Lord Stirling",
+"b": "1749",
+"x": "1820",
+"w": "",
+"l": 0
+},
+{
+"q": "Q98497331",
+"n": "John Alsop",
+"d": "1697 - 1761",
+"b": "1697",
+"x": "1761",
+"w": "",
+"l": 0
+},
+{
+"q": "Q108839836",
+"n": "Moses Rogers",
+"d": "American merchant (ca. 1750-1825)",
+"b": "1750",
+"x": "1825",
+"w": "",
+"l": 0
+},
+{
+"q": "Q109228138",
+"n": "Margaret Marston Philipse Ogilvie",
+"d": "(172_-1807)",
+"b": "1727",
+"x": "1807",
+"w": "",
+"l": 0
+},
+{
+"q": "Q109228215",
+"n": "Mary Crooke Marston",
+"d": "(1706-1773)",
+"b": "1706",
+"x": "1773",
+"w": "",
+"l": 0
+},
+{
+"q": "Q119881386",
+"n": "Robert Livingston Ireland",
+"d": "American businessman (1867–1928)",
+"b": "1867",
+"x": "1928",
+"w": "",
+"l": 0
+}
+],
+"Q42720282": [
+{
+"q": "Q3760496",
+"n": "George Frederick Cooke",
+"d": "British actor",
+"b": "1756",
+"x": "1812",
+"w": "George Frederick Cooke",
+"l": 8
+},
+{
+"q": "Q336626",
+"n": "Campbell P. White",
+"d": "American politician (1787-1859)",
+"b": "1787",
+"x": "1859",
+"w": "Campbell P. White",
+"l": 5
+},
+{
+"q": "Q5112127",
+"n": "Christopher Colles",
+"d": "Irish engineer",
+"b": "1739",
+"x": "1816",
+"w": "Christopher Colles",
+"l": 5
+},
+{
+"q": "Q5354477",
+"n": "Eleazer Oswald",
+"d": "American journalist",
+"b": "1755",
+"x": "1795",
+"w": "Eleazer Oswald",
+"l": 5
+},
+{
+"q": "Q82219",
+"n": "William Denning",
+"d": "American politician (1740-1819)",
+"b": "1740",
+"x": "1819",
+"w": "William Denning",
+"l": 4
+},
+{
+"q": "Q6239702",
+"n": "John Holt",
+"d": "publisher",
+"b": "1721",
+"x": "1784",
+"w": "John Holt (publisher)",
+"l": 2
+},
+{
+"q": "Q55759109",
+"n": "Samuel Auchmuty",
+"d": "1722-1777 , Episcopal minister and Loyalist",
+"b": "1721",
+"x": "1777",
+"w": "Samuel Auchmuty (clergyman)",
+"l": 2
+}
+],
+"Q7842673": [
+{
+"q": "Q192496",
+"n": "Robert Fulton",
+"d": "American engineer and inventor (1765–1815)",
+"b": "1765",
+"x": "1815",
+"w": "Robert Fulton",
+"l": 72
+},
+{
+"q": "Q57423",
+"n": "John Jacob Astor I",
+"d": "German-American businessman (1763-1848)",
+"b": "1763",
+"x": "1848",
+"w": "John Jacob Astor",
+"l": 47
+},
+{
+"q": "Q430672",
+"n": "John Jacob Astor IV",
+"d": "American businessman, real estate builder, investor, inventor, writer, lieutenant colonel (1864–1912)",
+"b": "1864",
+"x": "1912",
+"w": "John Jacob Astor IV",
+"l": 41
+},
+{
+"q": "Q421707",
+"n": "Jerry Orbach",
+"d": "American actor and singer (1935-2004)",
+"b": "1935",
+"x": "2004",
+"w": "Jerry Orbach",
+"l": 35
+},
+{
+"q": "Q500046",
+"n": "Albert Gallatin",
+"d": "Swiss and American politician, diplomat and scholar (1761-1849)",
+"b": "1761",
+"x": "1849",
+"w": "Albert Gallatin",
+"l": 32
+},
+{
+"q": "Q271742",
+"n": "Madeleine Astor",
+"d": "American socialite and Titanic survivor (1893-1940)",
+"b": "1893",
+"x": "1940",
+"w": "Madeleine Astor",
+"l": 26
+},
+{
+"q": "Q5363475",
+"n": "Elizabeth Schuyler Hamilton",
+"d": "American philanthropist and wife of Alexander Hamilton (1757–1854)",
+"b": "1757",
+"x": "1854",
+"w": "Elizabeth Schuyler Hamilton",
+"l": 24
+},
+{
+"q": "Q223235",
+"n": "Francis Lewis",
+"d": "Signatory of the US Declaration of Independence, from Wales",
+"b": "1713",
+"x": "1803",
+"w": "Francis Lewis",
+"l": 18
+},
+{
+"q": "Q663151",
+"n": "Hugh Williamson",
+"d": "American politician (1735-1819)",
+"b": "1735",
+"x": "1819",
+"w": "Hugh Williamson",
+"l": 16
+},
+{
+"q": "Q1044554",
+"n": "Caroline Webster Schermerhorn Astor",
+"d": "American socialite (1830–1908)",
+"b": "1830",
+"x": "1908",
+"w": "Caroline Schermerhorn Astor",
+"l": 14
+},
+{
+"q": "Q4762673",
+"n": "Angelica Schuyler Church",
+"d": "American socialite (1756–1814)",
+"b": "1756",
+"x": "1814",
+"w": "Angelica Schuyler Church",
+"l": 14
+},
+{
+"q": "Q4019918",
+"n": "William Alexander",
+"d": "Continental Army general (1726-1783)",
+"b": "1726",
+"x": "1783",
+"w": "William Alexander, Lord Stirling",
+"l": 12
+},
+{
+"q": "Q437169",
+"n": "John Sloss Hobart",
+"d": "American statesman (1738-1805)",
+"b": "1738",
+"x": "1805",
+"w": "John Sloss Hobart",
+"l": 10
+},
+{
+"q": "Q5561786",
+"n": "John Jacob Astor III",
+"d": "Union Army officer and capitalist (1822–1890)",
+"b": "1822",
+"x": "1890",
+"w": "John Jacob Astor III",
+"l": 9
+},
+{
+"q": "Q870607",
+"n": "William Backhouse Astor, Sr.",
+"d": "American businessman (1792-1875)",
+"b": "1792",
+"x": "1875",
+"w": "William Backhouse Astor Sr.",
+"l": 8
+},
+{
+"q": "Q1497723",
+"n": "William Backhouse Astor, Jr.",
+"d": "American businessman, yachtsman, and racehorse owner/breeder",
+"b": "1829",
+"x": "1892",
+"w": "William Backhouse Astor Jr.",
+"l": 8
+},
+{
+"q": "Q1678766",
+"n": "John Morin Scott",
+"d": "American politician, New York (1730-1784)",
+"b": "1730",
+"x": "1784",
+"w": "John Morin Scott",
+"l": 8
+},
+{
+"q": "Q1680697",
+"n": "James Lawrence",
+"d": "American naval officer",
+"b": "1781",
+"x": "1813",
+"w": "James Lawrence",
+"l": 8
+},
+{
+"q": "Q2154933",
+"n": "Rita de Acosta Lydig",
+"d": "American socialite (1875–1929)",
+"b": "1875",
+"x": "1929",
+"w": "Rita de Acosta Lydig",
+"l": 8
+},
+{
+"q": "Q5492116",
+"n": "Franklin Wharton",
+"d": "United States Marine Corps Commandant",
+"b": "1767",
+"x": "1818",
+"w": "Franklin Wharton",
+"l": 8
+},
+{
+"q": "Q22088567",
+"n": "Philip Hamilton",
+"d": "Eldest child of Alexander Hamilton and Elizabeth Schuyler (1782–1801)",
+"b": "1782",
+"x": "1801",
+"w": "Philip Hamilton",
+"l": 8
+},
+{
+"q": "Q1669276",
+"n": "Marinus Willett",
+"d": "American mayor",
+"b": "1740",
+"x": "1830",
+"w": "Marinus Willett",
+"l": 7
+},
+{
+"q": "Q13219089",
+"n": "William A. Chanler",
+"d": "American politician",
+"b": "1867",
+"x": "1934",
+"w": "William A. Chanler",
+"l": 7
+},
+{
+"q": "Q1027427",
+"n": "John R. Fellows",
+"d": "American politician (1832-1896)",
+"b": "1832",
+"x": "1896",
+"w": "John R. Fellows",
+"l": 6
+},
+{
+"q": "Q1702113",
+"n": "John Watts Jr.",
+"d": "American lawyer and politician from New York City (1749-1836)",
+"b": "1749",
+"x": "1836",
+"w": "John Watts (New York politician)",
+"l": 6
+},
+{
+"q": "Q6245375",
+"n": "John Lovelace, 4th Baron Lovelace",
+"d": "English military officer, governor of the provinces of New York and New Jersey",
+"b": "1672",
+"x": "1709",
+"w": "John Lovelace, 4th Baron Lovelace",
+"l": 6
+},
+{
+"q": "Q16198820",
+"n": "Mary Alexander",
+"d": "British American merchant",
+"b": "1693",
+"x": "1760",
+"w": "Mary Alexander",
+"l": 6
+},
+{
+"q": "Q93384",
+"n": "John J. Morgan",
+"d": "American politician (1770-1849)",
+"b": "1770",
+"x": "1849",
+"w": "John J. Morgan",
+"l": 5
+},
+{
+"q": "Q501756",
+"n": "Thomas J. Oakley",
+"d": "American politician (1783-1857)",
+"b": "1783",
+"x": "1857",
+"w": "Thomas J. Oakley",
+"l": 5
+},
+{
+"q": "Q3471212",
+"n": "Samuel Provoost",
+"d": "American bishop (1742–1815)",
+"b": "1742",
+"x": "1815",
+"w": "Samuel Provoost",
+"l": 5
+},
+{
+"q": "Q5362157",
+"n": "Eliza Jumel",
+"d": "American socialite (1775-1865)",
+"b": "1775",
+"x": "1865",
+"w": "Eliza Jumel",
+"l": 5
+},
+{
+"q": "Q7411203",
+"n": "Samuel Ward",
+"d": "American lobbyist (1814–1884)",
+"b": "1814",
+"x": "1884",
+"w": "Samuel Ward (lobbyist)",
+"l": 5
+},
+{
+"q": "Q11310714",
+"n": "John Alsop",
+"d": "American merchant and politician (1724-1794)",
+"b": "1724",
+"x": "1794",
+"w": "John Alsop",
+"l": 5
+},
+{
+"q": "Q5079965",
+"n": "Charles L. Livingston",
+"d": "American politician",
+"b": "1800",
+"x": "1873",
+"w": "Charles L. Livingston",
+"l": 4
+},
+{
+"q": "Q5343483",
+"n": "Edward Holland",
+"d": "Mayor of New York City",
+"b": "1702",
+"x": "1756",
+"w": "Edward Holland (mayor)",
+"l": 4
+},
+{
+"q": "Q7610393",
+"n": "Stephen Rochefontaine",
+"d": "United States Army officer (1755–1814)",
+"b": "1755",
+"x": "1814",
+"w": "Stephen Rochefontaine",
+"l": 4
+},
+{
+"q": "Q18154659",
+"n": "Richard Morris",
+"d": "American lawyer and politician from New York",
+"b": "1730",
+"x": "1810",
+"w": "Richard Morris (New York judge)",
+"l": 4
+},
+{
+"q": "Q20707882",
+"n": "Elias Neau",
+"d": "British French-born Huguenot, religious educator",
+"b": "1662",
+"x": "1722",
+"w": "Elias Neau",
+"l": 4
+},
+{
+"q": "Q3661160",
+"n": "Aaron Hackley",
+"d": "American politician (1783-1868)",
+"b": "1783",
+"x": "1868",
+"w": "Aaron Hackley Jr.",
+"l": 3
+},
+{
+"q": "Q5720001",
+"n": "Henry Cruger",
+"d": "Anglo-American politician (1739–1827)",
+"b": "1739",
+"x": "1827",
+"w": "Henry Cruger",
+"l": 3
+},
+{
+"q": "Q6230272",
+"n": "John Duer",
+"d": "American jurist (1782–1858)",
+"b": "1782",
+"x": "1858",
+"w": "John Duer",
+"l": 3
+},
+{
+"q": "Q7517584",
+"n": "Simeon Draper",
+"d": "American politician",
+"b": "1804",
+"x": "1866",
+"w": "Simeon Draper",
+"l": 3
+},
+{
+"q": "Q8005827",
+"n": "William Bradford",
+"d": "Early English-born printer in North America",
+"b": "1663",
+"x": "1752",
+"w": "William Bradford (printer, born 1663)",
+"l": 3
+},
+{
+"q": "Q6140358",
+"n": "James Nicholson",
+"d": "US Navy officer",
+"b": "1737",
+"x": "1804",
+"w": "James Nicholson (naval officer)",
+"l": 2
+},
+{
+"q": "Q6273866",
+"n": "Jonathan Mayhew Wainwright I",
+"d": "British-American Episcopal Bishop (1792–1854)",
+"b": "1792",
+"x": "1854",
+"w": "Jonathan Mayhew Wainwright (bishop)",
+"l": 2
+},
+{
+"q": "Q8005225",
+"n": "William Bayard Jr.",
+"d": "American banker (1761-1826)",
+"b": "1761",
+"x": "1826",
+"w": "William Bayard Jr.",
+"l": 2
+},
+{
+"q": "Q15457838",
+"n": "John Lamb",
+"d": "general",
+"b": "1735",
+"x": "1800",
+"w": "John Lamb (general)",
+"l": 2
+},
+{
+"q": "Q16859145",
+"n": "Q16859145",
+"d": "American general",
+"b": "1779",
+"x": "1848",
+"w": "Robert Swartwout",
+"l": 2
+},
+{
+"q": "Q16886435",
+"n": "John Ward",
+"d": "Intendent of Charleston, South Carolina, born 1767",
+"b": "1767",
+"x": "1816",
+"w": "John Ward (South Carolina politician)",
+"l": 2
+},
+{
+"q": "Q61639787",
+"n": "Q61639787",
+"d": "American politician",
+"b": "1758",
+"x": "1822",
+"w": "Aquila Giles",
+"l": 2
+},
+{
+"q": "Q100230989",
+"n": "Thomas Fuller Potter",
+"d": "French rugby union player",
+"b": "1865",
+"x": "1948",
+"w": "",
+"l": 2
+},
+{
+"q": "Q7412724",
+"n": "Q7412724",
+"d": "American soldier, merchant, speculator and politician (1783-1856)",
+"b": "1783",
+"x": "1856",
+"w": "Samuel Swartwout",
+"l": 1
+},
+{
+"q": "Q47010848",
+"n": "John W. Mulligan",
+"d": "(1774-1862)",
+"b": "1774",
+"x": "1862",
+"w": "John W. Mulligan",
+"l": 1
+},
+{
+"q": "Q50199163",
+"n": "Frederic James de Peyster",
+"d": "(1839-1905)",
+"b": "1839",
+"x": "1905",
+"w": "Frederic James de Peyster",
+"l": 1
+},
+{
+"q": "Q62605592",
+"n": "Philip Philipse",
+"d": "(1724-1768)",
+"b": "1724",
+"x": "1768",
+"w": "Philip Philipse (1724–1768)",
+"l": 1
+},
+{
+"q": "Q76290978",
+"n": "Bache McEvers",
+"d": "American commission merchant, shipper, and insurer.",
+"b": "1798",
+"x": "1851",
+"w": "Bache McEvers",
+"l": 1
+},
+{
+"q": "Q85235326",
+"n": "James Gordon",
+"d": "British Army officer (c. 1735-1783), fought in the American Revolutionary War",
+"b": "1735",
+"x": "1783",
+"w": "James Gordon (British Army officer, died 1783)",
+"l": 1
+},
+{
+"q": "Q90946773",
+"n": "Stephen Van Rensselaer Cruger",
+"d": "American soldier and financier",
+"b": "1844",
+"x": "1898",
+"w": "Stephen Van Rensselaer Cruger",
+"l": 1
+},
+{
+"q": "Q57326672",
+"n": "Stephen Fiske",
+"d": "American writer (1840–1916)",
+"b": "1840",
+"x": "1916",
+"w": "",
+"l": 1
+},
+{
+"q": "Q75413941",
+"n": "unnamed infant son Astor",
+"d": "(born 1802)",
+"b": "1802",
+"x": "1802",
+"w": "",
+"l": 0
+},
+{
+"q": "Q75414070",
+"n": "John Rudolph Astor",
+"d": "(1881-1881)",
+"b": "1881",
+"x": "1881",
+"w": "",
+"l": 0
+},
+{
+"q": "Q75414072",
+"n": "Gwendolyn Astor",
+"d": "(1889-1902)",
+"b": "1889",
+"x": "1902",
+"w": "",
+"l": 0
+},
+{
+"q": "Q85850646",
+"n": "Elizabeth Wolcott Gracie",
+"d": "(1795-1819)",
+"b": "1795",
+"x": "1819",
+"w": "",
+"l": 0
+},
+{
+"q": "Q92979142",
+"n": "Sarah Livingston",
+"d": "(died 1805)",
+"b": "1725",
+"x": "1805",
+"w": "",
+"l": 0
+},
+{
+"q": "Q94286175",
+"n": "Edward William Laight",
+"d": "1773-1852",
+"b": "1773",
+"x": "1852",
+"w": "",
+"l": 0
+},
+{
+"q": "Q98960236",
+"n": "Schuyler Livingston",
+"d": "(1772–1809)",
+"b": "1772",
+"x": "1809",
+"w": "",
+"l": 0
+},
+{
+"q": "Q104848586",
+"n": "William Seton",
+"d": "(1746 - 1798)",
+"b": "1746",
+"x": "1798",
+"w": "",
+"l": 0
+},
+{
+"q": "Q109228136",
+"n": "Frederick Philipse",
+"d": "(1755-1829)",
+"b": "1755",
+"x": "1829",
+"w": "",
+"l": 0
+},
+{
+"q": "Q109228191",
+"n": "Nathaniel Marston",
+"d": "27 Mar 1704 - 21 Oct 1778",
+"b": "1704",
+"x": "1778",
+"w": "",
+"l": 0
+},
+{
+"q": "Q110006437",
+"n": "Catherine Harris Smith Pemberton",
+"d": "",
+"b": "",
+"x": "1751",
+"w": "",
+"l": 0
+},
+{
+"q": "Q110493333",
+"n": "Mary L. Seward",
+"d": "American poet 1815-1879",
+"b": "1815",
+"x": "",
+"w": "",
+"l": 0
+},
+{
+"q": "Q111031012",
+"n": "Phebe Taylor Winthrop",
+"d": "(1765-1841)",
+"b": "1765",
+"x": "1841",
+"w": "",
+"l": 0
+},
+{
+"q": "Q136122252",
+"n": "Sarah Cruger Heyward",
+"d": "",
+"b": "1787",
+"x": "1868",
+"w": "",
+"l": 0
+},
+{
+"q": "Q136230971",
+"n": "Louisa Livingston",
+"d": "",
+"b": "1826",
+"x": "1876",
+"w": "",
+"l": 0
+},
+{
+"q": "Q136372941",
+"n": "Maria Antoinette Kane",
+"d": "",
+"b": "1798",
+"x": "1869",
+"w": "",
+"l": 0
+},
+{
+"q": "Q136452002",
+"n": "Sarah Cornell Clarkson",
+"d": "",
+"b": "1762",
+"x": "1803",
+"w": "",
+"l": 0
+},
+{
+"q": "Q136548624",
+"n": "Don Alonzo Cushman",
+"d": "Millionaire of NYC (1792-1875)",
+"b": "1792",
+"x": "1875",
+"w": "",
+"l": 0
+}
+]
+}

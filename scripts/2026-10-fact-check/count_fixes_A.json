@@ -1,0 +1,14 @@
+{
+  "Calvary Cemetery|Queens": {"count": 1750000, "count_display": "more than 1.75 million", "count_type": "interments", "count_confidence": "high", "count_source": "https://calvaryandalliedcemeteries.com/calvary-cemetery/"},
+  "Hart Island (City Cemetery)|Bronx": {"count_source": "https://www.nycgovparks.org/parks/hart-island"},
+  "All Faiths Cemetery|Queens": {"count_display": "more than 540,000", "count_source": "https://allfaithscemetery.org/about-us/"},
+  "Cemetery of the Evergreens|Queens": {"count": 538000, "count_display": "over 538,000", "count_source": "https://www.theevergreenscemetery.org/"},
+  "Saint Raymonds Cemetery|Bronx": {"count": null, "count_display": null, "count_type": null, "count_confidence": null, "count_source": null},
+  "Cypress Hills Cemetery|Queens": {"count_confidence": "low"},
+  "Woodlawn Cemetery|Bronx": {"count": 310000, "count_display": "more than 310,000", "count_source": "https://www.woodlawn.org/about/history/"},
+  "Mount Hebron Cemetery|Queens": {"count": 217000, "count_display": "over 217,000", "count_type": "interments", "count_confidence": "high", "count_source": "https://www.mounthebroncemetery.com/"},
+  "Mount Zion Cemetery|Queens": {"count_type": "interments", "count_source": "https://www.mountzioncemetery.com/"},
+  "Montefiore Cemetery|Queens": {"count": 150000, "count_display": "more than 150,000", "count_type": "interments", "count_confidence": "low"},
+  "Mount Carmel Cemetery|Queens": {"count": 135000, "count_display": "more than 135,000", "count_type": "interments", "count_confidence": "high", "count_source": "http://www.mountcarmelcemetery.com/"},
+  "Maple Grove Cemetery|Queens": {"count_confidence": "low"}
+}

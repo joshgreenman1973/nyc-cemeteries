@@ -292,7 +292,10 @@ header .links button#sat-btn.on { background: var(--navy); color: #fff; border-c
 .fact { display: flex; gap: 10px; padding: 3px 0; font-size: 13.5px; border-bottom: 1px dotted var(--rule); }
 .fact .fk { color: var(--stone); min-width: 92px; text-transform: uppercase; font-size: 11px; letter-spacing: .06em; padding-top: 2px; }
 .fact .fv { color: var(--ink); }
+.fact .fv a { color: var(--moss); }
 .note-block { font-size: 13.5px; line-height: 1.5; color: #3a3f3a; background: var(--bone-deep); padding: 9px 11px; margin: 10px 0; border-left: 2px solid var(--gilt); }
+.h3src { font-weight: normal; font-style: italic; text-transform: none; letter-spacing: 0; color: var(--stone); font-size: .85em; }
+.prov a { color: var(--moss); }
 .prov { margin-top: 16px; font-size: 11px; color: var(--stone); font-style: italic; line-height: 1.4; border-top: 1px solid var(--rule); padding-top: 9px; }
 
 /* ---------- AI caution popover ---------- */
@@ -329,7 +332,7 @@ header .links button#sat-btn.on { background: var(--navy); color: #fff; border-c
 <body>
 <header>
   <h1>The permanent residents</h1>
-  <div class="dek">Nearly 600 cemeteries and burial grounds across the five boroughs — the active, the preserved and the long-paved-over — with burial counts and notable residents where they're documented.</div>
+  <div class="dek">About 550 cemeteries and burial grounds across the five boroughs — the active, the preserved and the long-paved-over — with burial counts and notable residents where they're documented.</div>
   <div class="links">
     <button id="side-toggle" class="chip">List</button>
     <button id="sat-btn" data-tip="Satellite imagery appears only for cemeteries large enough to have a mapped outline. The smaller historic and no-longer-extant sites are mapped as single points, so they don't show an aerial view.">Satellite</button>
@@ -342,7 +345,7 @@ header .links button#sat-btn.on { background: var(--navy); color: #fff; border-c
   <h4>About this page</h4>
   <ul>
     <li>This map was built with AI assistance. Active-cemetery shapes come from OpenStreetMap; the fuller inventory — including historic and obliterated burial grounds, and the founding years and status labels — comes from Elizabeth D. Meade's <a href="https://www.cemeteriesofnyc.com/map" target="_blank" rel="noopener">Cemeteries of New York City</a> catalogue. Notable burials come from Wikidata.</li>
-    <li>Burial counts were checked one by one against cemetery websites, Wikipedia article text and news sources, with a source link and confidence level shown for each. Most cemeteries publish no figure at all.</li>
+    <li>Burial counts were checked one by one against cemetery websites, city landmark reports, Wikipedia article text and other published sources. Each count names its source, links to it and carries a confidence level; the methodology lists them all. Most cemeteries publish no figure at all.</li>
     <li>"Notable burials" means people with Wikipedia/Wikidata entries who are recorded there as buried at the cemetery — an incomplete and uneven list.</li>
     <li>Spot-check anything you plan to rely on. See the <a href="methodology.html">methodology</a> for details.</li>
   </ul>
@@ -545,7 +548,7 @@ function renderList() {
   document.getElementById('list').innerHTML = rows.map(p => `
     <div class="item ${p._id===activeId?'active':''} ${p.status==='Obliterated'?'oblit':''}" onclick="select(${p._id}, true)">
       <div class="nm">${p.name}</div>
-      <div class="meta">${p.borough || 'New York City'}${p.founded ? ' · est. ' + p.founded : ''}
+      <div class="meta">${p.borough || 'New York City'}${p.founded ? ' · est. ' + (p.founded_display || p.founded) : ''}
         ${p.count ? ' · <b>' + approx(p.count_display) + '</b> ' + (p.count_type==='graves'?'graves':'buried')
           : (p.status==='Obliterated' ? ' · no longer extant' : '')}
         ${p.n_notables ? ' · ' + p.n_notables + ' notable' : ''}
@@ -568,16 +571,17 @@ function select(id, fly) {
     (p.status ? `<br><span class="badge badge-${p.status}">${STATUS_LABEL[p.status] || p.status}</span>` : '');
   let stats = '';
   stats += `<div class="stat"><div class="num">${p.count ? approx(p.count_display) : '—'}</div><div class="lbl">${p.count ? (p.count_type==='graves'?'graves':'people buried') : 'no documented count'}</div></div>`;
-  if (p.founded) stats += `<div class="stat"><div class="num">${p.founded}</div><div class="lbl">founded</div></div>`;
+  if (p.founded) stats += `<div class="stat"><div class="num">${p.founded_display || p.founded}</div><div class="lbl">founded</div></div>`;
   stats += `<div class="stat"><div class="num">${p.n_notables || '—'}</div><div class="lbl">notable burials</div></div>`;
   document.getElementById('dstats').innerHTML = stats;
   const src = document.getElementById('dsrc');
   if (p.count && p.count_source) {
     let host = '';
     try { host = new URL(p.count_source).hostname.replace('www.',''); } catch(e) {}
-    src.innerHTML = `Count source: <a href="${p.count_source}" target="_blank" rel="noopener">${host}</a> · confidence: ${p.count_confidence}`;
+    src.innerHTML = `Count source: <a href="${p.count_source}" target="_blank" rel="noopener">${p.count_source_label || host}</a> · confidence: ${p.count_confidence}` +
+      (p.count_note ? `<br>${p.count_note}` : '');
     src.style.display = 'block';
-  } else { src.style.display = 'none'; }
+  } else { src.innerHTML = ''; src.style.display = 'none'; }
 
   const body = document.getElementById('dbody');
   const ppl = NOTABLES[p.wikidata] || [];
@@ -586,8 +590,13 @@ function select(id, fly) {
   // historical / catalogue facts
   const facts = [];
   if (p.cem_type) facts.push(['Type', [p.cem_type, p.subtype].filter(Boolean).join(', ')]);
-  if (p.close_yr && p.close_yr !== 'present') facts.push(['Closed', p.close_yr]);
-  if (p.oblit_yr && p.oblit_yr !== 'n/a') facts.push(['No longer extant', p.oblit_yr]);
+  if (p.meade_name && p.meade_name !== p.name) facts.push(['Catalogue name', p.meade_name]);
+  if (p.close_yr && p.close_yr.toLowerCase() !== 'present') facts.push(['Closed', p.close_yr]);
+  if (p.oblit_yr && p.oblit_yr.toLowerCase() !== 'n/a') facts.push([p.status === 'Obliterated' ? 'No longer extant' : 'Partly obliterated', p.oblit_yr]);
+  if (p.approx) facts.push(['Location', 'Approximate; the exact site is not known']);
+  const srcLink = (u, l) => l ? `Source: <a href="${u}" target="_blank" rel="noopener">${l}</a>.` : '';
+  if (p.founded_source_label) facts.push(['Founding year', [p.founded_note, srcLink(p.founded_source, p.founded_source_label)].filter(Boolean).join(' ')]);
+  if (p.status_note) facts.push(['Status', p.status_note + ' ' + srcLink(p.status_source, p.status_source_label)]);
   if (facts.length) {
     html += `<h3>Record</h3><div class="facts">` +
       facts.map(([k,v]) => `<div class="fact"><span class="fk">${k}</span><span class="fv">${v}</span></div>`).join('') +
@@ -596,7 +605,7 @@ function select(id, fly) {
   if (p.other) html += `<div class="note-block">${p.other}</div>`;
 
   if (ppl.length) {
-    html += `<h3>Notable burials</h3>`;
+    html += `<h3>Notable burials <span class="h3src">from Wikidata</span></h3>`;
     html += renderPeople(ppl.slice(0, 25));
     if (ppl.length > 25) {
       html += `<button class="more-btn" onclick="showAll(${id})">Show all ${ppl.length}</button>`;
@@ -609,10 +618,14 @@ function select(id, fly) {
   if (p.wikipedia) links.push(`<a class="wiki-link" target="_blank" rel="noopener" href="https://en.wikipedia.org/wiki/${encodeURIComponent(p.wikipedia.replace(/ /g,'_'))}">Wikipedia article</a>`);
   if (links.length) html += `<div class="links-row">${links.join('')}</div>`;
   const prov = [];
+  const meadeLink = '<a href="https://www.cemeteriesofnyc.com/map" target="_blank" rel="noopener">Cemeteries of New York City</a>';
+  const overridden = p.founded_source_label || p.status_note;
+  if (p.meade_id) prov.push((overridden ? 'Status, founding year, record and notes, except as noted above: ' : 'Status, founding year, record and notes: ') + 'Elizabeth D. Meade, ' + meadeLink +
+    (p.meade_sources ? ', citing ' + p.meade_sources : ''));
+  else prov.push('Not in Meade’s catalogue; status from OpenStreetMap');
   if (p.source === 'osm') prov.push('Boundary: OpenStreetMap');
-  if (p.meade_sources) prov.push('Catalogue: Meade, citing ' + p.meade_sources);
-  else if (p.source === 'meade') prov.push('Catalogue: Cemeteries of New York City (E. D. Meade)');
-  if (prov.length) html += `<div class="prov">${prov.join(' · ')}</div>`;
+  if (ppl.length) prov.push('Notable burials: Wikidata');
+  html += `<div class="prov">${prov.join(' · ')}</div>`;
   body.innerHTML = html;
   body.scrollTop = 0;
   document.getElementById('detail').classList.add('open');
@@ -633,7 +646,7 @@ function showAll(id) {
   const p = CEMS[id].properties;
   const ppl = NOTABLES[p.wikidata] || [];
   const body = document.getElementById('dbody');
-  let html = `<h3>Notable burials</h3>` + renderPeople(ppl);
+  let html = `<h3>Notable burials <span class="h3src">from Wikidata</span></h3>` + renderPeople(ppl);
   if (p.n_notables > ppl.length) html += `<div class="empty-note">Showing the ${ppl.length} most-noted of ${p.n_notables} people recorded in Wikidata.</div>`;
   const links2 = [];
   if (p.website) links2.push(`<a class="wiki-link" target="_blank" rel="noopener" href="${p.website}">Official website</a>`);

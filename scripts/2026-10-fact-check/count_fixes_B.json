@@ -1,0 +1,47 @@
+{
+ "Frederick Douglass Memorial Park|Staten Island": {
+  "count_display": "an estimated 60,000",
+  "count_confidence": "low",
+  "count_source": "https://nylandmarks.org/news/frederick-douglass-memorial-park-is-now-a-landmark/"
+ },
+ "Flushing Cemetery|Queens": {
+  "count_display": "41,000 as of 1951",
+  "count_confidence": "low"
+ },
+ "Moore-Jackson Cemetery|Queens": {
+  "count": 51,
+  "count_display": "at least 51",
+  "count_type": "graves",
+  "count_confidence": "high",
+  "count_source": "https://s-media.nyc.gov/agencies/lpc/lp/1956.pdf"
+ },
+ "Brinckerhoff Cemetery|Queens": {
+  "count_display": "at least 77",
+  "count_type": "interments",
+  "count_confidence": "high",
+  "count_source": "https://s-media.nyc.gov/agencies/lpc/lp/2087.pdf"
+ },
+ "Lawrence Cemetery|Queens": {
+  "count": 89,
+  "count_display": "89 graves",
+  "count_type": "graves",
+  "count_confidence": "medium",
+  "count_source": "https://hdc.org/buildings/lawrence-family-graveyard/"
+ },
+ "Prospect Cemetery|Queens": {
+  "count_confidence": "medium"
+ },
+ "Cypress Hills National Cemetery|Brooklyn": {
+  "count": 21000,
+  "count_display": "more than 21,000",
+  "count_source": "https://web.archive.org/web/20060726085547/http://www.cem.va.gov/CEM/cems/nchp/cypresshills.asp"
+ },
+ "New York Marble Cemetery|Manhattan": {
+  "count": 2000,
+  "count_display": "more than 2,000",
+  "count_source": "https://www.marblecemetery.org/records"
+ },
+ "Saint Peter’s Cemetery|Staten Island": {
+  "count_confidence": "medium"
+ }
+}
