@@ -86,7 +86,7 @@ header .links button#sat-btn.on { background: var(--navy); color: #fff; border-c
 #sat-btn:hover::after { opacity: 1; visibility: visible; }
 @media (max-width: 760px) { #sat-btn::after { right: auto; left: 0; width: 220px; } }
 
-#wrap { flex: 1; display: flex; min-height: 0; position: relative; }
+#wrap { flex: 1; display: flex; min-height: 0; position: relative; overflow: hidden; }
 
 /* ---------- sidebar ---------- */
 #side {
@@ -319,8 +319,60 @@ header .links button#sat-btn.on { background: var(--navy); color: #fff; border-c
 #ai-pop li { margin-bottom: 5px; }
 #ai-pop a { color: #aac4e2; }
 
+/* ---------- totals panel ---------- */
+#tot-pop {
+  display: none;
+  position: absolute;
+  top: 58px; right: 18px;
+  width: 420px;
+  max-width: calc(100vw - 32px);
+  max-height: calc(100vh - 76px);
+  overflow-y: auto;
+  background: var(--bone);
+  color: var(--ink);
+  border: 1px solid var(--ink);
+  padding: 16px 18px 14px;
+  z-index: 2100;
+  font-size: 13px;
+  line-height: 1.45;
+  box-shadow: 4px 4px 0 rgba(31,36,33,.3);
+}
+#tot-pop.open { display: block; }
+#tot-pop .closer { position: absolute; top: 6px; right: 10px; background: none; border: 0; font-size: 22px; line-height: 1; color: var(--stone); cursor: pointer; }
+#tot-pop h4 { font-size: 12px; letter-spacing: .08em; text-transform: uppercase; color: var(--stone); margin: 0 0 4px; font-weight: 600; }
+#tot-pop h5 { font-size: 12px; letter-spacing: .06em; text-transform: uppercase; color: var(--stone); margin: 16px 0 6px; font-weight: 600; }
+.tot-hero { font-family: 'Cormorant Garamond', serif; font-size: 34px; font-weight: 700; line-height: 1.05; }
+.tot-sub { color: var(--ink); margin: 2px 0 12px; }
+.tot-chart { position: relative; padding-bottom: 30px; }
+.tot-bar { position: relative; height: 26px; }
+.tot-bar .seg { position: absolute; top: 0; bottom: 0; border-right: 2px solid var(--bone); box-sizing: border-box; cursor: default; }
+.tot-bar .seg:first-child { border-radius: 4px 0 0 4px; }
+.tot-bar .seg.hatch { background-image: repeating-linear-gradient(135deg, rgba(31,36,33,.28) 0 1.5px, transparent 1.5px 5px); }
+.tot-bar .seg.unknown { border: 1.5px dashed var(--stone); border-left: 0; border-radius: 0 4px 4px 0; background: transparent; display: flex; align-items: center; justify-content: flex-start; padding-left: 7px; color: var(--stone); font-size: 14px; font-weight: 600; }
+.tot-tick { position: absolute; top: -4px; height: 34px; border-left: 2px solid var(--ink); }
+.tot-tick span { position: absolute; top: 36px; right: -2px; white-space: nowrap; font-size: 11.5px; color: var(--ink); }
+.tot-legend { display: grid; grid-template-columns: 14px 1fr auto; gap: 4px 8px; align-items: center; font-size: 12.5px; }
+.tot-legend .sw { width: 12px; height: 12px; border-radius: 2px; }
+.tot-legend .sw.hatch { background-image: repeating-linear-gradient(135deg, rgba(31,36,33,.28) 0 1.5px, transparent 1.5px 5px); }
+.tot-legend .sw.hollow { border: 1.5px dashed var(--stone); box-sizing: border-box; }
+.tot-legend .sw.empty { border: 1px solid var(--stone); box-sizing: border-box; }
+.tot-legend .v { text-align: right; font-variant-numeric: tabular-nums; color: var(--ink); white-space: nowrap; }
+.tot-legend .v small { color: var(--stone); font-size: 11.5px; }
+.tot-waffle { display: grid; grid-template-columns: repeat(auto-fill, 7px); gap: 2px; margin-bottom: 8px; }
+.tot-waffle i { width: 7px; height: 7px; border-radius: 1px; display: block; }
+.tot-waffle i.none { border: 1px solid #b9b3a3; box-sizing: border-box; }
+.tot-why { padding-left: 17px; margin: 0; }
+.tot-why li { margin-bottom: 6px; }
+.tot-bottom { margin: 10px 0 8px; font-weight: 600; }
+.tot-src { font-size: 11.5px; color: var(--stone); margin: 0; }
+#tot-pop a { color: var(--moss); }
+.tot-tip { position: absolute; display: none; pointer-events: none; background: var(--ink); color: var(--bone); font-size: 12px; line-height: 1.4; padding: 7px 9px; max-width: 250px; z-index: 5; box-shadow: 2px 2px 0 rgba(31,36,33,.25); }
+
 @media (max-width: 760px) {
-  header { padding: 10px 14px; }
+  header { padding: 10px 14px; flex-wrap: wrap; row-gap: 8px; }
+  header .links { flex-wrap: wrap; gap: 6px; margin-left: 0; }
+  header .links a, header .links button { padding: 4px 8px; font-size: 11px; }
+  #tot-pop, #ai-pop { right: 16px; }
   header .dek { display: none; }
   #side { position: absolute; left: 0; top: 0; bottom: 0; transform: translateX(-100%); transition: transform .25s; width: 320px; min-width: 320px; }
   #side.open { transform: translateX(0); }
@@ -336,6 +388,7 @@ header .links button#sat-btn.on { background: var(--navy); color: #fff; border-c
   <div class="links">
     <button id="side-toggle" class="chip">List</button>
     <button id="sat-btn" data-tip="Satellite imagery appears only for cemeteries large enough to have a mapped outline. The smaller historic and no-longer-extant sites are mapped as single points, so they don't show an aerial view.">Satellite</button>
+    <button id="tot-btn" aria-expanded="false" aria-controls="tot-pop">Totals</button>
     <a href="methodology.html">Methodology</a>
     <button class="ai" id="ai-btn">AI caution</button>
   </div>
@@ -349,6 +402,26 @@ header .links button#sat-btn.on { background: var(--navy); color: #fff; border-c
     <li>"Notable burials" means people with Wikipedia/Wikidata entries who are recorded there as buried at the cemetery — an incomplete and uneven list.</li>
     <li>Spot-check anything you plan to rely on. See the <a href="methodology.html">methodology</a> for details.</li>
   </ul>
+</div>
+
+<div id="tot-pop" role="dialog" aria-label="How many people are buried here">
+  <button class="closer" id="tot-close" aria-label="Close">×</button>
+  <h4>How many people are buried here?</h4>
+  <div class="tot-hero"><span id="tot-hero-num"></span></div>
+  <div class="tot-sub" id="tot-hero-sub"></div>
+  <div class="tot-chart">
+    <div class="tot-bar" id="tot-bar"></div>
+    <div class="tot-tick" id="tot-tick"><span id="tot-tick-lbl"></span></div>
+  </div>
+  <div class="tot-legend" id="tot-legend"></div>
+  <h5 id="tot-sites-h"></h5>
+  <div class="tot-waffle" id="tot-waffle" aria-hidden="true"></div>
+  <div class="tot-legend" id="tot-waffle-legend"></div>
+  <h5>Why the rest is unknown</h5>
+  <ul class="tot-why" id="tot-why"></ul>
+  <p class="tot-bottom" id="tot-bottom"></p>
+  <p class="tot-src">Every count and its source is listed in the <a href="methodology.html#counts">methodology</a>. Population: <a href="https://s-media.nyc.gov/agencies/dcp/assets/files/pdf/data-tools/population/population-estimates/new-york-city-population-estimates-and-trends-march-2026.pdf" target="_blank" rel="noopener">NYC Department of City Planning</a>, July 2025 estimate. Acreage is measured from the map's OpenStreetMap outlines.</p>
+  <div class="tot-tip" id="tot-tip"></div>
 </div>
 
 <div id="wrap">
@@ -450,6 +523,7 @@ Promise.all([
   buildSatelliteLayer(geo);
   applyMapFilter();
   renderList();
+  buildTotals();
 });
 
 /* ---------- satellite (clipped to cemetery shapes) ---------- */
@@ -659,10 +733,144 @@ document.getElementById('dclose').addEventListener('click', () => {
   document.getElementById('detail').classList.remove('open');
   activeId = null; renderList();
 });
-document.getElementById('ai-btn').addEventListener('click', () => document.getElementById('ai-pop').classList.toggle('open'));
+document.getElementById('ai-btn').addEventListener('click', () => { const el = document.getElementById('ai-pop'); placePopup(el); el.classList.toggle('open'); closeTotals(); });
 document.addEventListener('click', e => {
   if (!e.target.closest('#ai-pop') && !e.target.closest('#ai-btn')) document.getElementById('ai-pop').classList.remove('open');
 });
+/* ---------- totals panel ---------- */
+const NYC_POP = 8585000; // NYC Department of City Planning, July 2025 estimate
+const TIERS = [
+  { key: 'high', label: 'Cemeteries’ own or official figures', color: '#2e4434' },
+  { key: 'medium', label: 'A single researched source', color: '#557259' },
+  { key: 'low', label: 'Weakly sourced', color: '#97ab93', hatch: true },
+];
+const GRAVES_COLOR = '#7a5a1e';
+const commas = n => n.toLocaleString('en-US');
+const millions = n => (n / 1e6).toFixed(1) + ' million';
+const short = n => n.replace(/ Cemetery$/, '');
+function buildTotals() {
+  const P = CEMS.map(f => f.properties);
+  const people = P.filter(p => p.count && p.count_type !== 'graves').sort((a, b) => b.count - a.count);
+  const graves = P.filter(p => p.count && p.count_type === 'graves');
+  const covered = P.filter(p => !p.count && p.count_included_in);
+  const none = P.filter(p => !p.count && !p.count_included_in);
+  const tiers = TIERS.map(t => {
+    const rows = people.filter(p => p.count_confidence === t.key);
+    return { ...t, rows, sum: rows.reduce((s, p) => s + p.count, 0) };
+  });
+  const all = tiers.reduce((s, t) => s + t.sum, 0);
+  const solid = tiers[0].sum + tiers[1].sum;
+  const nSolid = tiers[0].rows.length + tiers[1].rows.length;
+
+  document.getElementById('tot-hero-num').textContent = millions(solid);
+  document.getElementById('tot-hero-sub').textContent =
+    `people documented as buried in the ${nSolid} cemeteries with reasonably sourced counts. ` +
+    `Adding ${tiers[2].rows.length} weakly sourced figures brings it to ${millions(all)}.`;
+
+  // stacked bar on one scale, with the city's population marked
+  const max = Math.max(NYC_POP, all) * 1.12;
+  let x = 0, bar = '';
+  tiers.forEach((t, i) => {
+    bar += `<div class="seg${t.hatch ? ' hatch' : ''}" data-tier="${i}" style="left:${x / max * 100}%;width:${t.sum / max * 100}%;background-color:${t.color}"></div>`;
+    x += t.sum;
+  });
+  bar += `<div class="seg unknown" data-tier="u" style="left:${x / max * 100}%;right:0">?</div>`;
+  document.getElementById('tot-bar').innerHTML = bar;
+  document.getElementById('tot-tick').style.left = (NYC_POP / max * 100) + '%';
+  document.getElementById('tot-tick-lbl').textContent = `City population, July 2025: ${commas(NYC_POP)}`;
+
+  document.getElementById('tot-legend').innerHTML = tiers.map(t =>
+    `<span class="sw${t.hatch ? ' hatch' : ''}" style="background-color:${t.color}"></span><span>${t.label}</span>` +
+    `<span class="v">${commas(t.sum)} <small>· ${t.rows.length}</small></span>`).join('') +
+    `<span class="sw hollow"></span><span>Not counted</span><span class="v">unknown <small>· ${none.length} sites</small></span>`;
+
+  // one square per site on the map
+  document.getElementById('tot-sites-h').textContent = `What’s counted: ${people.length + graves.length} of ${P.length} sites`;
+  const tierColor = Object.fromEntries(TIERS.map(t => [t.key, t.color]));
+  const calvary = P.find(p => p.name === 'Calvary Cemetery');
+  const order = [...people, ...covered, ...graves, ...none];
+  document.getElementById('tot-waffle').innerHTML = order.map(p => {
+    const id = CEMS.findIndex(f => f.properties === p);
+    if (p.count && p.count_type !== 'graves') return `<i data-id="${id}" style="background:${tierColor[p.count_confidence]}"></i>`;
+    if (p.count_included_in) return `<i data-id="${id}" style="background:${tierColor[calvary.count_confidence]}"></i>`;
+    if (p.count) return `<i data-id="${id}" style="background:${GRAVES_COLOR}"></i>`;
+    return `<i data-id="${id}" class="none"></i>`;
+  }).join('');
+  document.getElementById('tot-waffle-legend').innerHTML =
+    `<span class="sw" style="background:${TIERS[0].color}"></span><span>Count of people, shaded by source as above</span><span class="v">${people.length} <small>+ ${covered.length} in Calvary’s</small></span>` +
+    `<span class="sw" style="background:${GRAVES_COLOR}"></span><span>Count of graves only</span><span class="v">${graves.length}</span>` +
+    `<span class="sw empty"></span><span>No published count</span><span class="v">${none.length}</span>`;
+
+  // why the rest is unknown, from the data
+  const activeNone = none.filter(p => p.status === 'Active');
+  const big = activeNone.filter(p => p.acres).sort((a, b) => b.acres - a.acres).slice(0, 5);
+  const acresNone = activeNone.reduce((s, p) => s + (p.acres || 0), 0);
+  const acresCounted = P.filter(p => p.acres && (p.count || p.count_included_in)).reduce((s, p) => s + p.acres, 0);
+  const round50 = n => commas(Math.round(n / 50) * 50);
+  const gone = P.filter(p => p.status === 'Obliterated');
+  const moved = gone.filter(p => /remov|moved|reinter|exhum|disinter|transferred/i.test(p.other || ''));
+  const named = big.map((p, i) => `${short(p.name)} (${p.acres}${i === 0 ? ' acres' : ''})`);
+  const list = named.slice(0, -1).join(', ') + ' and ' + named[named.length - 1];
+  document.getElementById('tot-why').innerHTML = [
+    `No one keeps a running total. New York State asks cemetery corporations to report each year’s burials, not cumulative totals, and we found no published data.`,
+    `${activeNone.length} active cemeteries publish no count, among them ${list}. Together they cover about ${round50(acresNone)} acres, against about ${round50(acresCounted)} acres for the cemeteries with counts.`,
+    `${gone.length} of the sites no longer exist, and none has a published count. Meade’s catalogue records remains being moved from at least ${moved.length} of them.`,
+    `The counts that do exist have limits: many are stated as minimums (“more than”), some are years old (Flushing’s is from 1951) and one covers only part of a cemetery (Mokom Sholom).`,
+  ].map(t => `<li>${t}</li>`).join('');
+  document.getElementById('tot-bottom').textContent =
+    `So ${millions(solid)} covers only the documented cemeteries: a floor for the city, not an estimate. Published figures can’t settle whether the people buried in the city outnumber the ${millions(NYC_POP)} who live here.`;
+
+  // hover details
+  const pop = document.getElementById('tot-pop'), tip = document.getElementById('tot-tip');
+  const showTip = (e, html) => {
+    tip.innerHTML = html; tip.style.display = 'block';
+    const r = pop.getBoundingClientRect();
+    let left = e.clientX - r.left + 12, top = e.clientY - r.top + pop.scrollTop + 14;
+    if (left + tip.offsetWidth > pop.clientWidth - 6) left = pop.clientWidth - tip.offsetWidth - 6;
+    tip.style.left = left + 'px'; tip.style.top = top + 'px';
+  };
+  pop.addEventListener('mousemove', e => {
+    const seg = e.target.closest('.seg'), sq = e.target.closest('.tot-waffle i');
+    if (seg) {
+      if (seg.dataset.tier === 'u') return showTip(e, `<b>Not counted</b><br>${none.length} sites have no published count. How many people they hold is unknown.`);
+      const t = tiers[+seg.dataset.tier];
+      return showTip(e, `<b>${t.label}</b><br>${commas(t.sum)} people in ${t.rows.length} cemeteries<br>Largest: ${t.rows.slice(0, 3).map(p => short(p.name)).join(', ')}`);
+    }
+    if (sq) {
+      const p = CEMS[+sq.dataset.id].properties;
+      const what = p.count ? `${approx(p.count_display)} ${p.count_type === 'graves' ? 'graves' : 'people'}`
+        : p.count_included_in ? `counted with ${p.count_included_in}` : 'no published count';
+      return showTip(e, `<b>${p.name}</b><br>${p.borough} · ${what}`);
+    }
+    tip.style.display = 'none';
+  });
+  pop.addEventListener('mouseleave', () => { tip.style.display = 'none'; });
+  document.getElementById('tot-waffle').addEventListener('click', e => {
+    const sq = e.target.closest('i'); if (!sq) return;
+    closeTotals(); select(+sq.dataset.id, true);
+  });
+}
+function placePopup(el) {
+  const top = document.querySelector('header').getBoundingClientRect().bottom + 6;
+  el.style.top = top + 'px';
+  el.style.maxHeight = (window.innerHeight - top - 12) + 'px';
+}
+function closeTotals() {
+  document.getElementById('tot-pop').classList.remove('open');
+  document.getElementById('tot-btn').setAttribute('aria-expanded', 'false');
+}
+document.getElementById('tot-btn').addEventListener('click', () => {
+  const el = document.getElementById('tot-pop');
+  placePopup(el);
+  const open = el.classList.toggle('open');
+  document.getElementById('tot-btn').setAttribute('aria-expanded', String(open));
+  document.getElementById('ai-pop').classList.remove('open');
+});
+document.getElementById('tot-close').addEventListener('click', closeTotals);
+document.addEventListener('click', e => {
+  if (!e.target.closest('#tot-pop') && !e.target.closest('#tot-btn')) closeTotals();
+});
+document.addEventListener('keydown', e => { if (e.key === 'Escape') closeTotals(); });
 document.getElementById('side-toggle').addEventListener('click', () => document.getElementById('side').classList.toggle('open'));
 </script>
 </body>

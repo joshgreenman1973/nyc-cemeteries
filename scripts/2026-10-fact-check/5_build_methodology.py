@@ -106,8 +106,8 @@ td:nth-child(2) {{ white-space: nowrap; }}
 <li><strong>Burial counts:</strong> assembled cemetery by cemetery from, in order of preference, the cemetery or its operator; government records (New York City Landmarks Preservation Commission designation reports, NYC Parks, the U.S. Department of Veterans Affairs); Wikipedia sentences that cite a reliable source; and researched secondary sources, chiefly the <a href="https://nycemetery.wordpress.com/">New York City Cemetery Project</a> by historian Mary French. Every count is listed with its source in the table below.</li>
 </ul>
 
-<h2>Burial counts and their sources</h2>
-<p>Each figure was checked against the source page or document linked here; none was estimated or extrapolated. Where a source says "more than" or "about," that wording is kept and the stated number is used for sizing the map circles and for the totals below. The map prepends "about" to bare numbers, since none of these is an audited tally.</p>
+<h2 id="counts">Burial counts and their sources</h2>
+<p>Each figure was checked against the source page or document linked here; none was estimated or extrapolated. Where a source gives a minimum ("more than," "over") the map says "more than"; where it gives an approximation the map keeps it ("about," "an estimated"). The stated number is used for sizing the map circles and for the totals below. The map prepends "about" to bare numbers, since none of these is an audited tally.</p>
 <p><strong>Confidence labels.</strong> High: the cemetery or its operator, a government body, or a Wikipedia sentence that cites a reliable source. Medium: a single researched secondary source. Low: a figure whose own sourcing is weak, such as an uncited Wikipedia sentence, an advocacy group's estimate or a decades-old snapshot. "People" counts interments; "graves" counts graves or plots, which can hold more than one person.</p>
 <div class="tablewrap"><table>
 <thead><tr><th>Cemetery</th><th>Figure</th><th>Counts</th><th>Source</th><th>Confidence</th><th>Note</th></tr></thead>
