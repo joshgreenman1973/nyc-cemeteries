@@ -1,6 +1,6 @@
 # The permanent residents — a map of New York City's cemeteries
 
-An interactive map of 549 cemeteries, churchyards and burial grounds across the five boroughs — active, preserved and no longer extant — with founding years, status, documented counts for 40 (35 of people, four of graves and one of gravestones and markers; each with its source named and linked, a source type and a confidence label) and Wikidata-recorded notable burials for 45.
+An interactive map of 547 cemeteries, churchyards and burial grounds across the five boroughs — active, preserved and no longer extant — with founding years, status, documented counts for 40 (35 of people, four of graves and one of gravestones and markers; each with its source named and linked, a source type and a confidence label) and Wikidata-recorded notable burials for 45.
 
 Inventory, founding years and status come from Elizabeth D. Meade's [Cemeteries of New York City](https://www.cemeteriesofnyc.com/map) catalogue; drawn boundaries come from OpenStreetMap; notable burials from Wikidata; burial counts were assembled and checked one by one against cemetery websites, city landmark reports and other published sources.
 

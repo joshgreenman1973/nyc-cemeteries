@@ -147,6 +147,7 @@ header .links button#sat-btn.on { background: var(--navy); color: #fff; border-c
   padding: 2px 4px;
 }
 #count-note { font-size: 12px; color: var(--stone); padding: 8px 16px 6px; font-style: italic; }
+#count-note a { color: var(--maroon); font-style: normal; font-weight: 600; text-decoration: underline; cursor: pointer; }
 #list { flex: 1; overflow-y: auto; }
 .item {
   padding: 10px 16px 11px;
@@ -614,29 +615,45 @@ function personMatch(p, q) {
   return hit ? hit.n : null;
 }
 
+function enableOblit(e) {
+  if (e) e.preventDefault();
+  statusOn.add('Obliterated');
+  document.querySelectorAll('#statuses .schip').forEach(b => b.classList.toggle('on', statusOn.has(b.dataset.s)));
+  applyMapFilter(); renderList();
+}
+
+const countRank = p => !p.count ? 0 : p.count_type === 'interments' ? 3 : p.count_type === 'graves' ? 2 : 1;
+
 function renderList() {
   const sort = document.getElementById('sort').value;
-  let rows = CEMS.map(f => f.properties)
-    .filter(p => boro === 'all' || p.borough === boro)
-    .filter(p => statusOn.has(p.status));
-  let matchNote = {};
+  const byBoro = CEMS.map(f => f.properties).filter(p => boro === 'all' || p.borough === boro);
+  let rows = byBoro.filter(p => statusOn.has(p.status));
+  let matchNote = {}, hiddenOblit = 0;
   if (q) {
-    rows = rows.filter(p => {
+    const matchesQuery = p => {
       if (p.name.toLowerCase().includes(q)) return true;
       const m = personMatch(p, q);
       if (m) { matchNote[p._id] = m; return true; }
+      if (p.meade_name && p.meade_name.toLowerCase().includes(q)) { matchNote[p._id] = p.meade_name; return true; }
       return false;
-    });
+    };
+    rows = rows.filter(matchesQuery);
+    if (!statusOn.has('Obliterated')) {
+      hiddenOblit = byBoro.filter(p => p.status === 'Obliterated' && (
+        p.name.toLowerCase().includes(q) || personMatch(p, q) || (p.meade_name && p.meade_name.toLowerCase().includes(q))
+      )).length;
+    }
   }
   rows.sort((a, b) => {
     if (sort === 'name') return a.name.localeCompare(b.name);
     if (sort === 'notables') return (b.n_notables - a.n_notables) || a.name.localeCompare(b.name);
     if (sort === 'founded') return (a.founded || 9999) - (b.founded || 9999) || a.name.localeCompare(b.name);
-    return ((b.count||0) - (a.count||0)) || (b.n_notables - a.n_notables);
+    return (countRank(b) - countRank(a)) || ((b.count||0) - (a.count||0)) || (b.n_notables - a.n_notables) || a.name.localeCompare(b.name);
   });
   const withC = rows.filter(p => p.count).length;
-  document.getElementById('count-note').textContent =
-    rows.length + (rows.length === 1 ? ' cemetery' : ' cemeteries') + ' shown · documented counts for ' + withC;
+  document.getElementById('count-note').innerHTML =
+    rows.length + (rows.length === 1 ? ' cemetery' : ' cemeteries') + ' shown · documented counts for ' + withC +
+    (hiddenOblit ? ` · <a href="#" onclick="enableOblit(event)">+${hiddenOblit} in “No longer extant”</a>` : '');
   document.getElementById('list').innerHTML = rows.map(p => `
     <div class="item ${p._id===activeId?'active':''} ${p.status==='Obliterated'?'oblit':''}" onclick="select(${p._id}, true)">
       <div class="nm">${p.name}</div>
@@ -701,11 +718,12 @@ function select(id, fly) {
   if (p.other) html += `<div class="note-block">${p.other}</div>`;
 
   if (ppl.length) {
-    html += `<h3>Notable burials <span class="h3src">from Wikidata</span></h3>`;
+    html += `<h3>Notable burials <span class="h3src">from Wikidata</span></h3><div id="notables-list">`;
     html += renderPeople(ppl.slice(0, 25));
     if (ppl.length > 25) {
       html += `<button class="more-btn" onclick="showAll(${id})">Show all ${ppl.length}</button>`;
     }
+    html += `</div>`;
   } else {
     html += `<div class="empty-note">No notable burials recorded in Wikidata for this cemetery. That reflects gaps in the database as much as the cemetery itself.</div>`;
   }
@@ -741,14 +759,11 @@ function renderPeople(ppl) {
 function showAll(id) {
   const p = CEMS[id].properties;
   const ppl = NOTABLES[p.wikidata] || [];
-  const body = document.getElementById('dbody');
-  let html = `<h3>Notable burials <span class="h3src">from Wikidata</span></h3>` + renderPeople(ppl);
+  const el = document.getElementById('notables-list');
+  if (!el) return;
+  let html = renderPeople(ppl);
   if (p.n_notables > ppl.length) html += `<div class="empty-note">Showing the ${ppl.length} most-noted of ${p.n_notables} people recorded in Wikidata.</div>`;
-  const links2 = [];
-  if (p.website) links2.push(`<a class="wiki-link" target="_blank" rel="noopener" href="${p.website}">Official website</a>`);
-  if (p.wikipedia) links2.push(`<a class="wiki-link" target="_blank" rel="noopener" href="https://en.wikipedia.org/wiki/${encodeURIComponent(p.wikipedia.replace(/ /g,'_'))}">Wikipedia article</a>`);
-  if (links2.length) html += `<div class="links-row">${links2.join('')}</div>`;
-  body.innerHTML = html;
+  el.innerHTML = html;
 }
 
 document.getElementById('dclose').addEventListener('click', () => {
@@ -919,7 +934,20 @@ function buildTotals() {
   pop.addEventListener('mouseleave', () => { tip.style.display = 'none'; });
   document.getElementById('tot-waffle').addEventListener('click', e => {
     const sq = e.target.closest('i'); if (!sq) return;
-    closeTotals(); select(+sq.dataset.id, true);
+    const id = +sq.dataset.id, p = CEMS[id].properties;
+    let changed = false;
+    if (!statusOn.has(p.status)) {
+      statusOn.add(p.status);
+      document.querySelectorAll('#statuses .schip').forEach(b => b.classList.toggle('on', statusOn.has(b.dataset.s)));
+      changed = true;
+    }
+    if (boro !== 'all' && boro !== p.borough) {
+      boro = 'all';
+      document.querySelectorAll('#boros .chip').forEach(c => c.classList.toggle('on', c.dataset.b === 'all'));
+      changed = true;
+    }
+    if (changed) applyMapFilter();
+    closeTotals(); select(id, true);
   });
 }
 function placePopup(el) {
