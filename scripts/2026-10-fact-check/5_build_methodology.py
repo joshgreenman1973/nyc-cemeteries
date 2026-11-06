@@ -26,11 +26,17 @@ gw = next(p for p in P if p['name'] == 'Green-Wood Cemetery')['n_notables']
 
 people = [p for p in counts if p['count_type'] == 'interments']
 graves = [p for p in counts if p['count_type'] == 'graves']
+markers = [p for p in counts if p['count_type'] == 'markers']  # gravestone/marker tallies: in neither total
 tier = {t: [p for p in people if p['count_confidence'] == t] for t in ('high', 'medium', 'low')}
 s = {t: sum(p['count'] for p in v) for t, v in tier.items()}
 n = {t: len(v) for t, v in tier.items()}
 graves_sum = sum(p['count'] for p in graves)
-assert n_counts == len(people) + len(graves)
+assert n_counts == len(people) + len(graves) + len(markers)
+assert all(p.get('count_source_type') for p in counts)
+news_high = [p for p in tier['high'] if p['count_source_type'] not in ('operator', 'government')]
+SOURCE_TYPE = dict(operator='cemetery or operator', government='government', news='news report',
+                   researcher='researcher', wikipedia='uncited Wikipedia', advocacy='preservation group')
+def mils(x): return f'{x / 1e6:.1f} million'
 
 def fmt(x): return f'{x:,}'
 
@@ -40,13 +46,19 @@ def num(x): return WORDS[x] if x < 10 else fmt(x)
 def approx(d):
     return ('about ' + d) if d[0].isdigit() and '+' not in d else d
 
+def figure(p):  # a marker tally is shown as recorded
+    return p['count_display'] if p['count_type'] == 'markers' else approx(p['count_display'])
+
+def measure(p):
+    return {'interments': 'people', 'graves': 'graves'}.get(p['count_type']) or f"gravestones and markers ({p['count_year']} survey)"
+
 rows = []
 for p in counts:
-    meas = 'graves' if p['count_type'] == 'graves' else 'people'
     note = e(p.get('count_note') or '')
-    rows.append(f"<tr><td>{e(p['name'])}<span class=\"boro\">{e(p['borough'])}</span></td><td>{e(approx(p['count_display']))}</td>"
-                f"<td>{meas}</td><td><a href=\"{e(p['count_source'])}\">{e(p['count_source_label'])}</a></td>"
-                f"<td>{p['count_confidence']}</td><td>{note}</td></tr>")
+    arch = f" (<a href=\"{e(p['count_source_archive'])}\">archived copy</a>)" if p.get('count_source_archive') else ''
+    rows.append(f"<tr><td>{e(p['name'])}<span class=\"boro\">{e(p['borough'])}</span></td><td>{e(figure(p))}</td>"
+                f"<td>{e(measure(p))}</td><td><a href=\"{e(p['count_source'])}\">{e(p['count_source_label'])}</a>{arch}</td>"
+                f"<td>{SOURCE_TYPE[p['count_source_type']]}</td><td>{p['count_confidence']}</td><td>{note}</td></tr>")
 count_table = '\n'.join(rows)
 
 dep = []
@@ -84,7 +96,7 @@ size_table = f"""<tr><th></th><th>Sites with a count</th><th>Sites with no count
 <tr><td>Median size</td><td>{_st.median(cs):.0f} acres</td><td>{_st.median(ns):.2f} acre</td></tr>
 <tr><td>Middle half of sites</td><td>{_q(cs, .25):.0f} to {_q(cs, .75):.0f} acres</td><td>{_q(ns, .25):.2f} to {_q(ns, .75):.2f} acre</td></tr>
 <tr><td>Under 1 acre</td><td>{sum(1 for x in cs if x < 1)}</td><td>{sum(1 for x in ns if x < 1)}</td></tr>
-<tr><td>Total land</td><td>{fmt(round(sum(cs)))} acres</td><td>{fmt(round(sum(ns)))} acres</td></tr>"""
+<tr><td>Sum of mapped site areas</td><td>{fmt(round(sum(cs)))} acres</td><td>{fmt(round(sum(ns)))} acres</td></tr>"""
 
 page = f"""<!DOCTYPE html>
 <html lang="en">
@@ -117,10 +129,10 @@ td:nth-child(2) {{ white-space: nowrap; }}
 <main>
 <a class="back" href="index.html">← Back to the map</a>
 <h1>Methodology</h1>
-<p>The permanent residents: a map of New York City's cemeteries. Built June 2026; corrected October 6, 2026, after a full fact-check (see <a href="#corrections">Corrections</a>).</p>
+<p>The permanent residents: a map of New York City's cemeteries. Built June 2026; corrected October 6, 2026, after a full fact-check, and November 6, 2026, after a follow-up review (see <a href="#corrections">Corrections</a>).</p>
 
 <h2>What this map shows</h2>
-<p>{fmt(n_sites)} cemeteries, churchyards and burial grounds across the five boroughs, including ones that no longer physically exist. Each is labeled with a status: <strong>Active</strong> ({st['Active']}, still taking burials), <strong>Preserved</strong> ({st['Preserved']}, historic and still there but no longer taking burials) or <strong>No longer extant</strong> ({st['Obliterated']}, paved over, built upon or otherwise gone; Elizabeth Meade's term for these in her catalogue is "obliterated"). Founding years are shown for {n_founded} of them, documented burial counts for {n_counts} (each with its source named and linked, and a confidence label) and lists of notable people buried there for {n_notable_cems} ({fmt(n_notable_people)} people recorded in Wikidata). By default the map shows active and preserved cemeteries; toggle "No longer extant" to reveal the vanished ones.</p>
+<p>{fmt(n_sites)} cemeteries, churchyards and burial grounds across the five boroughs, including ones that no longer physically exist. Each is labeled with a status: <strong>Active</strong> ({st['Active']}, still taking burials), <strong>Preserved</strong> ({st['Preserved']}, historic and still there but no longer taking burials) or <strong>No longer extant</strong> ({st['Obliterated']}, paved over, built upon or otherwise gone; Elizabeth Meade's term for these in her catalogue is "obliterated"). Founding years are shown for {n_founded} of them, documented counts for {n_counts} (each with its source named and linked, and a confidence label: {len(people)} count people, {num(len(graves))} count graves and {num(len(markers))} counts gravestones and markers) and lists of notable people buried there for {n_notable_cems} ({fmt(n_notable_people)} people recorded in Wikidata). By default the map shows active and preserved cemeteries; toggle "No longer extant" to reveal the vanished ones.</p>
 <p>Some burial grounds appear as more than one point. Meade's catalogue keeps separate records for a surviving part of a cemetery and a part that was destroyed (for instance where a street was cut through), and for separate parcels, and the map follows her records.</p>
 
 <h2>Data sources</h2>
@@ -134,33 +146,34 @@ td:nth-child(2) {{ white-space: nowrap; }}
 </ul>
 
 <h2 id="counts">Burial counts and their sources</h2>
-<p>Each figure was checked against the source page or document linked here; none was estimated or extrapolated. Where a source gives a minimum ("more than," "over") the map says "more than"; where it gives an approximation the map keeps it ("about," "an estimated"). The stated number is used for sizing the map circles and for the totals below. The map prepends "about" to bare numbers, since none of these is an audited tally.</p>
-<p><strong>Confidence labels.</strong> High: the cemetery or its operator, a government body, or a Wikipedia sentence that cites a reliable source. Medium: a single researched secondary source. Low: a figure whose own sourcing is weak, such as an uncited Wikipedia sentence, an advocacy group's estimate or a decades-old snapshot. "People" counts interments; "graves" counts graves or plots, which can hold more than one person.</p>
+<p>Each figure was checked against the source page or document linked here; none was estimated or extrapolated. Where a source gives a minimum ("more than," "over") the map says "more than"; where it gives an approximation the map keeps it ("about," "an estimated"). The stated number is used for sizing the map circles and, for counts of people, for the totals below. The map prepends "about" to bare numbers, since none of these is an audited tally.</p>
+<p><strong>Confidence labels.</strong> High: the cemetery or its operator, a government body, or a Wikipedia sentence that cites a reliable source. Medium: a single researched secondary source. Low: a figure whose own sourcing is weak, such as an uncited Wikipedia sentence, an advocacy group's estimate or a decades-old snapshot. "People" counts interments; "graves" counts graves or plots, which can hold more than one person; "gravestones and markers" counts stones recorded in a survey, which is not a count of people or of graves.</p>
+<p><strong>Source type</strong> is listed separately from confidence. {' '.join(f"{e(p['name'])}'s figure is rated high under these rules, but it comes from a news report as cited on Wikipedia ({e(p['count_source_label'])}), not from the cemetery or a government body; the original article was not checked directly." for p in news_high)}</p>
 <div class="tablewrap"><table>
-<thead><tr><th>Cemetery</th><th>Figure</th><th>Counts</th><th>Source</th><th>Confidence</th><th>Note</th></tr></thead>
+<thead><tr><th>Cemetery</th><th>Figure</th><th>Counts</th><th>Source</th><th>Source type</th><th>Confidence</th><th>Note</th></tr></thead>
 <tbody>
 {count_table}
 </tbody></table></div>
 
 <h2>Adding up the counts</h2>
-<p>Taking only the figures that count people, each at its stated number:</p>
+<p>Taking only the figures that count people, each at its stated number, and adding them:</p>
 <div class="tablewrap"><table class="totals">
-<tr><td>High-confidence sources ({n['high']} cemeteries)</td><td>{fmt(s['high'])}</td></tr>
+<tr><td>High-confidence sources ({n['high']} cemetery records)</td><td>{fmt(s['high'])}</td></tr>
 <tr><td>Plus medium-confidence sources ({n['medium']} more)</td><td>{fmt(s['high'] + s['medium'])}</td></tr>
 <tr><td>Plus low-confidence sources ({num(n['low'])} more)</td><td>{fmt(s['high'] + s['medium'] + s['low'])}</td></tr>
 </table></div>
-<p>The conservative figure is the middle one: about {round((s['high'] + s['medium']) / 1e5) / 10} million people buried in the {n['high'] + n['medium']} cemeteries with a reasonably sourced count. The {num(len(graves))} grave counts ({fmt(graves_sum)} graves) are left out, because a grave can hold more than one person. These totals are floors for a small share of the city's {fmt(n_sites)} sites, not a citywide count: most cemeteries publish no figure, several figures are years old, and Mokom Sholom's covers only one section. Calvary is counted at its operator's figure of 1.75 million rather than the widely repeated 3 million.</p>
+<p>Published figures for the {n['high'] + n['medium']} cemetery records with high- or medium-confidence sources add to about {mils(s['high'] + s['medium'])} interments. This is an incomplete, mixed-date sum: some source figures are approximate, others are stated minimums, and it is not an audited citywide count. The sums above are arithmetic on published figures, not counts of unique people; remains moved from one cemetery to another may appear in more than one figure. The {num(len(graves))} grave counts ({fmt(graves_sum)} graves) are left out, because a grave can hold more than one person, and so {'is' if len(markers) == 1 else 'are'} {', '.join(f"{e(p['name'])}'s {p['count_display']} gravestones and markers, from a {p['count_year']} survey" for p in markers)}, because a stone is not a person. The figures cover a small share of the city's {fmt(n_sites)} sites: no count was located for most of them, several figures are years old and Mokom Sholom's covers only one section. Calvary is counted at its operator's figure of 1.75 million rather than the widely repeated 3 million. Published figures can't settle whether the people buried in the city outnumber the people who live here.</p>
 
 <h2 id="sizes">How big are the sites without counts?</h2>
-<p>Meade's catalogue maps a footprint for each site whose location is known. Measured from those shapes (the "sites with a count" include the three Calvary divisions covered by Calvary's figure):</p>
+<p>Meade's catalogue maps a footprint for each site whose location is known. Measured from those shapes, not from the OpenStreetMap outlines drawn on the map (the "sites with a count" include the three Calvary divisions covered by Calvary's figure). Areas are summed site by site, not merged, so any overlap between footprints is counted twice:</p>
 <div class="tablewrap"><table class="totals">
 {size_table}
 </table></div>
-<p>Most sites without a count are small: {sub.get('House of Worship', 0)} are church or synagogue burial grounds and {sub.get('Family Burying Ground', 0)} are family burying grounds. Most of the uncounted land is in {len(active_none)} active cemeteries that publish no figure, led by {big_list}. Together the sites without counts cover {share_none}% of the burial ground Meade mapped. {len(none_sites) - len(ns)} of them are mapped only to a general vicinity and are not measured.</p>
+<p>Most sites without a count are small: {sub.get('House of Worship', 0)} are church or synagogue burial grounds and {sub.get('Family Burying Ground', 0)} are family burying grounds. Most of the uncounted mapped area is in {len(active_none)} active cemetery records for which no count was located (searches as of October 2026), led by {big_list}. Together the sites without counts account for {share_none}% of the summed mapped area. {len(none_sites) - len(ns)} of them are mapped only to a general vicinity and are not measured.</p>
 <p>Area is only a rough guide to burials: density varies widely, and many vanished grounds were emptied. Meade records remains moved, in whole or part, from at least {to_ch} of them to Cypress Hills, {to_gw} to Green-Wood and {to_wl} to Woodlawn (entries she marks "possibly" are not counted here). All three cemeteries have counts above, so some of those people are already in the totals.</p>
 
 <h2>Why most cemeteries have no count</h2>
-<p>There is no central, authoritative dataset of how many people are buried in New York City's cemeteries. The New York State Division of Cemeteries asks cemetery corporations to report their "Number of Body Burials" for each year on their <a href="https://dos.ny.gov/annual-financial-report-cemetery-corporation-parts-1-3-printable">annual financial reports</a>, but these are yearly figures, not running totals, and we found no published dataset of them. The Diocese of Brooklyn's cemetery office publishes no totals; the Archdiocese of New York's cemetery arm gives figures for Calvary and Resurrection and a combined figure for its five cemeteries. The open-data portals (New York State's Public Cemetery Locations, NYC Open Data, the U.S. Geological Survey gazetteer) carry locations only. Find A Grave's per-cemetery figures count volunteer-created memorials rather than actual interments, and its terms prohibit automated collection, so it is not used. Absence of a number on the map is not a claim that few people are buried there.</p>
+<p>We found no central public dataset of how many people are buried in New York City's cemeteries. The New York State Division of Cemeteries asks cemetery corporations to report their "Number of Body Burials" for each year on their <a href="https://dos.ny.gov/annual-financial-report-cemetery-corporation-parts-1-3-printable">annual financial reports</a>, but these are yearly figures, not running totals, and we found no published dataset of them. We found no published totals from the Diocese of Brooklyn's cemetery office; the Archdiocese of New York's cemetery arm gives figures for Calvary and Resurrection and a combined figure for its five cemeteries. The open-data portals (New York State's Public Cemetery Locations, NYC Open Data, the U.S. Geological Survey gazetteer) carry locations only. Find A Grave's per-cemetery figures count volunteer-created memorials rather than actual interments, and its terms prohibit automated collection, so it is not used. Absence of a number on the map is not a claim that few people are buried there.</p>
 
 <h2>Where the map departs from Meade's catalogue</h2>
 <p>Founding years and statuses follow Meade's catalogue except in these cases, where a primary or better-documented source disagrees. Each is also explained in the cemetery's detail panel. Founding years otherwise keep Meade's qualifiers ("c. 1654," "1746 or 1751").</p>
@@ -189,6 +202,15 @@ td:nth-child(2) {{ white-space: nowrap; }}
 <p>The raw inputs and intermediate files are in the project repository: the Overpass query and its output, the Meade catalogue extract (<code>data/meade_cemeteries.json</code>) and the full web map it came from, with her mapped footprints (<code>data/meade_webmap.json</code>), Wikidata query results and Wikipedia infobox parses. The scripts that first processed them in June 2026 were not saved. The October 2026 corrections were made with scripts that are saved in <code>scripts/2026-10-fact-check/</code>. The map's data files are <code>data/cemeteries.geojson</code> and <code>data/notables.json</code>.</p>
 
 <h2 id="corrections">Corrections</h2>
+<p>November 6, 2026. A follow-up review found and fixed these problems:</p>
+<ul>
+<li>Brinckerhoff Cemetery's 77 had been counted as people. The Landmarks Preservation Commission report gives 77 gravestones and markers recorded in a 1919 survey, so it is now shown as a marker count and left out of the people total. The high-confidence sum fell by 77; the rounded totals did not change.</li>
+<li>The totals had been described as a floor for the city. They are an incomplete sum of published figures, some approximate and of different dates, and are now described that way.</li>
+<li>The map had said dozens of active cemeteries "publish no count." It now says no count was located for them in this inventory.</li>
+<li>The top confidence tier had been labeled as cemeteries' own or official figures, but Bayside's comes from a news report cited on Wikipedia. Each figure's source type is now listed separately from its confidence.</li>
+<li>The totals panel said its acreage came from OpenStreetMap outlines. It comes from Meade's mapped footprints.</li>
+<li>Mokom Sholom's source file now also links to an archived copy.</li>
+</ul>
 <p>October 6, 2026. A full fact-check of the map found and fixed these errors:</p>
 <ul>
 <li>47 entries duplicated a cemetery already on the map, usually once from OpenStreetMap and once from Meade's catalogue, often with conflicting statuses (Chatham Square's Shearith Israel cemetery, for one, was shown as both active and preserved). The duplicates were merged, the total fell from 594 to {fmt(n_sites)} and the active count from 126 to {st['Active']}. Union Field and New Union Field cemeteries had been matched to each other's records.</li>
@@ -207,4 +229,4 @@ open(f'{REPO}/methodology.html', 'w').write(page)
 print('written', len(page))
 print(dict(n_sites=n_sites, st=dict(st), n_founded=n_founded, n_counts=n_counts, n_notable_cems=n_notable_cems,
            n_notable_people=n_notable_people, n_shipped=n_shipped, n_web=n_web, osm=len(osm), osm_matched=osm_matched,
-           meade_on_map=meade_on_map, gw=gw, tiers=s, n=n, graves=graves_sum))
+           meade_on_map=meade_on_map, gw=gw, tiers=s, n=n, graves=graves_sum, markers=[(p['name'], p['count']) for p in markers]))
